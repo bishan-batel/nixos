@@ -54,7 +54,7 @@
     isNormalUser = true;
     description = "Kishan S Patel";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ gcc clang ];
   };
 
 
