@@ -72,6 +72,8 @@
     enable = true;
   };
 
+  services.gnome3.at-spi2-core.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
