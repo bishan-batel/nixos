@@ -11,7 +11,6 @@
       alias ci="zi"
       alias cat="bat"
     '';
-    f = true;
     functions = {
       rebuild = ''
         pushd /home/bishan_/nixos
