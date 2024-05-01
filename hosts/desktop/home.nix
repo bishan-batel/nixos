@@ -67,7 +67,8 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    TERM = "kitty";
+    TERMINAL = "kitty";
+    BROWSER = "firefox";
   };
 
   # TODO

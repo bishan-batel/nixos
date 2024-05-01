@@ -8,7 +8,7 @@
     ./gtk.nix
     ./eww.nix
     ./rofi.nix
-    ./hyprland.nix
+    # ./hyprland.nix
     ./wallpaper.nix
     ./dunst.nix
   ];

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  services.dunst = {
+  services.mako = {
     enable = true;
     catppuccin.enable = true;
   };

@@ -7,8 +7,9 @@
   };
 
   home.packages = with pkgs; [
-    jetbrains.clion
-    jetbrains.rider
-    jetbrains.rust-rover
+    jetbrains-toolbox
+    #jetbrains.clion
+    #jetbrains.rider
+    #jetbrains.rust-rover
   ];
 }
