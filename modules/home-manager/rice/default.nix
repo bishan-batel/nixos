@@ -10,5 +10,6 @@
     ./rofi.nix
     ./hyprland.nix
     ./wallpaper.nix
+    ./dunst.nix
   ];
 }
