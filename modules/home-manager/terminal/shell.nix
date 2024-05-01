@@ -11,6 +11,7 @@
       alias ci="zi"
       alias cat="bat"
     '';
+    f = true;
     functions = {
       rebuild = ''
         pushd /home/bishan_/nixos
@@ -20,7 +21,7 @@
         sudo nixos-rebuild switch --flake /home/bishan_/nixos#default &>nixos-switch.log
 
         if [ $status != 0 ];
-          cat nixos-switch.log | grep --color error && false
+          bat nixos-switch.log | grep --color error && false
           echo Failed to build.
         else
           git commit -am "$(nixos-rebuild list-generations | grep current)"
