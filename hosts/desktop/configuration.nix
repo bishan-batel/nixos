@@ -91,11 +91,6 @@
   programs = {
     hyprland = {enable = true;};
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
-
     tmux.enable = true;
     fish.enable = true;
   };
