@@ -1,19 +1,30 @@
-{ pkgs, ...}:
+{pkgs, ...}: {
+  home.packages = with pkgs; [alejandra];
 
-{
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-    alias ls="lsd -lah"
-    alias ll="lsd -lah"
-    alias lt="lsd -lah --tree"
-    alias cd="z"
-    alias ci="zi"
-    alias cat="bat"
+      alias ls="lsd -lah"
+      alias ll="lsd -lah"
+      alias lt="lsd -lah --tree"
+      alias cd="z"
+      alias ci="zi"
+      alias cat="bat"
     '';
     functions = {
       rebuild = ''
+        pushd /home/bishan_/nixos
+        alejandra . &> /dev/null
+        git diff -U0 "*.nix"
+        echo NixOS Rebuilding...
+        sudo nixos-rebuild switch --flake /home/bishan_/nixos#default &>nixos-switch.log
 
+        if [ $status != 0 ];
+          cat nixos-switch.log | grep --color error && false
+          echo Failed to build.
+        else
+          git commit -am "$(nixos-rebuild list-generations | grep current)"
+        end
       '';
     };
   };

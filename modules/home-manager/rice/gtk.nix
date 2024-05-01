@@ -1,10 +1,9 @@
-{ pkgs, ...}:
-{
+{pkgs, ...}: {
   gtk = {
     enable = true;
     font.name = "JetBrainsMono Nerd Font Mono";
 
-    catppuccin = { enable = true; };
+    catppuccin = {enable = true;};
   };
 
   xdg = {

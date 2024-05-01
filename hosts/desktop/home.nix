@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/compilers.nix
@@ -29,7 +31,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -68,7 +70,7 @@
     TERM = "kitty";
   };
 
-  # TODO 
+  # TODO
   # xdg.configFile."hypr/hyprland.conf".soruce = ./hypr/hyprland.conf;
 
   # Let Home Manager install and manage itself.

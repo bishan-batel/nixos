@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     gh
     git-credential-oauth
@@ -19,11 +17,9 @@
       };
 
       init.defaultBranch = "main";
-       credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+      credential.helper = "${pkgs.git.override {withLibsecret = true;}}/bin/git-credential-libsecret";
     };
-
 
     aliases = {};
   };
 }
-

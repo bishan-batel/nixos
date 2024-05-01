@@ -12,20 +12,22 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
-    let 
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      config = { allowUnfree = true; };
-    in
-    {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/desktop/configuration.nix
-          inputs.home-manager.nixosModules.default
-          inputs.catppuccin.nixosModules.catppuccin
-        ];
-      };
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+    config = {allowUnfree = true;};
+  in {
+    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/desktop/configuration.nix
+        inputs.home-manager.nixosModules.default
+        inputs.catppuccin.nixosModules.catppuccin
+      ];
+    };
   };
 }
