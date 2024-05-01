@@ -292,6 +292,6 @@
   programs.gamemode.enable = true;
 
   environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/bishan_/.steam/root/compatabilitytools.d";
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
   };
 }
