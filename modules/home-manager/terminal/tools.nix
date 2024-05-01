@@ -7,7 +7,7 @@
     };
 
     lsd = {
-      enableAliases = true;
+      enable = true;
       settings = {
         date = "relative";
         ignore-globs = [
