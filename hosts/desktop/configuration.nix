@@ -10,11 +10,13 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
   ];
 
   catppuccin.enable = true;
   catppuccin.flavour = "mocha";
+
+  console.catppuccin.enable = true;
+  boot.loader.grub.catppuccin.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
