@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }:
 {
-  programs.swww = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    swww
+  ];
 }
 
 
