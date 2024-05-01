@@ -290,4 +290,8 @@
     gamescopeSession.enable = true;
   };
   programs.gamemode.enable = true;
+
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/bishan_/.steam/root/compatabilitytools.d";
+  };
 }
