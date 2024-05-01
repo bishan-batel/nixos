@@ -17,7 +17,7 @@
       };
 
       init.defaultBranch = "main";
-      credential.helper = "${pkgs.git.override {withLibsecret = true;}}/bin/gh auth git-credential";
+      credential.helper = "${pkgs.gh} auth git-credential";
     };
 
     aliases = {};
