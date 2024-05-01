@@ -12,6 +12,6 @@
       font_size = 14;
     };
 
-    #catppuccin.enable = true;
+    catppuccin.enable = true;
   };
 }

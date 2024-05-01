@@ -7,10 +7,10 @@
     ../../modules/home-manager/editors.nix
     ../../modules/home-manager/spotify.nix
     ../../modules/home-manager/utilities.nix
-    ../../modules/home-manager/ricefields.nix
     ../../modules/home-manager/gaming.nix
     ../../modules/home-manager/discord.nix
     ../../modules/home-manager/terminal
+    ../../modules/home-manager/rice
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
