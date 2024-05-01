@@ -5,6 +5,7 @@
     ./gtk.nix
     ./eww.nix
     ./rofi.nix
+    ./hyprland.nix
     ./wallpaper.nix
   ];
 }

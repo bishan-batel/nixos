@@ -9,6 +9,12 @@
     alias lt="lsd -lah --tree"
     alias cd="z"
     alias ci="zi"
+    alias cat="bat"
     '';
+    functions = {
+      rebuild = ''
+
+      '';
+    };
   };
 }
