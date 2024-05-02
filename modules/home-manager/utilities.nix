@@ -3,5 +3,6 @@
     pavucontrol
     firefox
     gimp
+    obsidian
   ];
 }
