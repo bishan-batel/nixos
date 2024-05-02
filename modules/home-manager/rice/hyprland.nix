@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    flameshot
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
