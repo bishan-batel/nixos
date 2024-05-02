@@ -4,6 +4,12 @@
     git-credential-oauth
   ];
 
+  programs.gh-dash = {
+    enable = true;
+    # settings = {};
+    catppuccin.enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "Kishan S Patel";
