@@ -25,6 +25,7 @@
         else
           git commit -am "$(nixos-rebuild list-generations | grep current)"
         end
+        popd
       '';
     };
   };

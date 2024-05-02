@@ -4,7 +4,8 @@
     catppuccin.enable = true;
   };
 
-  programs.feh = {
+  programs.imv = {
     enable = true;
+    catppuccin.enable = true;
   };
 }
