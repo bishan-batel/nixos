@@ -13,6 +13,7 @@
 
     gh = {
       gitCredentialHelper.enable = true;
+      extensions = [pkgs.gh-dash];
     };
 
     git = {
