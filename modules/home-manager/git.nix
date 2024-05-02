@@ -11,6 +11,10 @@
       catppuccin.enable = true;
     };
 
+    gh = {
+      gitCredentialHelper.enable = true;
+    };
+
     git = {
       enable = true;
       userName = "Kishan S Patel";
