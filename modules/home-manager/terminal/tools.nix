@@ -34,5 +34,11 @@
       enable = true;
       catppuccin.enable = true;
     };
+
+    fzf = {
+      tmux.enableShellIntegration = true;
+      enableFishIntegration = true;
+      catppuccin.enable = true;
+    };
   };
 }

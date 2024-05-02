@@ -11,6 +11,7 @@
     ../../modules/home-manager/utilities.nix
     ../../modules/home-manager/gaming.nix
     ../../modules/home-manager/discord.nix
+    ../../modules/home-manager/browser.nix
     ../../modules/home-manager/terminal
     ../../modules/home-manager/rice
   ];
