@@ -18,7 +18,7 @@
       };
 
       configFile.source = ./config.nu;
-      envFile = ./env.nu;
+      envFile.source = ./env.nu;
     };
 
     carapace.enableNushellIntegration = true;

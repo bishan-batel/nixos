@@ -2,7 +2,9 @@
 
 export def rebuild []  {
   let config_dir = $env.HOME + "/nixos";
-  let logfile = "($config_dir)/nixos-switch.log";
+  let logfile = $"($config_dir)/nixos-switch.log";
+
+  print $"Entering ($config_dir)";
   cd $config_dir;
 
 
@@ -15,6 +17,8 @@ export def rebuild []  {
   print "NixOS Rebuilding...";
 
   sudo nixos-rebuild switch --flake $'($config_dir)#default' o> $logfile
+
+  print $env.LAST_EXIT_CODE
 
   if $env.LAST_EXIT_CODE != 0 {
     open --raw $logfile | find error
