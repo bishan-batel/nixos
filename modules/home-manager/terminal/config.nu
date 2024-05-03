@@ -12,17 +12,23 @@ def rebuild [] {
 
   echo "NixOS Rebuilding..."
 
-  let log = sudo nixos-rebuild switch --flake $'($config_dir)#default' 
-  open --raw $logfile e> $logfile
+  sudo nixos-rebuild switch --flake $'($config_dir)#default' | save -f $logfile
 
   if $env.LAST_EXIT_CODE != 0 {
     open --raw $logfile | find error
     "Failed to Build"
   } else {
-    let msg = nixos-rebuild list-generations | find "current" ;
-    git commit -m '($msg)'
+    let generations = nixos-rebuild list-generations --json | from json
 
-    "Successfully Built NixOS: '($msg |into string)'"
+    let current = $generations | where "current" | select generation date 
+
+    let current_gen = $current | get generation | first
+    let date = $current | get date | first
+
+    let msg = $'Generation ($current_gen): ($date)'
+    git commit -m $msg
+
+    $"Successfully Built NixOS: '($msg)'"
   }
 }
 
