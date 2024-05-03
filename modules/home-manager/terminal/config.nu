@@ -1,16 +1,19 @@
-#!/usr/bin/env nu
 
-let config_dir = $env.HOME + "/nixos"
-let logfile = "nixos-switch.log"
+# let show_banner = false
 
-def rebuild [] {
-  cd $config_dir
-  alejandra -q . | ignore
+export def rebuild [] -> string  {
+  let config_dir = $env.HOME + "/nixos";
+  let logfile = "nixos-switch.log";
+  cd $config_dir;
 
-  git diff -U0 "*.nix"
-  git add "." 
 
-  echo "NixOS Rebuilding..."
+  # print "Formatting..."
+  # alejandra .;
+
+  git diff -U0 "*.nix" ;
+  git add "." ;
+
+  print "NixOS Rebuilding...";
 
   sudo nixos-rebuild switch --flake $'($config_dir)#default' | save -f $logfile
 
@@ -28,7 +31,7 @@ def rebuild [] {
     let msg = $'Generation ($current_gen): ($date)'
     git commit -m $msg
 
-    $"Successfully Built NixOS: '($msg)'"
+    print $"Successfully Built NixOS: '($msg)'"
   }
 }
 
