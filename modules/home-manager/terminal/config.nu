@@ -1,7 +1,7 @@
 
 # let show_banner = false
 
-export def rebuild [] -> string  {
+export def rebuild []  {
   let config_dir = $env.HOME + "/nixos";
   let logfile = "nixos-switch.log";
   cd $config_dir;
@@ -23,13 +23,12 @@ export def rebuild [] -> string  {
   } else {
     let generations = nixos-rebuild list-generations --json | from json
 
-    let current = $generations | where "current" | select generation date 
-
-    let current_gen = $current | get generation | first
-    let date = $current | get date | first
+    let current = $generations | where "current" | select generation date | first
+    let current_gen = $current | get generation 
+    let date = $current | get date 
 
     let msg = $'Generation ($current_gen): ($date)'
-    git commit -m $msg
+    git commit -m $msg | ignore
 
     print $"Successfully Built NixOS: '($msg)'"
   }
