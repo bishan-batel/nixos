@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   imports = [
-    ./tools.nix
-    ./shell.nix
+    ./nu.nix
     ./kitty.nix
     ./filemanage.nix
+    ./starship.nix
   ];
 }

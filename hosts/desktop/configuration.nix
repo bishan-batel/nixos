@@ -82,6 +82,7 @@
     git
     zip
     unzip
+    nushell
   ];
 
   # SDDM
@@ -100,7 +101,7 @@
     };
 
     tmux.enable = true;
-    fish.enable = false;
+    #fish.enable = false;
   };
 
   nix.settings = {
