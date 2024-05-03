@@ -15,10 +15,11 @@ def rebuild [] {
 
   if $env.LAST_EXIT_CODE != 0 {
     open --raw "nixos-switch.log" | find error
-    echo "Failed to Build".
+    "Failed to Build"
   } else {
     git commit -m "$(nixos-rebuild list-generations | grep current)"
-    echo Successfully Built NixOS
+
+    "Successfully Built NixOS"
   }
 }
 
