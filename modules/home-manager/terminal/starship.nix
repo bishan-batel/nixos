@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   programs = {
+    f
     starship = {
       enable = true;
       catppuccin.enable = true;
