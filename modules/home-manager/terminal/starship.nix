@@ -5,8 +5,8 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:base_light)($cmd_duration )$directory[\\ue0b4](base_light) ";
-        right_format = "([\\ue0b6](lavender)[$git_branch( $git_status)](bg:lavender)[\\ue0b4](lavender))";
+        format = "$all[$character](bg:base_light)($cmd_duration )$directory[\ue0b4](base_light) ";
+        right_format = "([\ue0b6](lavender)[$git_branch( $git_status)](bg:lavender)[\ue0b4](lavender))";
 
         character = {
           success_symbol = "[\ue0b6](bold blue)[●](bg:blue black)[\ue0b4](bold blue bg:base_light)";
