@@ -9,6 +9,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-programs-sqlite = {
+      url = "github:wamserma/flake-programs-sqlite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -26,6 +31,7 @@
         ./hosts/desktop/configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
+        inputs.flake-programs-sqlite.nixosModules.programs-sqlite
       ];
     };
   };
