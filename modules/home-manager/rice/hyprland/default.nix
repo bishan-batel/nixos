@@ -12,12 +12,11 @@
     package = pkgs.hyprland;
 
     xwayland.enable = true;
-
     systemd.enable = true;
 
     settings = {
-      source = ["~/.config/hyprland/hypr.conf"];
+      source = ["~/.config/hypr/hypr.conf"];
     };
   };
-  home.file.".config/hyprland/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
+  home.file.".config/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
 }
