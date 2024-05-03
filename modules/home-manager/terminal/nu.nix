@@ -6,9 +6,9 @@
       enable = true;
 
       shellAliases = {
-        "ls" = "lsd -lah";
-        "ll" = "lsd -lah";
-        "lt" = "lsd -lah --tree";
+       #"ls" = "lsd -lah";
+       #"ll" = "lsd -lah";
+       #"lt" = "lsd -lah --tree";
         "cd" = "z";
         "ci" = "zi";
         "cat" = "bat";
