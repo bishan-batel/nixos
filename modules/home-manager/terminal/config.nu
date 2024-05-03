@@ -16,13 +16,17 @@ export def rebuild []  {
 
   print "NixOS Rebuilding...";
 
+  let code = -420;
+
   sudo nixos-rebuild switch --flake $'($config_dir)#default' | save -f $logfile
 
   # print $env.LAST_EXIT_CODE
 
+  print $env.LAST_EXIT_CODE
+
   if $env.LAST_EXIT_CODE != 0 {
-    #bat $logfile | grep --color error
-    "Failed to Build"
+    bat $logfile | grep --color error
+    print "Failed to Build"
   } else {
     let generations = nixos-rebuild list-generations --json | from json
 
