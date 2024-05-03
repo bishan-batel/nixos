@@ -11,6 +11,8 @@
 
     systemd.enable = true;
 
-    sourceFirst = ./hyprland.conf;
+    settings = {
+      source = ["~/nixos/modules/home-manager/rice/hyprland/hyprland.conf"];
+    };
   };
 }
