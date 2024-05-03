@@ -10,9 +10,7 @@
     xwayland.enable = true;
 
     systemd.enable = true;
-
-    settings = {
-      "$mod" = "SUPER";
-    };
   };
+
+  xdg.configFile."~/.config/hypr/hyprland.conf".source = ./hyprland.conf;
 }
