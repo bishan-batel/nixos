@@ -1,4 +1,11 @@
 
+
+$env.config = {
+  ...
+  show_banner: false,
+  ...
+}
+
 export def rebuild []  {
   let config_dir = $env.HOME + "/nixos";
   let logfile = "nixos-switch.log";

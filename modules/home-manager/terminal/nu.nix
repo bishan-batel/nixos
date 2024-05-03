@@ -5,9 +5,7 @@
     nushell = {
       enable = true;
 
-      envFile = ''
-        $env.config.show_banner = false
-      '';
+      envFile = '' '';
 
       shellAliases = {
         #"ls" = "lsd -lah";
