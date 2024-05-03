@@ -9,7 +9,7 @@ export def rebuild []  {
   # alejandra .;
 
   git diff -U0 "*.nix" ;
-  git add "." ;
+  git add .;
 
   print "NixOS Rebuilding...";
 
