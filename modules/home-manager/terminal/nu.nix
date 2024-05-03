@@ -7,7 +7,7 @@
 
       shellAliases = {
        #"ls" = "lsd -lah";
-       #"ll" = "lsd -lah";
+       "ll" = "ls -l";
        #"lt" = "lsd -lah --tree";
         "cd" = "z";
         "ci" = "zi";
