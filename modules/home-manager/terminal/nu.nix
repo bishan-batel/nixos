@@ -6,7 +6,7 @@
       enable = true;
 
       envFile = ''
-        $env.config.show_banner = false;
+        $env.config.show_banner = false
       '';
 
       shellAliases = {
