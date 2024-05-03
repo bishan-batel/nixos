@@ -10,7 +10,7 @@
     xwayland.enable = true;
 
     systemd.enable = true;
-  };
 
-  xdg.configFile."~/.config/hypr/hyprland.conf".source = ./hyprland.conf;
+    sourceFirst = ./hyprland.conf;
+  };
 }
