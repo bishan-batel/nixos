@@ -33,6 +33,10 @@
       };
 
       aliases = {};
+
+      delta = {
+        enable = true;
+      };
     };
   };
 }
