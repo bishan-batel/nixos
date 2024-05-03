@@ -8,7 +8,6 @@
         format = "$all[$character](bg:base_light)($cmd_duration )$directory[](base_light) ";
         right_format = "([\u{e0b6}](lavender)[$git_branch( $git_status)](bg:lavender)[\u{e0b4}](lavender))";
 
-
         character = {
           success_symbol = "[\u{e0b6}](bold blue)[●](bg:blue black)[\u{e0b4}](bold blue bg:base_light)";
           error_symbol = "[\u{e0b6}](bold red)[✖](bg:red black)[\u{e0b4}](bold red bg:base_light)";

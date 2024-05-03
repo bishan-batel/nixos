@@ -5,10 +5,14 @@
     nushell = {
       enable = true;
 
+      envFile = ''
+        $env.config.show_banner = false;
+      '';
+
       shellAliases = {
-       #"ls" = "lsd -lah";
-       "ll" = "ls -l";
-       #"lt" = "lsd -lah --tree";
+        #"ls" = "lsd -lah";
+        "ll" = "ls -l";
+        #"lt" = "lsd -lah --tree";
         "cd" = "z";
         "ci" = "zi";
         "cat" = "bat";
