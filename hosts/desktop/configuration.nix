@@ -100,7 +100,7 @@
     };
 
     tmux.enable = true;
-    fish.enable = true;
+    fish.enable = false;
   };
 
   nix.settings = {
@@ -108,7 +108,7 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
-  users.users.bishan_.shell = pkgs.fish;
+  users.users.bishan_.shell = pkgs.nushell;
 
   services.printing.enable = true;
 

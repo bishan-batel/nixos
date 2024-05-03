@@ -1,8 +1,11 @@
 
 
 
+(deflisten 
+
+
 (defwidget workspaces_list []
-  (label :text "me when the when the me when the" ))
+  (label :text "me en the when the me when the" ))
 
 
 (defwindow workspaces

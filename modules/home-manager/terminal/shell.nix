@@ -1,16 +1,28 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [alejandra];
 
+  programs = {
+    nushell = {
+      enable = true;
+
+      shellAliases = {
+        "ls" = "lsd -lah";
+        "ll" = "lsd -lah";
+        "lt" = "lsd -lah --tree";
+        "cd" = "z";
+        "ci" = "zi";
+        "cat" = "bat";
+        "diff" = "delta";
+      };
+    };
+
+    zoxide.enableNushellIntegration = true;
+    yazi.enableNushellIntegration = true;
+  };
+
   programs.fish = {
-    enable = true;
+    enable = false;
     interactiveShellInit = ''
-      alias ls="lsd -lah"
-      alias ll="lsd -lah"
-      alias lt="lsd -lah --tree"
-      alias cd="z"
-      alias ci="zi"
-      alias cat="bat"
-      alias diff="delta"
     '';
     functions = {
       rebuild = ''
