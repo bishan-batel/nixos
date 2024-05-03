@@ -16,10 +16,8 @@
     systemd.enable = true;
 
     settings = {
-      monitor = [
-        "DP-1, highrr, auto, auto"
-        "HDMI-A-1, preferred,auto,auto"
-      ];
+      source = ["./hypr.conf"];
     };
   };
+  home.file."~/.config/hyprland/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
 }
