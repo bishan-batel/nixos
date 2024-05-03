@@ -1,7 +1,10 @@
 
 $env.config = {
-  show_banner = false
-};
+  ...
+  show_banner: false,
+  ...
+}
+
 
 export def rebuild []  {
   let config_dir = $env.HOME + "/nixos";
