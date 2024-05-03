@@ -5,7 +5,8 @@ let logfile = "nixos-switch.log"
 
 def rebuild [] {
   cd $config_dir
-  alejandra . | ignore 
+  alejandra -q .
+
   git diff -U0 "*.nix"
   git add "."
 
@@ -17,26 +18,11 @@ def rebuild [] {
     open --raw "nixos-switch.log" | find error
     "Failed to Build"
   } else {
-    git commit -m "$(nixos-rebuild list-generations | grep current)"
+    let msg = nixos-rebuild list-generations | find "current";
+    git commit -m $msg
 
     "Successfully Built NixOS"
   }
 }
-
-#       pushd /home/bishan_/nixos
-#       alejandra . &> /dev/null
-#       git add .
-#       git diff -U0 "*.nix"
-#       echo NixOS Rebuilding...
-#       sudo nixos-rebuild switch --flake /home/bishan_/nixos#default &>nixos-switch.log
-
-#       if [ $status != 0 ];
-#         bat nixos-switch.log | grep --color error && false
-#         echo Failed to build.
-#       else
-#         git commit -m "$(nixos-rebuild list-generations | grep current)"
-#       end
-#       popd
-
 
 # vim: ft=nu
