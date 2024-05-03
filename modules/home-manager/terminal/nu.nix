@@ -5,7 +5,7 @@
     nushell = {
       enable = true;
 
-      envFile = '' '';
+
 
       shellAliases = {
         #"ls" = "lsd -lah";
@@ -18,6 +18,7 @@
       };
 
       configFile.source = ./config.nu;
+      envFile = ./env.nu;
     };
 
     carapace.enableNushellIntegration = true;
