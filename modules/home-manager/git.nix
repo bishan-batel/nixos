@@ -1,8 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    git-credential-oauth
-    gh
-  ];
+  home.packages = with pkgs; [gh];
 
   programs = {
     gh-dash = {
