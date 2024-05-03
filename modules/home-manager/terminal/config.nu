@@ -5,23 +5,24 @@ let logfile = "nixos-switch.log"
 
 def rebuild [] {
   cd $config_dir
-  alejandra -q .
+  alejandra -q . | ignore
 
   git diff -U0 "*.nix"
-  git add "."
+  git add "." 
 
   echo "NixOS Rebuilding..."
 
-  sudo nixos-rebuild switch --flake $'($config_dir)#default' out> "nixos-switch.log" | ignore
+  let log = sudo nixos-rebuild switch --flake $'($config_dir)#default' 
+  open --raw $logfile e> $logfile
 
   if $env.LAST_EXIT_CODE != 0 {
-    open --raw "nixos-switch.log" | find error
+    open --raw $logfile | find error
     "Failed to Build"
   } else {
-    let msg = nixos-rebuild list-generations | find "current";
-    git commit -m $msg
+    let msg = nixos-rebuild list-generations | find "current" ;
+    git commit -m '($msg)'
 
-    "Successfully Built NixOS"
+    "Successfully Built NixOS: '($msg |into string)'"
   }
 }
 
