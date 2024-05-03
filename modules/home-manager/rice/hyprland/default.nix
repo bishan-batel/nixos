@@ -16,8 +16,8 @@
     systemd.enable = true;
 
     settings = {
-      source = ["./hypr.conf"];
+      source = ["~/.config/hyprland/hypr.conf"];
     };
   };
-  home.file."~/.config/hyprland/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
+  home.file.".config/hyprland/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
 }
