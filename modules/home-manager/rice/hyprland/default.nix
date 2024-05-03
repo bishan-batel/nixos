@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     flameshot
   ];
@@ -12,7 +16,13 @@
     systemd.enable = true;
 
     settings = {
-      source = ["~/nixos/modules/home-manager/rice/hyprland/hyprland.conf"];
+      source = ["./hypr.conf"];
+    };
+  };
+
+  home.file = {
+    ".config/hyprland/hypr.conf" = {
+      source = config.lib.file.mkOutOfStoreSymlink ./hypr.conf;
     };
   };
 }
