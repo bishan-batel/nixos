@@ -12,8 +12,8 @@
     };
 
     gh = {
-      gitCredentialHelper.enable = true;
-      extensions = [pkgs.gh-dash];
+      # gitCredentialHelper.enable = true;
+      # extensions = [pkgs.gh-dash];
     };
 
     git = {
@@ -23,9 +23,7 @@
 
       extraConfig = {
         url = {
-          "https://github.com/" = {
-            insteadOf = "gh:";
-          };
+          "https://github.com/" = {insteadOf = "gh:";};
         };
 
         init.defaultBranch = "main";
