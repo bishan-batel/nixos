@@ -5,23 +5,24 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:mauve)($cmd_duration)$directory[](base_light bg:mauve)[](bold mauve bg:base_light) ";
+        format = "$all[$character](bg:mantle text)($cmd_duration)$directory[](text bg:mantle)[](bold mantle bg:base_light) ";
         right_format = "([](sapphire)[$git_branch( $git_status)](bg:sapphire)[](sapphire))";
 
         character = {
-          success_symbol = "[](bold peach)[λ](bg:peach bold base)[](bold peach bg:mauve)";
-          error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mauve)";
+          success_symbol = "[](bold peach)[λ](bg:peach bold base)[](bold peach bg:mantle)";
+          error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mantle)";
         };
 
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
           # truncation_symbol = ".../";
-          style = "bold bg:mauve base";
-          read_only_style = "bold bg:mauve red";
+          style = "bg:mantle text";
+          read_only_style = "bold bg:mantle red";
         };
 
         cmd_duration = {
-          format = "[ 󰚭 $duration](bg:mauve black)[](mauve bg:mauve)";
+          # format = "[󰚭$duration](bg:mantle black)[](mantle bg:mantle)";
+          format = "";
         };
 
         git_branch = {
