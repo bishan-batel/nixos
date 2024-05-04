@@ -1,7 +1,6 @@
 {
   pkgs,
   config,
-  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -17,6 +16,7 @@
 
     settings = {
       source = ["./hypr.conf"];
+      exec-once = ["startup.nu"];
     };
 
     plugins = [];
