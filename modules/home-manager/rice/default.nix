@@ -11,5 +11,6 @@
     ./notifications.nix
     # ./eww
     ./hyprland
+    ./ags
   ];
 }
