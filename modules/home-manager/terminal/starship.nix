@@ -6,22 +6,22 @@
 
       settings = {
         format = "$all[$character](bg:base_light)($cmd_duration )$directory[](base_light) ";
-        right_format = "([\\ue0b6](lavender)[$git_branch( $git_status)](bg:lavender)[\\ue0b4](lavender))";
+        right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
-          success_symbol = "[\\u{e0b6}](bold blue)[●](bg:blue black)[\\ue0b4](bold blue bg:base_light)";
-          error_symbol = "[\\ue0b6](bold red)[✖](bg:red black)[\\ue0b4](bold red bg:base_light)";
+          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:base_light)";
+          error_symbol = "[](bold red)[✖](bg:red black)[](bold red bg:base_light)";
         };
 
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
-          truncation_symbol = "…/";
+          truncation_symbol = ".../";
           style = "bg:base_light white";
           read_only_style = "bg:base_light peach";
         };
 
         cmd_duration = {
-          format = "[ 󰚭 $duration](bg:green black)[\\ue0b4](green bg:base_light)";
+          format = "[ 󰚭 $duration](bg:green black)[](green bg:base_light)";
         };
 
         git_branch = {
