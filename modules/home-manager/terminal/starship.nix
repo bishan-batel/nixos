@@ -9,7 +9,7 @@
         right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
-          success_symbol = "[](bold blue)[λ](bg:blue base)[](bold blue bg:mauve)";
+          success_symbol = "[](bold peach)[λ](bg:peach base)[](bold peach bg:mauve)";
           error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mauve)";
         };
 
@@ -66,8 +66,7 @@
         custom.reponame = {
           require_repo = true;
           symbol = " ";
-          command = ''
-            git ls-remote --get-url | sed 's#.*:\\(.*\\).git#\\1#' '';
+          command = ''git ls-remote --get-url | str replace "https://github.com/" "gh:" '';
           description = "display the directory root of the current repo";
           when = true;
         };
