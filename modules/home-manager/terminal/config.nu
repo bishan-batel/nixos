@@ -1,8 +1,6 @@
 
 
 export def rebuild []  {
-  use std log 
-
   let config_dir = $env.HOME + "/nixos";
   let logfile = $"($config_dir)/nixos-switch.log";
 
@@ -10,13 +8,13 @@ export def rebuild []  {
   cd $config_dir;
 
 
-  log info "Formatting..."
-  alejandra -q .;
+  print "Formatting..."
+  alejandra .;
 
   git diff -U0 "*.nix" ;
   git add .;
 
-  log info "NixOS Rebuilding...";
+  print "NixOS Rebuilding...";
 
   let output = sudo nixos-rebuild switch --flake $'($config_dir)#default' | complete 
 
@@ -25,7 +23,7 @@ export def rebuild []  {
 
   if $output.exit_code != 0 {
     open --raw $logfile | grep --color error
-    log error "Failed to Build"
+    print "Failed to Build"
   } else {
     let generations = nixos-rebuild list-generations --json | from json
 
@@ -36,7 +34,7 @@ export def rebuild []  {
     let msg = $'Generation ($current_gen): ($date)'
     git commit -m $msg | ignore
 
-    log info $"Successfully Built NixOS: '($msg)'"
+    print $"Successfully Built NixOS: '($msg)'"
   }
 }
 

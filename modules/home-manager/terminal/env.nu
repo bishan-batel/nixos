@@ -1,8 +1,7 @@
 
 
 $env.config = {
-  ...
-  show_banner: false,
-  ...
-}
+  show_banner: false
+};
 
+#vim: ft=nu
