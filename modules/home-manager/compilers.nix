@@ -4,5 +4,8 @@
     gnumake
     cmake
     zig
+
+    yarn
+    nodejs
   ];
 }
