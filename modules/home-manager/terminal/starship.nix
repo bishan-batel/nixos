@@ -16,8 +16,8 @@
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
           truncation_symbol = ".../";
-          style = "bg:base_light white";
-          read_only_style = "bg:base_light peach";
+          style = "bg:mauve black";
+          read_only_style = "bg:mauve red";
         };
 
         cmd_duration = {
