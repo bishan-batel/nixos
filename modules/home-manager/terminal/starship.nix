@@ -9,7 +9,7 @@
         right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
-          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:base_light)";
+          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:green)";
           error_symbol = "[](bold red)[✖](bg:red black)[](bold red bg:base_light)";
         };
 
