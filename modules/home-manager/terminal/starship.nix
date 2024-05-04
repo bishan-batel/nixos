@@ -5,23 +5,23 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:mantle text)($cmd_duration)$directory[](text bg:mantle)[](bold mantle bg:base_light) ";
+        format = "$all[$character](bg:surface0 text)($cmd_duration)$directory[](text bg:surface0)[](bold surface0 bg:base_light) ";
         right_format = "([](sapphire)[$git_branch( $git_status)](bg:sapphire)[](sapphire))";
 
         character = {
-          success_symbol = "[](bold peach)[λ](bg:peach bold base)[](bold peach bg:mantle)";
-          error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mantle)";
+          success_symbol = "[](bold peach)[λ](bg:peach bold base)[](bold peach bg:surface0)";
+          error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:surface0)";
         };
 
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
           # truncation_symbol = ".../";
-          style = "bg:mantle text";
-          read_only_style = "bold bg:mantle red";
+          style = "bg:surface0 text";
+          read_only_style = "bold bg:surface0 red";
         };
 
         cmd_duration = {
-          # format = "[󰚭$duration](bg:mantle black)[](mantle bg:mantle)";
+          # format = "[󰚭$duration](bg:surface0 black)[](surface0 bg:surface0)";
           format = "";
         };
 
