@@ -6,18 +6,18 @@
 
       settings = {
         format = "$all[$character](bg:mauve)($cmd_duration)$directory[](base_light bg:mauve)[](bold mauve bg:base_light) ";
-        right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
+        right_format = "([](sapphire)[$git_branch( $git_status)](bg:sapphire)[](sapphire))";
 
         character = {
-          success_symbol = "[](bold peach)[λ](bg:peach base)[](bold peach bg:mauve)";
+          success_symbol = "[](bold peach)[λ](bg:peach bold base)[](bold peach bg:mauve)";
           error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mauve)";
         };
 
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
           # truncation_symbol = ".../";
-          style = "bg:mauve base";
-          read_only_style = "bg:mauve red";
+          style = "bold bg:mauve base";
+          read_only_style = "bold bg:mauve red";
         };
 
         cmd_duration = {
@@ -25,13 +25,13 @@
         };
 
         git_branch = {
-          style = "bold black bg:lavender";
+          style = "bold black bg:sapphire";
           symbol = "";
           format = "[$symbol$branch(:$remote_branch)]($style)";
         };
 
         git_status = {
-          style = "black bg:lavender";
+          style = "black bg:sapphire bold";
           ahead = "⇡\${count}";
           diverged = "⇕⇡\${ahead_count}⇣\${behind_count}";
           behind = "⇣\${count}";
