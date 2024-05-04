@@ -5,12 +5,12 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:base_light)($cmd_duration )$directory[](base_light) ";
+        format = "$all[$character](bg:mauve)($cmd_duration )$directory[](base_light)[](bold mauve bg:base_light)";
         right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
-          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:green)";
-          error_symbol = "[](bold red)[✖](bg:red black)[](bold red bg:base_light)";
+          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:mauve)";
+          error_symbol = "[](bold red)[✖](bg:red black)[](bold red bg:mauve)";
         };
 
         directory = {
