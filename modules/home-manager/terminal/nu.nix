@@ -5,8 +5,6 @@
     nushell = {
       enable = true;
 
-
-
       shellAliases = {
         #"ls" = "lsd -lah";
         "ll" = "ls -l";
