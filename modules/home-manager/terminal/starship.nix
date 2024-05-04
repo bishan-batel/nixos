@@ -5,7 +5,7 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:mauve)($cmd_duration )$directory[](base_light)[](bold mauve bg:base_light)";
+        format = "$all[$character](bg:mauve)($cmd_duration )$directory[](base_light bg:mauve)[](bold mauve bg:base_light)";
         right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
@@ -21,7 +21,7 @@
         };
 
         cmd_duration = {
-          format = "[ 󰚭 $duration](bg:green black)[](green bg:base_light)";
+          format = "[ 󰚭 $duration](bg:mauve black)[](mauve bg:mauve)";
         };
 
         git_branch = {
