@@ -4,7 +4,7 @@ export def rebuild []  {
   let config_dir = $env.HOME + "/nixos";
   let logfile = $"($config_dir)/nixos-switch.log";
 
-  log info $"Entering ($config_dir)";
+  print $"Entering ($config_dir)";
   cd $config_dir;
 
 
