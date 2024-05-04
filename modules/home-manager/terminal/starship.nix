@@ -67,7 +67,7 @@
         custom.reponame = {
           require_repo = true;
           symbol = " ";
-          command = ''git ls-remote --get-url | str replace "https://github.com/" "gh:" '';
+          command = ''git ls-remote --get-url | str replace "https://github.com/" "gh:" | str replace ".git" "" '';
           description = "display the directory root of the current repo";
           when = true;
         };
