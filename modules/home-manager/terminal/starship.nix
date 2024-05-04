@@ -5,18 +5,18 @@
       catppuccin.enable = true;
 
       settings = {
-        format = "$all[$character](bg:mauve)($cmd_duration )$directory[](base_light bg:mauve)[](bold mauve bg:base_light)";
+        format = "$all[$character](bg:mauve)($cmd_duration)$directory[](base_light bg:mauve)[](bold mauve bg:base_light) ";
         right_format = "([](lavender)[$git_branch( $git_status)](bg:lavender)[](lavender))";
 
         character = {
-          success_symbol = "[](bold blue)[●](bg:blue black)[](bold blue bg:mauve)";
-          error_symbol = "[](bold red)[✖](bg:red black)[](bold red bg:mauve)";
+          success_symbol = "[](bold blue)[λ](bg:blue base)[](bold blue bg:mauve)";
+          error_symbol = "[](bold red)[✖](bg:red base)[](bold red bg:mauve)";
         };
 
         directory = {
           format = "[$path]($style)[$read_only]($read_only_style)";
-          truncation_symbol = ".../";
-          style = "bg:mauve black";
+          # truncation_symbol = ".../";
+          style = "bg:mauve base";
           read_only_style = "bg:mauve red";
         };
 
@@ -36,13 +36,13 @@
           diverged = "⇕⇡\${ahead_count}⇣\${behind_count}";
           behind = "⇣\${count}";
           stashed = "󱝏";
-          format = "([\[$all_status$ahead_behind\]]($style))";
+          format = "([\\[$all_status$ahead_behind\\]]($style))";
         };
 
         python = {
           symbol = " ";
           version_format = "\${major}.\${minor}";
-          format = "[\${symbol}\${pyenv_prefix}(\${version} )(\($virtualenv\) )]($style)";
+          format = "[\${symbol}\${pyenv_prefix}(\${version} )(\\($virtualenv\\) )]($style)";
         };
 
         conda = {
