@@ -37,10 +37,7 @@ export def rebuild []  {
   }
 }
 
-export def upgrade [] {
-  let config_dir = $env.HOME + "/nixos";
-  cd $config_dir
-
+export def upgradenix [] {
   print "Updating Flakes:"
   nix flake update 
 
