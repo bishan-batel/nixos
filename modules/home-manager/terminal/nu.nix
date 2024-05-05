@@ -7,12 +7,14 @@
 
       shellAliases = {
         #"ls" = "lsd -lah";
-        "ll" = "ls -l";
+        "la" = "ls -a";
+        "ll" = "ls -la";
         #"lt" = "lsd -lah --tree";
         "cd" = "z";
         "ci" = "zi";
         "cat" = "bat";
         "diff" = "delta";
+        "bt" = "bluetoothctl";
       };
 
       configFile.source = ./config.nu;
