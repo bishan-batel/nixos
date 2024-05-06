@@ -59,6 +59,11 @@
     packages = with pkgs; [gcc clang];
   };
 
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
+
   # === Ricefields ===
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
@@ -102,11 +107,6 @@
 
     tmux.enable = true;
     #fish.enable = false;
-  };
-
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   users.users.bishan_.shell = pkgs.nushell;

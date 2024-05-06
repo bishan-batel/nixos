@@ -1,6 +1,6 @@
+let config_dir = $env.HOME + "/nixos";
 
 export def rebuild []  {
-  let config_dir = $env.HOME + "/nixos";
   let logfile = $"($config_dir)/nixos-switch.log";
 
   print $"Entering ($config_dir)";
@@ -38,13 +38,12 @@ export def rebuild []  {
 }
 
 export def upgrade [] {
-  let config_dir = $env.HOME + "/nixos";
   cd $config_dir
 
   print "Updating Flakes:"
   nix flake update 
 
-  if $env.LAST_EXIT_STATUS != 0 {
+  if $env.LAST_EXIT_CODE != 0 {
     print -e "Failed to Update"
   } else {
     rebuild
