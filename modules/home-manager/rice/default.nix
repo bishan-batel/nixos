@@ -12,5 +12,6 @@
     # ./eww
     ./hyprland
     ./ags
+    # ./shortcuts.nix
   ];
 }
