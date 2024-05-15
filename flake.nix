@@ -22,6 +22,10 @@
       url = "github:wamserma/flake-programs-sqlite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lobster = {
+      url = "github:justchokingaround/lobster";
+    };
   };
 
   outputs = {

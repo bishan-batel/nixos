@@ -88,6 +88,7 @@
     zip
     unzip
     nushell
+    inputs.lobster
   ];
 
   # SDDM
