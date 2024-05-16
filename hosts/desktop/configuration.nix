@@ -165,6 +165,7 @@
     SDL_mixer
     SDL_ttf
     alsa-lib
+    pkg-config
     at-spi2-atk
     at-spi2-core
     atk
