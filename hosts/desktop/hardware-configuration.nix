@@ -54,7 +54,10 @@
       powerOnBoot = true;
     };
 
-    opentabletdriver.enable = true;
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
 
   services.xserver.videoDrivers = ["amdgpu"];

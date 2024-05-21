@@ -56,7 +56,7 @@
     isNormalUser = true;
     description = "Kishan S Patel";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [gcc clang wacomtablet];
+    packages = with pkgs; [gcc clang];
   };
 
   nix.settings = {
