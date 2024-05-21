@@ -56,7 +56,7 @@
     isNormalUser = true;
     description = "Kishan S Patel";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [gcc clang];
+    packages = with pkgs; [gcc clang wacomtablet];
   };
 
   nix.settings = {
@@ -165,7 +165,6 @@
     SDL_mixer
     SDL_ttf
     alsa-lib
-    pkg-config
     at-spi2-atk
     at-spi2-core
     atk
