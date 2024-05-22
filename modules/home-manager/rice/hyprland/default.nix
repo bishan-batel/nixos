@@ -3,9 +3,8 @@
   config,
   ...
 }: {
-  home.packages = with pkgs; [
-    flameshot
-  ];
+  #home.packages = with pkgs; [
+  #];
 
   wayland.windowManager.hyprland = {
     enable = true;
