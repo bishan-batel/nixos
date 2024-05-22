@@ -8,5 +8,7 @@
 
     yarn
     nodejs
+
+    dotnet-sdk
   ];
 }
