@@ -3,6 +3,7 @@
     pavucontrol
     gimp
     obsidian
+    sway-contrib.grimshot
   ];
 
   programs = {
