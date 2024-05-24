@@ -6,16 +6,15 @@
       enable = true;
 
       shellAliases = {
-        #"ls" = "lsd -lah";
         "la" = "ls -a";
         "ll" = "ls -la";
         "ns" = "nix-shell --cmd nu";
-        #"lt" = "lsd -lah --tree";
         "cd" = "z";
         "ci" = "zi";
         "cat" = "bat";
         "diff" = "delta";
         "bt" = "bluetoothctl";
+        "weeb" = "ani-cli";
       };
 
       configFile.source = ./config.nu;
