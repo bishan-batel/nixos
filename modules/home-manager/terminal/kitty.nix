@@ -2,8 +2,7 @@
   programs.kitty = {
     enable = true;
     theme = "Catppuccin-Mocha";
-    # font.name = "JetBrainsMono Nerd Font Mono";
-    font.name = "agave";
+    font.name = "JetBrainsMono Nerd Font Mono";
     settings = {
       background_opacity = "0.9";
       confirm_os_window_close = -0;
