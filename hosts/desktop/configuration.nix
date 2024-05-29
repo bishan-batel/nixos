@@ -291,6 +291,10 @@
   };
   programs.gamemode.enable = true;
 
+  fonts.packages = with pkgs; [
+    agave
+  ];
+
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
   };
