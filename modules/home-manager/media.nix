@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     ani-cli
+    blockbench
   ];
 
   programs.mpv = {
