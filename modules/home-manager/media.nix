@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     ani-cli
     blockbench
+    feh
   ];
 
   programs.mpv = {
