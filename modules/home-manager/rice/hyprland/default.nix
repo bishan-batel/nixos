@@ -11,7 +11,9 @@
     package = pkgs.hyprland;
 
     xwayland.enable = true;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+    };
 
     settings = {
       source = ["./hypr.conf"];
