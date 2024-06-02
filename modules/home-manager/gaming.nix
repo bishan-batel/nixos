@@ -5,7 +5,6 @@
     mangohud
     protonup
     scarab
-    minecraft
   ];
 
   # programs.steam.enable = true;

@@ -12,7 +12,7 @@
   ];
 
   catppuccin.enable = true;
-  catppuccin.flavour = "mocha";
+  catppuccin.flavor = "mocha";
 
   console.catppuccin.enable = true;
   boot.loader.grub.catppuccin.enable = true;
@@ -102,7 +102,7 @@
   programs = {
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
 
     tmux.enable = true;
