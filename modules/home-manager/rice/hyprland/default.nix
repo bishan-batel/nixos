@@ -6,6 +6,11 @@
   #home.packages = with pkgs; [
   #];
 
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
