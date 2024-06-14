@@ -17,6 +17,11 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
+  boot.kernel.sysctl = {
+    "kernel.perf_event_paranoid" = -1;
+    "kernel.kptr_restrict" = lib.mkForce 0;
+  };
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/22792390-a0c7-4bf3-8cf6-417c389804a8";
     fsType = "ext4";
