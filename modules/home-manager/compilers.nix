@@ -10,5 +10,7 @@
     nodejs
 
     dotnet-sdk
+
+    valgrind
   ];
 }
