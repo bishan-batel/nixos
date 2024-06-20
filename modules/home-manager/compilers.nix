@@ -5,6 +5,8 @@
     cmake
     zig
     lld
+    libllvm
+    libgcc
 
     yarn
     nodejs
