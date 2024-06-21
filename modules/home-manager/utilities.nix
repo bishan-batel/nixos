@@ -4,6 +4,7 @@
     gimp
     obsidian
     sway-contrib.grimshot
+    obs-studio
   ];
 
   programs = {
