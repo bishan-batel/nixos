@@ -93,6 +93,7 @@
   # SDDM
   services.displayManager = {
     sddm = {
+      package = pkgs.kdePackages.sddm;
       enable = true;
       wayland.enable = true;
     };
@@ -280,7 +281,7 @@
       "--no-write-lock-file"
       "-L"
     ];
-    dates = "02:00";
+    dates = "06:00";
     randomizedDelaySec = "45min";
   };
 
