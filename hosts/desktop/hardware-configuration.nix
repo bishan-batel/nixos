@@ -13,9 +13,13 @@
   ];
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
+  boot.initrd.kernelModules = [
+    "v4l2loopback"
+  ];
   boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
 
   boot.kernel.sysctl = {
     "kernel.perf_event_paranoid" = -1;
