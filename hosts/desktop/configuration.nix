@@ -88,6 +88,7 @@
     zip
     unzip
     nushell
+    v4l-utils
   ];
 
   # SDDM
