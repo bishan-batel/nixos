@@ -65,4 +65,7 @@
   };
 
   services.xserver.videoDrivers = ["amdgpu"];
+
+  environment.systemPackages = with pkgs; [lact];
+  # services.lact.enable = true;
 }
