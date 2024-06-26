@@ -66,6 +66,7 @@
 
   services.xserver.videoDrivers = ["amdgpu"];
 
+  systemd.services.lactd.enable = true;
   environment.systemPackages = with pkgs; [lact];
   # services.lact.enable = true;
 }
