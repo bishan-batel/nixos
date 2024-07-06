@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   programs.neovim = {
@@ -10,10 +11,9 @@
     viAlias = true;
   };
 
-  home.packages = with pkgs; [
-    jetbrains-toolbox
-    #jetbrains.clion
-    #jetbrains.rider
-    #jetbrains.rust-rover
-  ];
+  home = {
+    packages = with pkgs; [
+      jetbrains-toolbox
+    ];
+  };
 }
