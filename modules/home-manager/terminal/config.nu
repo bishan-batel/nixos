@@ -49,4 +49,6 @@ export def upgrade [] {
   }
 }
 
-# vim: ft=nu
+alias nunix = "nix-shell --run nu"
+
+# vim:ft=nu
