@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   programs = {
+    ripgrep.enable = true;
+
     yazi = {
       enable = true;
 
