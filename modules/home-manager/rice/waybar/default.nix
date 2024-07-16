@@ -12,7 +12,10 @@
       mainBar = {
         layer = "top";
         position = "left";
-        modules-left = ["wlr/workspaces"];
+        modules-left = [
+          # "wlr/workspaces"
+          "hyprland/window"
+        ];
         modules-center = [];
         modules-right = [
           "pulseaudio"
@@ -23,6 +26,13 @@
           "tray"
           #"custom/power"
         ];
+
+        # "wlr/workspaces" = {
+        #   disable-scroll = true;
+        #   sort-by-name = true;
+        #   format = "{icon}";
+        #   format-icons = { default = ""; };
+        # };
 
         "wlr/workspaces" = {
           disable-scroll = true;
