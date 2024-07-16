@@ -15,6 +15,7 @@
     packages = with pkgs; [
       jetbrains-toolbox
       neovide
+      wl-clipboard
     ];
   };
 }
