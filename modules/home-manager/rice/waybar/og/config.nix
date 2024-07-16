@@ -2,7 +2,7 @@ _: {
   mainBar = {
     layer = "top"; # Original
     # position = "bottom"; # Original
-    height = 20;
+    height = 15;
     # width = "1280";
     spacing = 8;
     margin-top = 6;
@@ -19,8 +19,8 @@ _: {
     ];
     modules-right = [
       # "custom/colorpicker"
-      "custom/notification"
-      "custom/cava"
+      # "custom/notification"
+      # "custom/cava"
       "memory"
       # "disk"
       "pulseaudio"
@@ -30,7 +30,7 @@ _: {
       "custom/power-menu"
     ];
 
-    "wlr/workspaces" = {
+    "hyprland/workspaces" = {
       active-only = false;
       on-click = "activate";
       on-scroll-up = "hyprctl dispatch workspace m+1";
@@ -47,12 +47,12 @@ _: {
         "8" = "八";
         "9" = "九";
         "10" = "十";
-        # "urgent" = "";
-        # "active" = "";
-        # "default" = "";
+        #"urgent" = "";
+        #"active" = "";
+        #"default" = "";
       };
 
-      persistent-workspaces = {
+      persistent_workspaces = {
         "1" = [];
         "2" = [];
         "3" = [];
