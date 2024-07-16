@@ -2,7 +2,7 @@ _: {
   mainBar = {
     layer = "top"; # Original
     # position = "bottom"; # Original
-    height = 32;
+    height = 20;
     # width = "1280";
     spacing = 8;
     margin-top = 6;
@@ -26,7 +26,7 @@ _: {
       "pulseaudio"
       "network"
       "clock"
-      "tray"
+      # "tray"
       "custom/power-menu"
     ];
 
