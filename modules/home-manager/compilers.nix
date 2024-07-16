@@ -14,5 +14,7 @@
     dotnet-sdk
 
     valgrind
+
+    go
   ];
 }

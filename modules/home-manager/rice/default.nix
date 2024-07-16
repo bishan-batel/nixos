@@ -9,9 +9,9 @@
     ./rofi.nix
     ./wallpaper.nix
     ./notifications.nix
-    # ./eww
+    ./eww
     ./hyprland
-    ./ags
+    # ./ags
     # ./shortcuts.nix
   ];
 }
