@@ -3,14 +3,6 @@
   config,
   ...
 }: {
-  #home.packages = with pkgs; [
-  #];
-
-  programs.waybar = {
-    enable = false;
-    systemd.enable = true;
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;

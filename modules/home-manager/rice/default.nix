@@ -9,7 +9,8 @@
     ./rofi.nix
     ./wallpaper.nix
     ./notifications.nix
-    ./eww
+    # ./eww
+    ./waybar
     ./hyprland
     # ./ags
     # ./shortcuts.nix
