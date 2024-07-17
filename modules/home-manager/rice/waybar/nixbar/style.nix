@@ -55,7 +55,7 @@ in
     }
 
     #workspaces button label {
-        font-size: 16;
+        font-size: 18;
     }
 
     #workspaces button.active {
