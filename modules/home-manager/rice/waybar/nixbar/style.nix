@@ -14,21 +14,20 @@ in
   ''
     * {
         border: none;
-        font-family: ${font};
         border-radius: 0px;
+        font-family: ${font};
         font-size: 14px;
         min-height: 0;
     }
 
     window#waybar {
         /* background: rgba(16, 18, 19, 0.8); */
-        /* background-color: rgba(0, 0, 0, 0.096); */
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.096);
     }
 
     #cava.left, #cava.right {
         background: #${background};
-        margin: 0px 5px;
+        margin: 5px;
         padding: 8px 16px;
         color: #${primary_accent};
     }
@@ -38,7 +37,6 @@ in
     #cava.right {
         border-radius: 10px 24px 10px 24px;
     }
-
     #workspaces {
         background: #${background};
         margin: 5px 5px;
@@ -50,19 +48,18 @@ in
         padding: 0px 5px;
         margin: 0px 3px;
         border-radius: 16px;
-        color: #2f354a;
-        min-width: 15px;
+        color: transparent;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
+        font-size: 25;
     }
 
     #workspaces button.active {
         background-color: #${secondary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 45px;
+        min-width: 30px;
         background-size: 400% 400%;
-        font-size: 20;
         transition: all 0.3s ease-in-out;
     }
 
@@ -72,7 +69,6 @@ in
         border-radius: 16px;
         min-width: 30px;
         background-size: 400% 400%;
-        transition: all 0.3s ease-in-out;
     }
 
     #custom-notification, #tray, #pulseaudio, #network, #battery, #memory,
@@ -102,7 +98,7 @@ in
         border-radius: 0px 0px 40px 0px;
         margin: 0px;
         padding: 0px 35px 0px 15px;
-        font-size: 24px;
+        font-size: 28px;
     }
 
     #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward {
@@ -142,7 +138,7 @@ in
         padding-right: 15px;
         border-radius: 16px;
         margin-top: 5px;
-        /* margin-bottom: 5px; */
+        margin-bottom: 5px;
         font-weight: normal;
         font-style: normal;
     }
