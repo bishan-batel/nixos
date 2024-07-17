@@ -28,7 +28,7 @@ in
 
     #cava.left, #cava.right {
         background: #${background};
-        margin: 5px;
+        margin: 0px 5px;
         padding: 8px 16px;
         color: #${primary_accent};
     }
@@ -53,14 +53,14 @@ in
         min-width: 15px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
-        font-size: 30;
+        font-size: 25;
     }
 
     #workspaces button.active {
         background-color: #${secondary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 45px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
@@ -69,7 +69,7 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 45px;
+        min-width: 30px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
