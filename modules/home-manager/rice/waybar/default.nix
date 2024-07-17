@@ -21,6 +21,8 @@
   #waybar_config = import ./simple/config.nix {inherit osConfig config lib pkgs;};
   #waybar_style = import ./simple/style.nix {inherit (config) colorscheme;};
 in {
+  home.packages = with pkgs; [playerctl];
+
   programs.waybar = {
     enable = true;
     package = pkgs.waybar;
