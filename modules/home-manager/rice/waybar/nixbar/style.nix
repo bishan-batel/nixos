@@ -49,6 +49,7 @@ in
         margin: 0px 3px;
         border-radius: 16px;
         color: #2f354a;
+        min-width: 20px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
     }
@@ -57,7 +58,7 @@ in
         background-color: #${secondary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 40px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
@@ -66,7 +67,7 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 40px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
