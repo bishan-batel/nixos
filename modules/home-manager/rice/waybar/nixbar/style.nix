@@ -48,7 +48,7 @@ in
         padding: 0px 5px;
         margin: 0px 3px;
         border-radius: 16px;
-        color: transparent;
+         /* color: transparent; */
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
     }
