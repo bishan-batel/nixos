@@ -49,7 +49,7 @@ in {
       disable-scroll = false;
       on-scroll-up = "hyprctl dispatch workspace e-1";
       on-scroll-down = "hyprctl dispatch workspace e+1";
-      format = "󰄽 {icon} 󰄾";
+      format = "{icon}";
       on-click = "activate";
       persistent-workspaces = {
         "1" = ["DP-1"];
