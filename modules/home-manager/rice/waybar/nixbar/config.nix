@@ -50,6 +50,19 @@ in {
       on-scroll-down = "hyprctl dispatch workspace e+1";
       format = "{name}";
       on-click = "activate";
+      persistent_workspaces = {
+        "1" = [];
+        "2" = [];
+        "3" = [];
+        "4" = [];
+        "5" = [];
+        "6" = [];
+        "7" = [];
+        "8" = [];
+        "9" = [];
+        "10" = [];
+        "11" = [];
+      };
       format-icons = {
         urgent = "";
         active = "";
