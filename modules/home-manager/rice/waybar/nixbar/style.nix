@@ -91,7 +91,7 @@ in
         color: #${tertiary_accent};
         background-color: #${background};
         border-radius: 0px 0px 0px 40px;
-        padding: 10px 10px 15px 25px;
+        padding: 10px 10px 10px 25px;
         margin-left: 7px;
         font-weight: bold;
         /* font-size: 14px; */
