@@ -6,7 +6,7 @@ _: let
   tertiary_accent = "f5f5f5";
   background = "11111B";
   opacity = ".85";
-  cursor = "Numix-Cursor";
+  cursor = "Catppuccin-Mocha-Dark-Cursors";
 in
   /*
   css
@@ -57,7 +57,7 @@ in
         background-color: #${secondary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 50px;
+        min-width: 30px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
@@ -66,7 +66,7 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 50px;
+        min-width: 30px;
         background-size: 400% 400%;
     }
 

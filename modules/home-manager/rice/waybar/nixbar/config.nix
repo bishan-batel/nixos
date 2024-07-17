@@ -6,7 +6,7 @@ _: let
   tertiary_accent = "f5f5f5";
   background = "11111B";
   opacity = ".85";
-  cursor = "Numix-Cursor";
+  cursor = "Catppuccin-Mocha-Dark-Cursors";
 in {
   mainBar = {
     position = "top";
