@@ -15,7 +15,7 @@ in
     * {
         border: none;
         font-family: ${font};
-            border-radius: 0px;
+        border-radius: 0px;
         font-size: 14px;
         min-height: 0;
     }
@@ -38,6 +38,7 @@ in
     #cava.right {
         border-radius: 10px 24px 10px 24px;
     }
+
     #workspaces {
         background: #${background};
         margin: 5px 5px;
@@ -53,7 +54,6 @@ in
         min-width: 15px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
-        font-size: 40;
     }
 
     #workspaces button.active {
@@ -62,6 +62,7 @@ in
         border-radius: 16px;
         min-width: 45px;
         background-size: 400% 400%;
+        font-size: 20;
         transition: all 0.3s ease-in-out;
     }
 
@@ -141,7 +142,7 @@ in
         padding-right: 15px;
         border-radius: 16px;
         margin-top: 5px;
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
         font-weight: normal;
         font-style: normal;
     }
