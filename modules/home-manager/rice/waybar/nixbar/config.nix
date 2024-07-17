@@ -44,7 +44,7 @@ in {
     };
     "hyprland/workspaces" = {
       active-only = false;
-      all-outputs = false;
+      all-outputs = true;
       disable-scroll = false;
       on-scroll-up = "hyprctl dispatch workspace e-1";
       on-scroll-down = "hyprctl dispatch workspace e+1";
@@ -193,6 +193,7 @@ in {
     };
     "custom/launcher" = {
       format = "";
+      on-click = "rofi -show drun";
       # on-click= "bash $HOME/.config/rofi/launcher.sh";
       # on-click-right= "bash $HOME/.config/rofi/run.sh";
       tooltip = "false";
