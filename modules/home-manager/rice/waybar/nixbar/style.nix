@@ -22,7 +22,8 @@ in
 
     window#waybar {
         /* background: rgba(16, 18, 19, 0.8); */
-        background-color: rgba(0, 0, 0, 0.096);
+        /* background-color: rgba(0, 0, 0, 0.096); */
+        background-color: transparent;
     }
 
     #cava.left, #cava.right {
