@@ -61,9 +61,10 @@ in
 
     #workspaces button.active {
         background-color: #${secondary_accent};
+        background-color: #f38ba8;
         color: #${background};
         border-radius: 16px;
-        min-width: 50px;
+        min-width: 30px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }
@@ -72,7 +73,7 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 50px;
+        min-width: 30px;
         background-size: 400% 400%;
     }
 
