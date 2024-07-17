@@ -56,12 +56,12 @@ in
     }
 
     #workspaces button label {
-        font-size: 18;
+        font-size: 20;
     }
 
     #workspaces button.active {
         background-color: #${secondary_accent};
-        background-color: #f38ba8;
+        /* background-color: #f38ba8; */
         color: #${background};
         border-radius: 16px;
         min-width: 30px;
