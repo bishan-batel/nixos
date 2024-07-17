@@ -35,7 +35,7 @@ _: {
       on-click = "activate";
       on-scroll-up = "hyprctl dispatch workspace m+1";
       on-scroll-down = "hyprctl dispatch workspace m-1";
-      format = "{name}";
+      format = "{icon}";
       format-icons = {
         "1" = "一";
         "2" = "二";
