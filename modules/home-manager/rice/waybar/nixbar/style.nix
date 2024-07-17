@@ -68,6 +68,7 @@ in
         border-radius: 16px;
         min-width: 30px;
         background-size: 400% 400%;
+        transition: all 0.3s ease-in-out;
     }
 
     #custom-notification, #tray, #pulseaudio, #network, #battery, #memory,
