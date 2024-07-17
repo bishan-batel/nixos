@@ -29,9 +29,10 @@ in {
       "cava#right"
     ];
     modules-right = [
-      "custom/notification"
-      "tray"
-      "battery"
+      # "custom/notification"
+      # "tray"
+      # "battery"
+      "memory"
       "pulseaudio"
       "network"
       "clock"
