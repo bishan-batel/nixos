@@ -49,8 +49,7 @@ in {
       disable-scroll = false;
       on-scroll-up = "hyprctl dispatch workspace e-1";
       on-scroll-down = "hyprctl dispatch workspace e+1";
-      # format = "󰄽 {icon} 󰄾";
-      # format = "{icon}";
+      format = "󰄽 {icon} 󰄾";
       on-click = "activate";
       persistent-workspaces = {
         "1" = ["DP-1"];
@@ -65,7 +64,6 @@ in {
         "10" = ["HDMI-A-1"];
         "11" = ["HDMI-A-1"];
       };
-      icon = true;
       icon-size = 30;
       format-icons = {
         "1" = "󱄅";

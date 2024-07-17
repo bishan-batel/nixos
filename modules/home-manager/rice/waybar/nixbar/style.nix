@@ -44,6 +44,7 @@ in
         border-radius: 16px;
         color: #${primary_accent}
     }
+
     #workspaces button {
         padding: 0px 5px;
         margin: 0px 3px;
@@ -51,6 +52,9 @@ in
         color: transparent;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
+    }
+
+    #workspaces button label {
         font-size: 40;
     }
 
@@ -60,7 +64,6 @@ in
         border-radius: 16px;
         min-width: 50px;
         background-size: 400% 400%;
-        font-size: 40;
         transition: all 0.3s ease-in-out;
     }
 
@@ -69,7 +72,6 @@ in
         color: #${background};
         border-radius: 16px;
         min-width: 50px;
-        font-size: 40;
         background-size: 400% 400%;
     }
 
