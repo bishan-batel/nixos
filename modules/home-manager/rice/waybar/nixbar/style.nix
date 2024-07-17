@@ -51,16 +51,16 @@ in
         color: transparent;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
-        font-size: 12;
+        font-size: 40;
     }
 
     #workspaces button.active {
         background-color: #${secondary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 50px;
         background-size: 400% 400%;
-        font-size: 30;
+        font-size: 40;
         transition: all 0.3s ease-in-out;
     }
 
@@ -68,8 +68,8 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
-        font-size: 30;
+        min-width: 50px;
+        font-size: 40;
         background-size: 400% 400%;
     }
 
