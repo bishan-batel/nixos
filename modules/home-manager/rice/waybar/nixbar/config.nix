@@ -49,7 +49,7 @@ in {
       disable-scroll = false;
       on-scroll-up = "hyprctl dispatch workspace e-1";
       on-scroll-down = "hyprctl dispatch workspace e+1";
-      format = "{name}:{icon}";
+      format = "{icon}";
       on-click = "activate";
       persistent_workspaces = {
         "1" = [];
@@ -77,9 +77,9 @@ in {
         "10" = "";
         "11" = "";
 
-        urgent = "";
-        active = "";
-        default = "";
+        # urgent = "";
+        # active = "";
+        # default = "";
         sort-by-number = true;
       };
     };

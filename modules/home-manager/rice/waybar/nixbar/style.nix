@@ -49,7 +49,7 @@ in
         margin: 0px 3px;
         border-radius: 16px;
         color: #2f354a;
-        min-width: 20px;
+        min-width: 15px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
     }
