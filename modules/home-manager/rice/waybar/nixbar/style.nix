@@ -53,7 +53,7 @@ in
         min-width: 15px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
-        font-size: 25;
+        font-size: 40;
     }
 
     #workspaces button.active {
@@ -101,7 +101,7 @@ in
         border-radius: 0px 0px 40px 0px;
         margin: 0px;
         padding: 0px 35px 0px 15px;
-        font-size: 28px;
+        font-size: 24px;
     }
 
     #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward {
