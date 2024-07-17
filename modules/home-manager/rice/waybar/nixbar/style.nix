@@ -14,15 +14,16 @@ in
   ''
     * {
         border: none;
-        border-radius: 0px;
         font-family: ${font};
+            border-radius: 0px;
         font-size: 14px;
         min-height: 0;
     }
 
     window#waybar {
         /* background: rgba(16, 18, 19, 0.8); */
-        background-color: rgba(0, 0, 0, 0.096);
+        /* background-color: rgba(0, 0, 0, 0.096); */
+        background-color: transparent;
     }
 
     #cava.left, #cava.right {
@@ -52,7 +53,7 @@ in
         min-width: 15px;
         background-color: #2f354a;
         transition: all 0.3s ease-in-out;
-        font-size: 18;
+        font-size: 25;
     }
 
     #workspaces button.active {
@@ -68,7 +69,7 @@ in
         background-color: #${tertiary_accent};
         color: #${background};
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 40px;
         background-size: 400% 400%;
         transition: all 0.3s ease-in-out;
     }

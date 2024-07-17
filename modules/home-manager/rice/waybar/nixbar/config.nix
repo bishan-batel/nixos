@@ -51,7 +51,7 @@ in {
       on-scroll-down = "hyprctl dispatch workspace e+1";
       format = "{icon}";
       on-click = "activate";
-      persistent_workspaces = {
+      persistent-workspaces = {
         "1" = [];
         "2" = [];
         "3" = [];
