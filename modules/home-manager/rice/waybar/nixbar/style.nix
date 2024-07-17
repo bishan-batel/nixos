@@ -94,7 +94,7 @@ in
         padding: 10px 10px 15px 25px;
         margin-left: 7px;
         font-weight: bold;
-        font-size: 14px;
+        /* font-size: 14px; */
     }
     #custom-launcher {
         color: #${secondary_accent};
