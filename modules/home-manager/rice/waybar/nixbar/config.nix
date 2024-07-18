@@ -52,17 +52,8 @@ in {
       format = "{icon}";
       on-click = "activate";
       persistent-workspaces = {
-        "1" = ["DP-1"];
-        "2" = ["DP-1"];
-        "3" = ["DP-1"];
-        "4" = ["DP-1"];
-        "5" = ["DP-1"];
-        "6" = ["DP-1"];
-        "7" = ["DP-1"];
-        "8" = ["DP-1"];
-        "9" = ["HDMI-A-1"];
-        "10" = ["HDMI-A-1"];
-        "11" = ["HDMI-A-1"];
+        "DP-1" = [1 2 3 4 5 6 7 8];
+        "HDMI-A-1" = [9 10 11];
       };
       icon-size = 30;
       format-icons = {
