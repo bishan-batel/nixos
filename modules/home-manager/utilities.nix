@@ -8,6 +8,7 @@
 
     wine
     winetricks
+    bottles
   ];
 
   programs.obs-studio = {
