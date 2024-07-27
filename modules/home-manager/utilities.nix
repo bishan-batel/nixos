@@ -5,6 +5,9 @@
     obsidian
     sway-contrib.grimshot
     thunderbird
+
+    wine
+    winetricks
   ];
 
   programs.obs-studio = {
