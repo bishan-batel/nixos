@@ -2,21 +2,23 @@
   home.packages = with pkgs; [
     pavucontrol
     gimp
+    zathura
     obsidian
     sway-contrib.grimshot
     thunderbird
+
+    texlive.combined.scheme-full
   ];
 
-  programs.obs-studio = {
-    enable = true;
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-    ];
-  };
-
   programs = {
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+      ];
+    };
     btop = {
       enable = true;
 
