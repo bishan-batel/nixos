@@ -22,6 +22,7 @@ export def rebuild []  {
   if $output.exit_code != 0 {
     open --raw $logfile | grep --color error
     print -e "Failed to Build"
+    exit 1
   } else {
     let generations = nixos-rebuild list-generations --json | from json
 
@@ -31,6 +32,8 @@ export def rebuild []  {
 
     let msg = $'Generation ($current_gen): ($date)'
     git commit -m $msg | ignore
+
+    hyprctl reload
 
     print $"Successfully Built NixOS: '($msg)'"
   }
