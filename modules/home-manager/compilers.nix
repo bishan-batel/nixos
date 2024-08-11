@@ -11,7 +11,7 @@
     yarn
     nodejs
 
-    dotnet-sdk
+    dotnet-sdk_8
 
     valgrind
 
