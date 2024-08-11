@@ -6,8 +6,8 @@
     obsidian
     sway-contrib.grimshot
     thunderbird
-    tdf
     texlive.combined.scheme-full
+    ffmpeg
   ];
 
   programs = {
