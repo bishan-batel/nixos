@@ -240,6 +240,7 @@
     libxcrypt-legacy
     libxkbcommon
     libxml2
+    libdecor
     mesa
     nspr
     nss
