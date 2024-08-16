@@ -96,7 +96,11 @@
     wineWowPackages.waylandFull
     winetricks
     bottles
+
+    via
   ];
+
+  services.udev.packages = with pkgs; [via];
 
   # SDDM
   services.displayManager = {
