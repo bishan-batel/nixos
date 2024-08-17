@@ -100,7 +100,7 @@
     via
   ];
 
-  services.udev.packages = with pkgs; [via];
+  services.udev.packages = with pkgs; [via qmk-udev-rules];
 
   # SDDM
   services.displayManager = {
