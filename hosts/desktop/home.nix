@@ -15,6 +15,7 @@
     ../../modules/home-manager/media.nix
     ../../modules/home-manager/terminal
     ../../modules/home-manager/rice
+    ../../modules/home-manager/keyboard.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

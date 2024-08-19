@@ -98,6 +98,7 @@
     bottles
 
     via
+    qmk
   ];
 
   services.udev = {

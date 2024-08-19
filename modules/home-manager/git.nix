@@ -9,8 +9,8 @@
     };
 
     gh = {
-      # gitCredentialHelper.enable = true;
-      # extensions = [pkgs.gh-dash];
+      gitCredentialHelper.enable = true;
+      extensions = with pkgs; [gh-dash];
     };
 
     git = {
