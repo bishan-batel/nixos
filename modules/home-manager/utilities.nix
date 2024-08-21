@@ -4,10 +4,7 @@
     gimp
     zathura
     obsidian
-    sway-contrib.grimshot
     thunderbird
-    texlive.combined.scheme-full
-    ffmpeg
   ];
 
   programs = {

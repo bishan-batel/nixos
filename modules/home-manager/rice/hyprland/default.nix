@@ -3,6 +3,10 @@
   config,
   ...
 }: {
+  home.packages = with pkgs; [
+    sway-contrib.grimshot
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;

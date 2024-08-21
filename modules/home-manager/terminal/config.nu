@@ -22,7 +22,7 @@ export def rebuild []  {
   if $output.exit_code != 0 {
     open --raw $logfile | grep --color error
     print -e "Failed to Build"
-    exit 1
+    return 1
   } else {
     let generations = nixos-rebuild list-generations --json | from json
 
