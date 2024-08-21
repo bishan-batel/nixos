@@ -15,4 +15,10 @@
     # ./ags
     # ./shortcuts.nix
   ];
+
+  catppuccin.flavor = "mocha";
+
+  qt = {
+    enable = true;
+  };
 }
