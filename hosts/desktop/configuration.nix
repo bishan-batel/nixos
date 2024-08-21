@@ -98,6 +98,7 @@
     winetricks
     bottles
 
+    qmk-udev-rules
     via
     qmk
   ];
