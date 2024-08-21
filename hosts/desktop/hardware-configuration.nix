@@ -56,9 +56,6 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-
   hardware = {
     opengl = {
       enable = true;
@@ -92,9 +89,15 @@
     };
   };
 
-  services.xserver.videoDrivers = ["amdgpu"];
-
   systemd.services.lactd.enable = true;
   environment.systemPackages = with pkgs; [lact];
+
+  services = {
+    xserver.videoDrivers = ["amdgpu"];
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
+  };
+
   # services.lact.enable = true;
 }
