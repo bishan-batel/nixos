@@ -54,11 +54,11 @@
     },
     "catppuccin": {
       "locked": {
-        "lastModified": 1724048768,
-        "narHash": "sha256-OZ9OXsPQi+fNdMM7SBPtU8OB1ntLzOvUwA/3zYJY6Eo=",
+        "lastModified": 1724156255,
+        "narHash": "sha256-rpUCeS/QZwQdJmDrvCm0hRi8bFvQNQKAnIMK5ZDBfpM=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "ff4128f8ea57879050145cf077a27b9d3a9cbf33",
+        "rev": "8886a68edadb1d93c7101337f995ffce4b410ff2",
         "type": "github"
       },
       "original": {
@@ -75,11 +75,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1724088385,
-        "narHash": "sha256-kQuNX6d4zuR28D+aCT6SexYuEE0rz9TmRfwaY+jLMK8=",
+        "lastModified": 1724199146,
+        "narHash": "sha256-ebjMzQoqb1UfjbkUOStKUKw4v9a0KS+vFHe9Tc7oGuc=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "84ea0190577534a2e5311e21593f6e3db6acbc1e",
+        "rev": "824333ae2bd6f7e6071ece05392d416425773a03",
         "type": "github"
       },
       "original": {
@@ -306,11 +306,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1722732728,
-        "narHash": "sha256-ch91LYKs6MswTC08Xi8VcIxooWvDprGuIn0B2Yo3ufo=",
+        "lastModified": 1724168814,
+        "narHash": "sha256-SaR4yGdY6EuTcilgD6jEd7kJYOpsqPOAXpYe+omagNc=",
         "owner": "justchokingaround",
         "repo": "lobster",
-        "rev": "942ad9f466a1056fe48961826c1ff34da4beb976",
+        "rev": "d8a2b735a78973e1b424bb5a431178c0a09de8cb",
         "type": "github"
       },
       "original": {
