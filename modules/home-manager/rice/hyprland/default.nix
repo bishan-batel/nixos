@@ -23,5 +23,6 @@
 
     plugins = [];
   };
+
   home.file.".config/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
 }

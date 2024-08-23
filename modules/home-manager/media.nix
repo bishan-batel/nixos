@@ -7,7 +7,11 @@
 
   programs.mpv = {
     enable = true;
-    catppuccin.enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "mauve";
+    };
   };
 
   programs.imv = {

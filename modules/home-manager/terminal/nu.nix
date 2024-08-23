@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [alejandra];
 
   programs = {
@@ -17,8 +21,8 @@
         "weeb" = "ani-cli";
       };
 
-      configFile.source = ./config.nu;
-      envFile.source = ./env.nu;
+      configFile.source = config.lib.file.mkOutOfStoreSymlink ./config.nu;
+      envFile.source = config.lib.file.mkOutOfStoreSymlink ./env.nu;
     };
 
     carapace.enableNushellIntegration = true;

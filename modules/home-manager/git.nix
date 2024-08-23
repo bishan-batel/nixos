@@ -4,8 +4,11 @@
   programs = {
     gh-dash = {
       enable = true;
-      # settings = {};
-      catppuccin.enable = true;
+      catppuccin = {
+        enable = true;
+        accent = "mauve";
+        flavor = "mocha";
+      };
     };
 
     gh = {
@@ -32,6 +35,11 @@
 
       delta = {
         enable = true;
+        catppuccin = {
+          enable = true;
+          flavor = "mocha";
+          # accent = "mauve";
+        };
       };
     };
   };

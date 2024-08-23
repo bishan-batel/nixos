@@ -8,17 +8,20 @@
     ./gtk.nix
     ./rofi.nix
     ./wallpaper.nix
-    ./notifications.nix
-    # ./eww
     ./waybar
+    ./notifications.nix
     ./hyprland
-    # ./ags
-    # ./shortcuts.nix
   ];
 
-  catppuccin.flavor = "mocha";
-
-  qt = {
+  catppuccin = {
     enable = true;
+    accent = "mauve";
+    flavor = "mocha";
+
+    pointerCursor = {
+      enable = true;
+      accent = "mauve";
+      flavor = "mocha";
+    };
   };
 }
