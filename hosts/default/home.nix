@@ -7,6 +7,7 @@
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/compilers.nix
     ../../modules/home-manager/editors.nix
+    ../../modules/home-manager/nvim.nix
     ../../modules/home-manager/spotify.nix
     ../../modules/home-manager/utilities.nix
     ../../modules/home-manager/gaming.nix
