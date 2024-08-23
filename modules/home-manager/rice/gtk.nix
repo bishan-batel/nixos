@@ -17,6 +17,20 @@
     };
   };
 
+  qt = {
+    enable = true;
+    platformTheme = {
+      name = "kvantum";
+    };
+    style = {
+      name = "kvantum";
+      catppuccin = {
+        enable = true;
+        apply = true;
+      };
+    };
+  };
+
   xdg = {
     enable = true;
   };

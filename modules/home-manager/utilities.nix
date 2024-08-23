@@ -2,10 +2,14 @@
   home.packages = with pkgs; [
     pavucontrol
     gimp
-    zathura
     obsidian
     thunderbird
   ];
+
+  programs.zathura = {
+    enable = true;
+    catppuccin.enable = true;
+  };
 
   programs = {
     obs-studio = {
