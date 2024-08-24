@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     rustup
     gnumake
-    cmake
     zig
     lld
     libllvm
@@ -12,9 +11,5 @@
     nodejs
 
     dotnet-sdk_8
-
-    valgrind
-
-    go
   ];
 }
