@@ -60,7 +60,7 @@
         inputs.flake-programs-sqlite.nixosModules.programs-sqlite
       ];
     };
-   
+
     homeConfigurations.bishan_ = home-manager.lib.homeManagerConfiguration {
       pkgs = pkgs;
       modules = [

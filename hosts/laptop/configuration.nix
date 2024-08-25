@@ -1,7 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
 {
   config,
   pkgs,
@@ -9,10 +8,10 @@
   lib,
   ...
 }: {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   catppuccin = {
     enable = true;
@@ -23,9 +22,8 @@
   console.catppuccin.enable = true;
   boot.loader.grub.catppuccin.enable = true;
 
-
   networking.hostName = "nixos-laptop"; # Define your hostname.
-#  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -47,12 +45,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bishan_ = {
     isNormalUser = true;
@@ -60,7 +52,6 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [linuxKernel.packages.linux_zen.perf vesktop xwaylandvideobridge];
   };
-
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
@@ -79,7 +70,6 @@
   services.dbus = {enable = true;};
 
   services.gnome.at-spi2-core.enable = true;
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

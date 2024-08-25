@@ -3,9 +3,13 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [
-    rofi-wayland
-  ];
+  # home.packages = with pkgs; [
+  #   rofi-wayland
+  # ];
 
-  programs.rofi.catppuccin.enable = true;
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+    catppuccin.enable = true;
+  };
 }

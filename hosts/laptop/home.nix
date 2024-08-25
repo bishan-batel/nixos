@@ -4,19 +4,19 @@
   ...
 }: {
   imports = [
-    ../../modules/home-manager/git.nix
-    ../../modules/home-manager/compilers.nix
-    ../../modules/home-manager/editors.nix
-    ../../modules/home-manager/nvim.nix
-    ../../modules/home-manager/spotify.nix
-    ../../modules/home-manager/utilities.nix
-    ../../modules/home-manager/gaming.nix
-    ../../modules/home-manager/discord.nix
-    ../../modules/home-manager/browser.nix
-    ../../modules/home-manager/media.nix
-    ../../modules/home-manager/terminal
-    ../../modules/home-manager/rice
-    ../../modules/home-manager/keyboard.nix
+    ../../modules/home/git.nix
+    ../../modules/home/compilers.nix
+    ../../modules/home/editors.nix
+    ../../modules/home/nvim.nix
+    ../../modules/home/spotify.nix
+    ../../modules/home/utilities.nix
+    ../../modules/home/gaming.nix
+    ../../modules/home/discord.nix
+    ../../modules/home/browser.nix
+    ../../modules/home/media.nix
+    ../../modules/home/terminal
+    ../../modules/home/rice
+    ../../modules/home/keyboard.nix
   ];
 
   programs.home-manager.enable = true;
