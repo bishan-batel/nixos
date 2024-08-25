@@ -7,22 +7,10 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    ../../modules/grub.nix
   ];
 
   boot = {
-    loader = {
-      # systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-
-      grub = {
-        enable = true;
-        devices = ["nodev"];
-        efiSupport = true;
-        useOSProber = true;
-        configurationLimit = 42;
-      };
-    };
-
     initrd = {
       availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
       kernelModules = ["amdgpu"];
