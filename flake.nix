@@ -51,6 +51,16 @@
       ];
     };
 
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/laptop/configuration.nix
+        inputs.catppuccin.nixosModules.catppuccin
+        inputs.home-manager.nixosModules.home-manager
+        inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+      ];
+    };
+   
     homeConfigurations.bishan_ = home-manager.lib.homeManagerConfiguration {
       pkgs = pkgs;
       modules = [
