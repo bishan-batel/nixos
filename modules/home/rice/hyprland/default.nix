@@ -24,5 +24,5 @@
     plugins = [];
   };
 
-  home.file.".config/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
+  home.file.".config/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/hyprland.conf";
 }

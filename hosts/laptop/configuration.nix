@@ -114,8 +114,6 @@
 
   users.users.bishan_.shell = pkgs.nushell;
 
-  programs = {tmux.enable = true;};
-
   security.rtkit.enable = true;
 
   services.printing.enable = true;
