@@ -35,11 +35,10 @@
       #   "luks-22e79119-15ce-4d08-ad00-e751f17ab2d4".device = "/dev/disk/by-uuid/22e79119-15ce-4d08-ad00-e751f17ab2d4";
       # };
 
-      luks.devices = { 
+      luks.devices = {
         cryptroot.device = "/dev/disk/by-uuid/8d6e3c4d-a9b5-4147-ab1c-e9f8fa040d73";
       };
     };
-
 
     kernelModules = ["kvm-intel" "v4l2loopback"];
 
