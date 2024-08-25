@@ -41,10 +41,10 @@
     pkgs = nixpkgs.legacyPackages.${system};
     config = {allowUnfree = true;};
   in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./hosts/default/configuration.nix
+        ./hosts/desktop/configuration.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
         inputs.flake-programs-sqlite.nixosModules.programs-sqlite

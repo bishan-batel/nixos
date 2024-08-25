@@ -14,7 +14,7 @@ export def rebuild []  {
 
   print "NixOS Rebuilding...";
 
-  let output = sudo nixos-rebuild switch --flake $'($config_dir)#default' | complete 
+  let output = sudo nixos-rebuild switch --flake $'($config_dir)#(hostname)' | complete 
 
   echo $output.stdout | save -f $logfile
   echo $output.stderr | save -a $logfile

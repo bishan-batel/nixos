@@ -27,22 +27,12 @@
     initrd = {
       availableKernelModules = ["xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
 
-      # kernelModules = [""];
-
-      # luks.devices = {
-      #   "luks-8d6e3c4d-a9b5-4147-ab1c-e9f8fa040d73".device = "/dev/disk/by-uuid/8d6e3c4d-a9b5-4147-ab1c-e9f8fa040d73";
-      #
-      #   "luks-22e79119-15ce-4d08-ad00-e751f17ab2d4".device = "/dev/disk/by-uuid/22e79119-15ce-4d08-ad00-e751f17ab2d4";
-      # };
-
-      luks.devices = {
-        cryptroot.device = "/dev/disk/by-uuid/8d6e3c4d-a9b5-4147-ab1c-e9f8fa040d73";
-      };
+      kernelModules = [];
     };
 
     kernelModules = ["kvm-intel" "v4l2loopback"];
 
-    extraModulePackages = [pkgs.linuxPackages.v4l2loopback];
+    extraModulePackages = with pkgs; [linuxPackages.v4l2loopback];
 
     extraModprobeConfig = ''
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
@@ -56,19 +46,21 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/d734ed07-0c87-4ccd-b318-34887c36a295";
+      device = "/dev/disk/by-uuid/06c4c11b-faf2-4901-8aad-1404cf53e1d5";
       fsType = "ext4";
     };
+
     "/boot" = {
       device = "/dev/disk/by-uuid/C4FA-7F70";
-      fsType = "vfat";
       options = ["fmask=0022" "dmask=0022"];
     };
   };
 
-  swapDevices = [
-    {device = "/dev/disk/by-uuid/fa9b4b4e-e4ee-489b-93da-c5ebbc44ef43";}
-  ];
+  # swapDevices = [
+  #   {
+  #     device = "/dev/disk/by-uuid/6d464dd9-28e8-4092-9727-dd0ad1fc0c3b";
+  #   }
+  # ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
