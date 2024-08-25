@@ -11,8 +11,16 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      # systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
+
+      grub = {
+        enable = true;
+        devices = ["nodev"];
+        efiSupport = true;
+        useOSProber = true;
+        configurationLimit = 42;
+      };
     };
 
     initrd = {
@@ -65,13 +73,9 @@
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-    opengl = {
-      enable = true;
-      driSupport32Bit = true;
-    };
-
     graphics = {
       enable = true;
+      enable32Bit = true;
 
       extraPackages = with pkgs; [
         amdvlk

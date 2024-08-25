@@ -21,8 +21,6 @@
   console.catppuccin.enable = true;
   boot.loader.grub.catppuccin.enable = true;
 
-  # Bootloader.
-
   networking.hostName = "nixos-desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
