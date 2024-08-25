@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ../../modules/home/scaling.nix
     ../../modules/home/git.nix
     ../../modules/home/compilers.nix
     ../../modules/home/editors.nix
