@@ -12,7 +12,7 @@
       "QT_SCALE_FACTOR,2"
       "GDK_SCALE,2"
       "QT_AUTO_SCREEN_SCALE_FACTOR,2"
-      "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card2"
+      "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1:/dev/dri/card2"
     ];
 
     input = {
@@ -27,6 +27,7 @@
       workspace_swipe = true;
       workspace_swipe_fingers = 4;
       workspace_swipe_min_fingers = 4;
+      workspace_swipe_distance = 200;
     };
 
     "$mod" = "SUPER";
