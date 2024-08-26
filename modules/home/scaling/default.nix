@@ -43,9 +43,11 @@
           keyword general:gaps_out 0;\
           keyword general:border_size 1;\
           keyword decoration:rounding 0"
+          pkill waybar
           exit
         fi
         hyprctl reload
+        waybar
       ''}/bin/game_mode.sh"
     ];
 
