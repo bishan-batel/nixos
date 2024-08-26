@@ -12,6 +12,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/nix-ld.nix
+    ../../modules/wayland.nix
   ];
 
   catppuccin = {
@@ -177,7 +178,6 @@
 
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
-    # NIXOS_OZONE_WL = "1";
   };
 
   # Power management

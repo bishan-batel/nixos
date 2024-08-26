@@ -13,6 +13,7 @@
     ../../modules/home/gaming.nix
     ../../modules/home/discord.nix
     ../../modules/home/browser.nix
+    ../../modules/home/obsidian.nix
     ../../modules/home/media.nix
     ../../modules/home/terminal
     ../../modules/home/rice
