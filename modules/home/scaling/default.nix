@@ -30,10 +30,8 @@
       workspace_swipe_distance = 200;
     };
 
-    "$mod" = "SUPER";
-
     bind = [
-      "$mod, G, exec, ${pkgs.writeShellScriptBin "game_mode.sh" ''
+      "SUPER, G, exec, sh ${pkgs.writeShellScriptBin "game_mode.sh" ''
         #!/usr/bin/env sh
         HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
         if [ "$HYPRGAMEMODE" = 1 ] ; then
