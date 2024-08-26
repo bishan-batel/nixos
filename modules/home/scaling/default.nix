@@ -4,7 +4,7 @@
     sh
     */
     ''
-      Xft.dpi: 180
+      Xft.dpi: 160
     '';
 
   wayland.windowManager.hyprland.settings = {
