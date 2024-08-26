@@ -26,4 +26,10 @@
 
   # home.file."${config.xdg.configHome}/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/hyprland.conf";
   home.file."${config.xdg.configHome}/hypr/hypr.conf".source = ./hyprland.conf;
+
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+    };
+  };
 }
