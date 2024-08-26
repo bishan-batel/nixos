@@ -23,6 +23,12 @@
       };
     };
 
+    gestures = {
+      workspace_swipe = true;
+      workspace_swipe_fingers = 4;
+      workspace_swipe_min_fingers = 4;
+    };
+
     "$mod" = "SUPER";
 
     binds = [
@@ -43,10 +49,6 @@
         hyprctl reload
       ''}"
     ];
-
-    workspace_swipe = true;
-    workspace_swipe_fingers = 4;
-    workspace_swipe_min_fingers = 4;
 
     xwayland = {
       force_zero_scaling = true;
