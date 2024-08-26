@@ -27,7 +27,7 @@
       workspace_swipe = true;
       workspace_swipe_fingers = 4;
       workspace_swipe_min_fingers = 4;
-      workspace_swipe_distance = 100;
+      workspace_swipe_distance = 500;
       workspace_swipe_touch = true;
     };
 
