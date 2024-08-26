@@ -177,6 +177,7 @@
 
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
+    AQ_DRM_DEVICES = "/dev/dri/card0:/dev/dri/card1:/dev/dri/card2";
   };
 
   # Power management

@@ -7,10 +7,6 @@
       Xft.dpi: 160
     '';
 
-  home.sessionVariables = {
-    AQ_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card2";
-  };
-
   wayland.windowManager.hyprland.settings = {
     env = [
       "QT_SCALE_FACTOR,2"
