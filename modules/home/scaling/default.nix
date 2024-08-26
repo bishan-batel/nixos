@@ -15,6 +15,39 @@
       "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card2"
     ];
 
+    input = {
+      touchpad = {
+        clickfinger_behavior = 1;
+        disable_while_typing = true;
+        tap-to-click = true;
+      };
+    };
+
+    "$mod" = "SUPER";
+
+    binds = [
+      "$mod, G, exec, ${pkgs.writeShellScriptBin "game_mode.sh" ''
+        #!/usr/bin/env sh
+        HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+        if [ "$HYPRGAMEMODE" = 1 ] ; then
+          hyprctl --batch "\
+          keyword animations:enabled 0;\
+          keyword decoration:drop_shadow 0;\
+          keyword decoration:blur:enabled 0;\
+          keyword general:gaps_in 0;\
+          keyword general:gaps_out 0;\
+          keyword general:border_size 1;\
+          keyword decoration:rounding 0"
+          exit
+        fi
+        hyprctl reload
+      ''}"
+    ];
+
+    workspace_swipe = true;
+    workspace_swipe_fingers = 4;
+    workspace_swipe_min_fingers = 4;
+
     xwayland = {
       force_zero_scaling = true;
       use_nearest_neighbor = true;
