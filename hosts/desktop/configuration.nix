@@ -11,7 +11,6 @@
     ./hardware-configuration.nix
     ../../modules/nix-ld.nix
     ../../modules/auto-upgrade.nix
-    ../../modules/wayland.nix
   ];
 
   catppuccin = {

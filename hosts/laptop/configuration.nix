@@ -12,7 +12,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/nix-ld.nix
-    ../../modules/wayland.nix
   ];
 
   catppuccin = {
