@@ -46,7 +46,7 @@
           exit
         fi
         hyprctl reload
-      ''}"
+      ''}/bin/game_mode.sh"
     ];
 
     xwayland = {
