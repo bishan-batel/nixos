@@ -15,6 +15,8 @@ in {
   home.packages = [pkgs.spotify];
 
   programs.spicetify = {
+    spotifyPackage = pkgs.spotify;
+
     # enable = true;
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";

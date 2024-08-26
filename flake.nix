@@ -36,6 +36,7 @@
     self,
     nixpkgs,
     catppuccin,
+    spicetify-nix,
     home-manager,
     ...
   } @ inputs: let
