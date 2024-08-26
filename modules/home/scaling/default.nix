@@ -15,7 +15,7 @@
     ];
 
     xwayland = {
-      force_zero_scaling = true;
+      # force_zero_scaling = true;
       use_nearest_neighbor = true;
     };
   };
