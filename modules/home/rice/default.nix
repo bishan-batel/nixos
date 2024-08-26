@@ -10,6 +10,7 @@
     ./wallpaper.nix
     ./waybar
     ./notifications.nix
+    ./spicetify.nix
     ./hyprland
   ];
 

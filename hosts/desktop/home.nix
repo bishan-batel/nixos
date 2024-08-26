@@ -8,7 +8,6 @@
     ../../modules/home/compilers.nix
     ../../modules/home/editors.nix
     ../../modules/home/nvim.nix
-    ../../modules/home/spotify.nix
     ../../modules/home/utilities.nix
     ../../modules/home/gaming.nix
     ../../modules/home/discord.nix
