@@ -32,7 +32,7 @@
 
     "$mod" = "SUPER";
 
-    binds = [
+    bind = [
       "$mod, G, exec, ${pkgs.writeShellScriptBin "game_mode.sh" ''
         #!/usr/bin/env sh
         HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
