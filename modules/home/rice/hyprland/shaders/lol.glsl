@@ -5,32 +5,82 @@ varying vec2 v_texcoord;
 uniform sampler2D tex;
 uniform float time;
 
-// see https://github.com/CeeJayDK/SweetFX/blob/a792aee788c6203385a858ebdea82a77f81c67f0/Shaders/Vibrance.fx#L20-L30
-const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
-const float VIB_VIBRANCE = 0.15;
+// const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
+// const float VIB_VIBRANCE = 0.15;
 
-const vec3 VIB_coeffVibrance = VIB_RGB_BALANCE * -VIB_VIBRANCE;
+#define width 3200.
+#define height 2000.
+
+#define M_PI 3.14159265358979323846
+
+float rand(vec2 co){return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);}
+float rand (vec2 co, float l) {return rand(vec2(rand(co), l));}
+float rand (vec2 co, float l, float t) {return rand(vec2(rand(co, l), t));}
+
+float perlin(vec2 p, float dim, float time) {
+	vec2 pos = floor(p * dim);
+	vec2 posx = pos + vec2(1.0, 0.0);
+	vec2 posy = pos + vec2(0.0, 1.0);
+	vec2 posxy = pos + vec2(1.0);
+	
+	float c = rand(pos, dim, time);
+	float cx = rand(posx, dim, time);
+	float cy = rand(posy, dim, time);
+	float cxy = rand(posxy, dim, time);
+	
+	vec2 d = fract(p * dim);
+	d = -0.5 * cos(d * M_PI) + 0.5;
+	
+	float ccx = mix(c, cx, d.x);
+	float cycxy = mix(cy, cxy, d.x);
+	float center = mix(ccx, cycxy, d.y);
+	
+	return center * 2.0 - 1.0;
+}
+
+// p must be normalized!
+float perlin(vec2 p, float dim) {
+	
+	/*vec2 pos = floor(p * dim);
+	vec2 posx = pos + vec2(1.0, 0.0);
+	vec2 posy = pos + vec2(0.0, 1.0);
+	vec2 posxy = pos + vec2(1.0);
+	
+	// For exclusively black/white noise
+	/*float c = step(rand(pos, dim), 0.5);
+	float cx = step(rand(posx, dim), 0.5);
+	float cy = step(rand(posy, dim), 0.5);
+	float cxy = step(rand(posxy, dim), 0.5);*/
+	
+	/*float c = rand(pos, dim);
+	float cx = rand(posx, dim);
+	float cy = rand(posy, dim);
+	float cxy = rand(posxy, dim);
+	
+	vec2 d = fract(p * dim);
+	d = -0.5 * cos(d * M_PI) + 0.5;
+	
+	float ccx = mix(c, cx, d.x);
+	float cycxy = mix(cy, cxy, d.x);
+	float center = mix(ccx, cycxy, d.y);
+	
+	return center * 2.0 - 1.0;*/
+	return perlin(p, dim, 0.0);
+}
 
 void main() {
-    vec4 pixColor = texture2D(tex, v_texcoord);
-    vec3 color = vec3(pixColor[0], pixColor[1], pixColor[2]);
+    vec2 uv = v_texcoord;
 
-    // vec3 VIB_coefLuma = vec3(0.333333, 0.333334, 0.333333); // was for `if VIB_LUMA == 1`
-    vec3 VIB_coefLuma = vec3(0.212656, 0.715158, 0.072186); // try both and see which one looks nicer.
+    const float s = 0.01;
 
-    float luma = dot(VIB_coefLuma, color);
+    float dist = distance(uv, vec2(0.5));
 
-    float max_color = max(color[0], max(color[1], color[2]));
-    float min_color = min(color[0], min(color[1], color[2]));
+    // uv.xy += 0.01  * perlin(uv + vec2(time * dist * dist, 0.), 1.0);
 
-    float color_saturation = max_color - min_color;
+    vec4 pixColor = texture2D(tex, uv);
+    pixColor.g *= 0.5 + dist;
 
-    vec3 p_col = vec3(vec3(vec3(vec3(sign(VIB_coeffVibrance) * color_saturation) - 1.0) * VIB_coeffVibrance) + 1.0);
-
-    float x = sin(time);
-    pixColor[0] = mix(luma, color[0], p_col[0]) * (x * x);
-    pixColor[1] = mix(luma, color[1], p_col[1]);
-    pixColor[2] = mix(luma, color[2], p_col[2]);
-
+    // pixColor.r += dist * (sin(time * 10.5) / 2. + .5) * 0.1;
+ 
     gl_FragColor = pixColor;
 }
