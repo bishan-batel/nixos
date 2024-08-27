@@ -1,8 +1,11 @@
 {
   pkgs,
   config,
+  inputs,
   ...
-}: {
+}: let
+  hypr-pkgs = inputs.hyprland-plugins.packages.${pkgs.system};
+in {
   home.packages = with pkgs; [
     sway-contrib.grimshot
   ];
@@ -21,7 +24,9 @@
       exec-once = ["startup.nu"];
     };
 
-    plugins = [];
+    plugins = [
+      hypr-pkgs.hyprtrails
+    ];
   };
 
   # home.file."${config.xdg.configHome}/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/hyprland.conf";
