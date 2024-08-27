@@ -18,7 +18,7 @@
     ../../modules/home/terminal
     ../../modules/home/rice
     ../../modules/home/keyboard.nix
-    ../../modules/home/wayland.nix
+    ../../modules/wayland.nix
   ];
 
   programs.home-manager.enable = true;
