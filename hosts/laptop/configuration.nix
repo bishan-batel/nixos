@@ -230,6 +230,23 @@
   ];
 
   # Keymap for key combo rebinds
-  # services.xremap.config.keymap = [
-  # ];
+  services.xremap.config.keymap = [
+    {
+      remap = {
+        "Esc-h" = "left";
+        "Esc-j" = "down";
+        "Esc-k" = "up";
+        "Esc-l" = "right";
+      };
+    }
+
+    {
+      name = "Rofi";
+      application.only = "rofi";
+      remap = {
+        "C-p" = "up";
+        "C-n" = "down";
+      };
+    }
+  ];
 }
