@@ -25,7 +25,7 @@ in {
     };
 
     plugins = [
-      hypr-pkgs.hyprtrails
+      # hypr-pkgs.hyprtrails
     ];
   };
 
