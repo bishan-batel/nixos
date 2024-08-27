@@ -224,4 +224,12 @@
   };
 
   security.pam.services.hyprlock = {};
+
+  services.xremap.config.modmap = [
+    {remap = {"CapsLock" = "Esc";};}
+  ];
+
+  # Keymap for key combo rebinds
+  # services.xremap.config.keymap = [
+  # ];
 }

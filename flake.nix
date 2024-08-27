@@ -5,6 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
 
+    xremap-flake.url = "github:xremap/nix-flake";
+
     spicetify-nix.url = "github:the-argus/spicetify-nix";
 
     # hyprland.url = "github:hyprwm/Hyprland";
@@ -58,6 +60,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/laptop/configuration.nix
+        inputs.xremap-flake.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
         inputs.flake-programs-sqlite.nixosModules.programs-sqlite
