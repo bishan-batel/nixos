@@ -226,17 +226,17 @@
   security.pam.services.hyprlock = {};
 
   services.xremap.config.modmap = [
-    {remap = {"CapsLock" = "Esc";};}
+    {remap = {"CapsLock" = "Ctrl_R";};}
   ];
 
   # Keymap for key combo rebinds
   services.xremap.config.keymap = [
     {
       remap = {
-        "Esc-h" = "left";
-        "Esc-j" = "down";
-        "Esc-k" = "up";
-        "Esc-l" = "right";
+        "CapsLock-h" = "left";
+        "CapsLock-j" = "down";
+        "CapsLock-k" = "up";
+        "CapsLock-l" = "right";
       };
     }
 
