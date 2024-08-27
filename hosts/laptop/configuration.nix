@@ -233,10 +233,10 @@
   services.xremap.config.keymap = [
     {
       remap = {
-        "CapsLock-h" = "left";
-        "CapsLock-j" = "down";
-        "CapsLock-k" = "up";
-        "CapsLock-l" = "right";
+        "Ctrl_R-h" = "left";
+        "Ctrl_R-j" = "down";
+        "Ctrl_R-k" = "up";
+        "Ctrl_R-l" = "right";
       };
     }
 
@@ -246,6 +246,11 @@
       remap = {
         "C-p" = "up";
         "C-n" = "down";
+
+        "C-h" = "left";
+        "C-j" = "down";
+        "C-k" = "up";
+        "C-l" = "right";
       };
     }
   ];
