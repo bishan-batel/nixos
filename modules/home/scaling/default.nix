@@ -12,7 +12,7 @@
       "QT_SCALE_FACTOR,2"
       "GDK_SCALE,2"
       "QT_AUTO_SCREEN_SCALE_FACTOR,2"
-      "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1:/dev/dri/card2"
+      "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card2"
     ];
 
     input = {
@@ -22,6 +22,14 @@
         tap-to-click = true;
       };
     };
+
+    decoration = {
+      blur.enabled = false;
+      drop_shadow = false;
+    };
+
+    # variable frame rate
+    misc.vfr = true;
 
     gestures = {
       workspace_swipe = true;
@@ -39,6 +47,7 @@
           hyprctl --batch "\
           keyword animations:enabled 0;\
           keyword decoration:drop_shadow 0;\
+          keyword misc:vfr 1;\
           keyword decoration:blur:enabled 0;\
           keyword general:gaps_in 0;\
           keyword general:gaps_out 0;\
