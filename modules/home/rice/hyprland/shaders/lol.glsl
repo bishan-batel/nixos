@@ -75,10 +75,11 @@ void main() {
 
     float dist = distance(uv, vec2(0.5));
 
-    // uv.xy += 0.01  * perlin(uv + vec2(time * dist * dist, 0.), 1.0);
+    uv.xy += 0.001  * perlin(uv + vec2(1. * dist * dist + time, 0.), 10.0);
 
     vec4 pixColor = texture2D(tex, uv);
-    pixColor.g *= 0.5 + dist;
+	// pixColor.g *= 0.5 + dist;
+    pixColor.r *= 1.0 + abs(distance(v_texcoord, uv));
 
     // pixColor.r += dist * (sin(time * 10.5) / 2. + .5) * 0.1;
  
