@@ -225,18 +225,18 @@
   security.pam.services.hyprlock = {};
 
   services.xremap.config.modmap = [
-    {remap = {"CapsLock" = "SUPER_R";};}
+    {remap = {"CapsLock" = "ALT_R";};}
   ];
 
   # Keymap for key combo rebinds
   services.xremap.config.keymap = [
     {
       remap = {
-        "SUPER_R-h" = "left";
-        "SUPER_R-j" = "down";
-        "SUPER_R-k" = "up";
-        "SUPER_R-l" = "right";
-        "SUPER_R-t" = {
+        "ALT_R-h" = "left";
+        "ALT_R-j" = "down";
+        "ALT_R-k" = "up";
+        "ALT_R-l" = "right";
+        "ALT_R-t" = {
           launch = ["wtype" "Δ"];
         };
       };
