@@ -236,7 +236,7 @@
         "M_R-j" = "down";
         "M_R-k" = "up";
         "M_R-l" = "right";
-        "M_R-t".launch = ["nu" "-c" "wtype Δ"];
+        "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
       };
     }
 
