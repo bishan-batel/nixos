@@ -51,7 +51,14 @@
     isNormalUser = true;
     description = "Kishan S Patel";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [linuxKernel.packages.linux_zen.perf vesktop xwaylandvideobridge acpi wtype];
+    packages = with pkgs; [
+      linuxKernel.packages.linux_zen.perf
+      vesktop
+      xwaylandvideobridge
+      acpi
+      wtype
+      inputs.lobster.packages.x86_64.lobster
+    ];
   };
 
   nix.settings = {

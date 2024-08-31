@@ -29,9 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lobster = {
-      url = "github:justchokingaround/lobster";
-    };
+    lobster.url = "github:justchokingaround/lobster";
   };
 
   outputs = {

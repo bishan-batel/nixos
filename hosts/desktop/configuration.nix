@@ -56,7 +56,11 @@
     isNormalUser = true;
     description = "Kishan S Patel";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [linuxKernel.packages.linux_zen.perf vesktop xwaylandvideobridge];
+    packages = with pkgs; [
+      linuxKernel.packages.linux_zen.perf
+      vesktop
+      xwaylandvideobridge
+    ];
   };
 
   nix.settings = {
@@ -86,6 +90,8 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    inputs.lobster.packages.x86_64-linux.lobster
+
     git
     zip
     unzip
