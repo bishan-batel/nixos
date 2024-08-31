@@ -50,6 +50,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/desktop/configuration.nix
+        inputs.xremap-flake.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
         inputs.flake-programs-sqlite.nixosModules.programs-sqlite
