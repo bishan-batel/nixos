@@ -182,4 +182,31 @@
   services.xremap.config.modmap = [
     {remap = {"CapsLock" = "M_R";};}
   ];
+
+  # Keymap for key combo rebinds
+  services.xremap.config.keymap = [
+    {
+      remap = {
+        "M_R-h" = "left";
+        "M_R-j" = "down";
+        "M_R-k" = "up";
+        "M_R-l" = "right";
+        "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
+      };
+    }
+
+    {
+      name = "Rofi";
+      application.only = "rofi";
+      remap = {
+        "C-p" = "up";
+        "C-n" = "down";
+
+        "C-h" = "left";
+        "C-j" = "down";
+        "C-k" = "up";
+        "C-l" = "right";
+      };
+    }
+  ];
 }
