@@ -179,34 +179,37 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
   };
 
-  services.xremap.config.modmap = [
-    {remap = {"CapsLock" = "M_R";};}
-  ];
-
-  # Keymap for key combo rebinds
-  services.xremap.config.keymap = [
-    {
-      remap = {
-        "M_R-h" = "left";
-        "M_R-j" = "down";
-        "M_R-k" = "up";
-        "M_R-l" = "right";
-        "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
-      };
-    }
-
-    {
-      name = "Rofi";
-      application.only = "rofi";
-      remap = {
-        "C-p" = "up";
-        "C-n" = "down";
-
-        "C-h" = "left";
-        "C-j" = "down";
-        "C-k" = "up";
-        "C-l" = "right";
-      };
-    }
-  ];
+  # services.xremap.config = {
+  #   modmap = [
+  #     {remap = {"CapsLock" = "C_R";};}
+  #   ];
+  #
+  #   keymap = [
+  #     {
+  #       remap = {
+  #         "C_R-h" = "left";
+  #         "C_R-j" = "down";
+  #         "C_R-k" = "up";
+  #         "C_R-l" = "right";
+  #         "C_R-t" = {
+  #           press = {launch = ["wtype" "Δ"];};
+  #         };
+  #       };
+  #     }
+  #
+  #     {
+  #       name = "Rofi";
+  #       application.only = "rofi";
+  #       remap = {
+  #         "C-p" = "up";
+  #         "C-n" = "down";
+  #
+  #         "C-h" = "left";
+  #         "C-j" = "down";
+  #         "C-k" = "up";
+  #         "C-l" = "right";
+  #       };
+  #     }
+  #   ];
+  # };
 }

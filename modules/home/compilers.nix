@@ -1,11 +1,13 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    rustup
+    # rustup
     gnumake
     zig
     lld
     libllvm
     libgcc
+
+    clang
 
     yarn
     nodejs
