@@ -1,7 +1,3 @@
-{
-  pkgs,
-  libs,
-  ...
-}: {
-  home.file.".ideavimrc" = libs.mkOutOfStoreSymlink ./.ideavimrc;
+{config, ...}: {
+  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink ./.ideavimrc;
 }

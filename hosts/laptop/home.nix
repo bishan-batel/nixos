@@ -18,6 +18,7 @@
     ../../modules/home/terminal
     ../../modules/home/rice
     ../../modules/home/keyboard.nix
+    ../../modules/home/dev
     ../../modules/wayland.nix
   ];
 

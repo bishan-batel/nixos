@@ -16,6 +16,7 @@
     ../../modules/home/obsidian.nix
     ../../modules/home/terminal
     ../../modules/home/rice
+    ../../modules/home/dev
     ../../modules/home/keyboard.nix
     ../../modules/wayland.nix
   ];
