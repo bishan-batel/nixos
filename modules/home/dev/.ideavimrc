@@ -1,0 +1,79 @@
+
+let g:mapleader = " "
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+
+
+set surround
+set commentary
+set which-key
+
+set ideajoin
+set ideamark
+set idearefactormode=keep
+
+set notimeout
+set timeoutlen=5000
+
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+set hlsearch
+set smartcase
+set visualbell
+
+
+set number
+set rnu
+
+
+
+vmap <leader>y "+y
+nmap <leader>y "+yy
+
+vmap <leader>p "+p
+nmap <leader>p "+p
+
+nmap s Ysurround
+xmap s <Plug>VSurround
+
+
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cg <Action>(Generate)
+
+map <leader>gg <Action>(Generate)
+map <leader>sf <Action>(GotoFile)
+map <leader>sa <Action>(SearchEverywhere)
+map <leader>sh <Action>(TextSearchAction)
+nmap <leader><leader> <C-Tab>
+
+map <leader>rn <Action>(RenameElement)
+
+nmap <leader>e <Action>(ShowErrorDescription)
+
+map [e <Action>(GotoPrevError)
+map ]e <Action>(GotoNextError)
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>f <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+map <leader>od <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <leader>cb <Action>(ToggleLineBreakpoint)
+
+nnoremap <C-\> :NERDTreeToggle<cr>
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+" set quickscope
