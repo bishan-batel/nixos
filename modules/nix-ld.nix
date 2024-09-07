@@ -78,6 +78,7 @@
       nspr
       nss
       openssl
+      openssl.dev
       p11-kit
       pango
       pixman
