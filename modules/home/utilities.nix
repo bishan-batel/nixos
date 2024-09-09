@@ -4,6 +4,10 @@
     gimp
     thunderbird
     # teams
+
+    # libreoffice
+    libreoffice-qt
+    hunspell
   ];
 
   programs.zathura = {
