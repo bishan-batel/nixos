@@ -3,6 +3,7 @@
     pavucontrol
     gimp
     thunderbird
+    # teams
   ];
 
   programs.zathura = {
