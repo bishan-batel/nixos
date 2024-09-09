@@ -5,6 +5,8 @@
     thunderbird
     # teams
 
+    chromium
+
     # libreoffice
     libreoffice-qt
     hunspell
