@@ -3,6 +3,13 @@
     pavucontrol
     gimp
     thunderbird
+    # teams
+
+    chromium
+
+    # libreoffice
+    libreoffice-qt
+    hunspell
   ];
 
   programs.zathura = {
