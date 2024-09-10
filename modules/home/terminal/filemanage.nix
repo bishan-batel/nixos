@@ -14,6 +14,9 @@
 
     zoxide = {enable = true;};
 
+    # also lsd has nice config options in a conf file,
+    # try sudo apt update?
+
     lsd = {
       enable = true;
       settings = {
