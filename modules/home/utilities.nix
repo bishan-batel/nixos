@@ -3,9 +3,6 @@
     pavucontrol
     gimp
     thunderbird
-    # teams
-
-    chromium
 
     # libreoffice
     libreoffice-qt
