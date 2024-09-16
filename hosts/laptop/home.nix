@@ -12,7 +12,7 @@
     ../../modules/home/utilities.nix
     ../../modules/home/gaming.nix
     ../../modules/home/discord.nix
-    ../../modules/home/browser.nix
+    ../../modules/home/browser
     ../../modules/home/obsidian.nix
     ../../modules/home/media.nix
     ../../modules/home/terminal
