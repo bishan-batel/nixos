@@ -11,7 +11,7 @@
     ../../modules/home/utilities.nix
     ../../modules/home/gaming.nix
     ../../modules/home/discord.nix
-    ../../modules/home/browser.nix
+    ../../modules/home/browser
     ../../modules/home/media.nix
     ../../modules/home/obsidian.nix
     ../../modules/home/terminal
