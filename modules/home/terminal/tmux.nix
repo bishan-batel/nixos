@@ -15,12 +15,18 @@
       tmux
       */
       ''
+        set-option -sa terminal-overrides ",xterm*:Tc"
+        set -g mouse on
+
         unbind C-b
         set -g prefix C-Space
         bind C-Space send-prefix
 
-        set -g mouse on
+        bind -n M-h previous-window
+        bind -n M-l next-window
 
+        bind '"' split-window -v -c "#{pane_current_path}"
+        bind % split-window -h -c "#{pane_current_path}"
 
         # set-option -g status-position top
 
@@ -29,13 +35,6 @@
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
-
-        bind -n M-H previous-window
-        bind -n M-L next-window
-
-
-        bind '"' split-window -v -c "#{pane_current_path}"
-        bind % split-window -h -c "#{pane_current_path}"
       '';
   };
 }
