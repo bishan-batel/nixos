@@ -31,10 +31,10 @@ in {
     modules-right = [
       # "custom/notification"
       # "tray"
-      # "battery"
+      "battery"
       "memory"
       "pulseaudio"
-      "network"
+      # "network"
       "clock"
     ];
     clock = {
