@@ -58,7 +58,8 @@
       xwaylandvideobridge
       acpi
       wtype
-      inputs.lobster.packages.x86_64.lobster
+      inputs.lobster.packages.x86_64-linux.lobster
+      brightnessctl
     ];
   };
 
@@ -234,34 +235,42 @@
 
   security.pam.services.hyprlock = {};
 
-  services.xremap.config.modmap = [
-    {remap = {"CapsLock" = "M_R";};}
-  ];
+  services.xremap = {
+    enable = true;
+    serviceMode = "user";
+    userName = "bishan_";
 
-  # Keymap for key combo rebinds
-  services.xremap.config.keymap = [
-    {
-      remap = {
-        "M_R-h" = "left";
-        "M_R-j" = "down";
-        "M_R-k" = "up";
-        "M_R-l" = "right";
-        "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
-      };
-    }
+    config = {
+      modmap = [
+        {remap = {"CapsLock" = "M_R";};}
+      ];
 
-    {
-      name = "Rofi";
-      application.only = "rofi";
-      remap = {
-        "C-p" = "up";
-        "C-n" = "down";
+      # Keymap for key combo rebinds
+      keymap = [
+        {
+          remap = {
+            "M_R-h" = "left";
+            "M_R-j" = "down";
+            "M_R-k" = "up";
+            "M_R-l" = "right";
+            "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
+          };
+        }
 
-        "C-h" = "left";
-        "C-j" = "down";
-        "C-k" = "up";
-        "C-l" = "right";
-      };
-    }
-  ];
+        {
+          name = "Rofi";
+          application.only = "rofi";
+          remap = {
+            "C-p" = "up";
+            "C-n" = "down";
+
+            "C-h" = "left";
+            "C-j" = "down";
+            "C-k" = "up";
+            "C-l" = "right";
+          };
+        }
+      ];
+    };
+  };
 }

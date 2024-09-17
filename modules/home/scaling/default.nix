@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.file.".Xresources".text =
     /*
     sh
@@ -66,4 +70,6 @@
       use_nearest_neighbor = true;
     };
   };
+
+  programs.kitty.settings.background_opacity = lib.mkOverride 10 "0.95";
 }
