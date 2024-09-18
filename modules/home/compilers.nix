@@ -2,13 +2,13 @@
   home.packages = with pkgs; [
     # rustup
     gnumake
-    zig
     lld
     libllvm
     libgcc
 
-    clang
+    python3
 
+    clang
     yarn
     nodejs
 
