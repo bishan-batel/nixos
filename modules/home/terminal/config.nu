@@ -52,7 +52,7 @@ export def upgrade [] {
   }
 }
 
-alias nunix = nix-shell --run nu
 alias ns = nix-shell 
-
-# vim:ft=nu
+alias nunix = ns --run nu
+alias nudev = nix develop -c nu 
+alias numux = nix develop -c tmux 
