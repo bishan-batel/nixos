@@ -1,30 +1,26 @@
 {
   pkgs,
-  lib,
   inputs,
+  spicetify-nix,
   ...
-}: let
-  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
-in {
-  # allow spotify to be installed if you don't have unfree enabled already
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) ["spotify"];
+}: {
+  # home.packages = with pkgs; [spotify];
 
-  imports = [inputs.spicetify-nix.homeManagerModule];
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+  ];
 
-  home.packages = [pkgs.spotify];
-
-  programs.spicetify = {
+  programs.spicetify = let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  in {
+    enable = true;
     spotifyPackage = pkgs.spotify;
-
-    # enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      # adblock
+      # hidePodcasts
+      # shuffle # shuffle+ (special characters are sanitized out of extension names)
+    ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
-
-    enabledExtensions = with spicePkgs.extensions; [
-      fullAppDisplay
-      #     shuffle # shuffle+ (special characters are sanitized out of ext names)
-      # hidePodcasts
-    ];
   };
 }

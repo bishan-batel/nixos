@@ -1,7 +1,0 @@
-{pkgs, ...}: {
-  programs.firefox = {
-    enable = true;
-  };
-
-  services.fx_cast_bridge.enable = true;
-}

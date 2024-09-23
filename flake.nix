@@ -7,7 +7,10 @@
 
     xremap-flake.url = "github:xremap/nix-flake";
 
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # hyprland.url = "github:hyprwm/Hyprland";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -36,7 +39,6 @@
     self,
     nixpkgs,
     catppuccin,
-    spicetify-nix,
     home-manager,
     ...
   } @ inputs: let
@@ -67,7 +69,8 @@
     };
 
     homeConfigurations.bishan_ = home-manager.lib.homeManagerConfiguration {
-      pkgs = pkgs;
+      inherit pkgs;
+      extraSpecialArgs = {inherit inputs;};
       modules = [
         catppuccin.homeManagerModules.catppuccin
       ];
