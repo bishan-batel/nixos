@@ -16,9 +16,11 @@
     enable = true;
     spotifyPackage = pkgs.spotify;
     enabledExtensions = with spicePkgs.extensions; [
-      # adblock
-      # hidePodcasts
-      # shuffle # shuffle+ (special characters are sanitized out of extension names)
+      fullAppDisplay
+      keyboardShortcut
+      popupLyrics
+      playingSource
+      randomBadToTheBoneRiff
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
