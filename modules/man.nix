@@ -10,7 +10,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    tldr
+    tealdeer
     linux-manual
     man-pages
     man-pages-posix
