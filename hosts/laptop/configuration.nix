@@ -52,7 +52,7 @@
   users.users.bishan_ = {
     isNormalUser = true;
     description = "Kishan S Patel";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "disk"];
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       vesktop
