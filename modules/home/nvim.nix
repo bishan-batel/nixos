@@ -8,5 +8,5 @@
     catppuccin.enable = false;
   };
 
-  home.packages = with pkgs; [neovide wl-clipboard];
+  home.packages = with pkgs; [neovide wl-clipboard librsvg imagemagick];
 }
