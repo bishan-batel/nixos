@@ -71,5 +71,5 @@
     };
   };
 
-  programs.kitty.settings.background_opacity = lib.mkOverride 10 "0.95";
+  # programs.kitty.settings.background_opacity = lib.mkOverride 10 "0.95";
 }
