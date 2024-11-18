@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   programs.kitty = {
     enable = true;
-    font.name = "JetBrainsMono Nerd Font Mono";
+    # font.name = "JetBrainsMono Nerd Font Mono";
+    font.name = "Agave Nerd Font Mono";
     settings = {
       background_opacity = "0.9";
       confirm_os_window_close = 0;

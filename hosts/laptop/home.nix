@@ -31,7 +31,7 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      (nerdfonts.override {fonts = ["JetBrainsMono" "Agave"];})
     ];
 
     file = {
