@@ -27,7 +27,14 @@
   };
 
   fonts = {
-    fontconfig.enable = true;
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = ["JetBrainsMono"];
+        sansSerif = ["JetBrainsMono"];
+        serif = ["JetBrainsMono"];
+      };
+    };
   };
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
