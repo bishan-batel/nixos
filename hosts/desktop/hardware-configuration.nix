@@ -89,7 +89,7 @@
     };
   };
 
-  systemd.services.lactd.enable = true;
+  # systemd.services.lactd.enable = true;
 
   services = {
     xserver.videoDrivers = ["amdgpu"];
