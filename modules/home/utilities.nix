@@ -3,6 +3,7 @@
     pavucontrol
     gimp
     thunderbird
+    quickemu
 
     # libreoffice
     libreoffice-qt
