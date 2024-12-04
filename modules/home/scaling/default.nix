@@ -29,7 +29,7 @@
 
     decoration = {
       blur.enabled = true;
-      drop_shadow = true;
+      # drop_shadow = true;
     };
 
     # variable frame rate
