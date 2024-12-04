@@ -29,11 +29,6 @@
     homeDirectory = "/home/bishan_";
     stateVersion = "23.11";
 
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.agave
-    ];
-
     file = {
       # # Building this configuration will create a copy of 'dotfiles/screenrc' in
       # # the Nix store. Activating the configuration will then make '~/.screenrc' a
