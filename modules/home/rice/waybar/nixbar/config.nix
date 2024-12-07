@@ -53,6 +53,7 @@ in {
       on-click = "activate";
       persistent-workspaces = {
         "DP-1" = [1 2 3 4 5 6 7 8];
+        "DP-2" = [9 10 11];
         "HDMI-A-1" = [9 10 11];
         "eDP-1" = [1 2 3 4 5 6 7 8 9 10];
       };
