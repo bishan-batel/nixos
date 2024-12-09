@@ -8,6 +8,7 @@
       yank
       sensible
       vim-tmux-navigator
+      tmux-fzf
     ];
 
     extraConfig =
