@@ -3,13 +3,39 @@
     enable = true;
     shell = "${pkgs.nushell}/bin/nu";
     terminal = "tmux-256color";
-    historyLimit = 1000;
-    plugins = with pkgs.tmuxPlugins; [
-      yank
-      sensible
-      vim-tmux-navigator
-      tmux-fzf
-    ];
+    historyLimit = 10000;
+
+    plugins = with pkgs;
+    # yank
+    # sensible
+    # vim-tmux-navigator
+    # tmux-fzf
+      [
+        tmuxPlugins.sensible
+        # must be before continuum edits right status bar
+        {
+          plugin = tmuxPlugins.catppuccin;
+          extraConfig = ''
+            set -g @catppuccin_flavour 'mocha'
+            set -g status-left ""
+            set -g status-right '#[fg=#{@thm_crust},bg=#{@thm_teal}] session: #S '
+
+            # Ensure that everything on the right side of the status line
+            # is included.
+            set -g status-right-length 100
+          '';
+        }
+        {
+          plugin = tmuxPlugins.resurrect;
+          extraConfig = ''
+            set -g @resurrect-strategy-vim 'session'
+            set -g @resurrect-strategy-nvim 'session'
+            set -g @resurrect-capture-pane-contents 'on'
+          '';
+        }
+        tmuxPlugins.better-mouse-mode
+        tmuxPlugins.yank
+      ];
 
     catppuccin.enable = true;
 
