@@ -35,6 +35,8 @@
         }
         tmuxPlugins.better-mouse-mode
         tmuxPlugins.yank
+        tmuxPlugins.vim-tmux-navigator
+        tmuxPlugins.tmux-fzf
       ];
 
     catppuccin.enable = true;
