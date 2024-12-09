@@ -11,6 +11,8 @@
       tmux-fzf
     ];
 
+    catppuccin.enable = true;
+
     extraConfig =
       /*
       tmux
