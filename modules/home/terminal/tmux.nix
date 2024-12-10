@@ -25,6 +25,9 @@
               set -g @catppuccin_flavor "mocha"
               set -g @catppuccin_window_status_style "rounded"
 
+              set -ogq @catppuccin_pane_default_fill "number"
+              set -ogq @catppuccin_pane_number_position "left" # right, left
+
               # Make the status line pretty and add some modules
               set -g status-right-length 100
               set -g status-left-length 100
@@ -54,7 +57,7 @@
         tmuxPlugins.tmux-fzf
       ];
 
-    catppuccin.enable = true;
+    catppuccin.enable = false;
 
     extraConfig =
       /*
