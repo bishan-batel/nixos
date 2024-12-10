@@ -12,26 +12,41 @@
     # tmux-fzf
       [
         tmuxPlugins.sensible
+        tmuxPlugins.battery
+        tmuxPlugins.cpu
         # must be before continuum edits right status bar
         {
           plugin = tmuxPlugins.catppuccin;
-          extraConfig = ''
-            set -g @catppuccin_flavour 'mocha'
-            set -g status-left ""
-            set -g status-right '#[fg=#{@thm_crust},bg=#{@thm_teal}] session: #S '
+          extraConfig =
+            /*
+            tmux
+            */
+            ''
+              set -g @catppuccin_flavor "mocha"
+              set -g @catppuccin_window_status_style "rounded"
 
-            # Ensure that everything on the right side of the status line
-            # is included.
-            set -g status-right-length 100
-          '';
+              # Make the status line pretty and add some modules
+              set -g status-right-length 100
+              set -g status-left-length 100
+              set -g status-left ""
+              set -g status-right "#{E:@catppuccin_status_application}"
+              set -agF status-right "#{E:@catppuccin_status_cpu}"
+              set -ag status-right "#{E:@catppuccin_status_session}"
+              set -ag status-right "#{E:@catppuccin_status_uptime}"
+              set -agF status-right "#{E:@catppuccin_status_battery}"
+            '';
         }
         {
           plugin = tmuxPlugins.resurrect;
-          extraConfig = ''
-            set -g @resurrect-strategy-vim 'session'
-            set -g @resurrect-strategy-nvim 'session'
-            set -g @resurrect-capture-pane-contents 'on'
-          '';
+          extraConfig =
+            /*
+            tmux
+            */
+            ''
+              set -g @resurrect-strategy-vim 'session'
+              set -g @resurrect-strategy-nvim 'session'
+              set -g @resurrect-capture-pane-contents 'on'
+            '';
         }
         tmuxPlugins.better-mouse-mode
         tmuxPlugins.yank
