@@ -6,33 +6,7 @@
     historyLimit = 10000;
 
     plugins = with pkgs; [
-      {
-        plugin = tmuxPlugins.catppuccin;
-        extraConfig =
-          /*
-          tmux
-          */
-          ''
-            set -g @catppuccin_flavor "mocha"
-            set -g @catppuccin_window_status_style "rounded"
-
-            set -ogq @catppuccin_pane_default_fill "number"
-            set -ogq @catppuccin_pane_number_position "left" # right, left
-
-            # Make the status line pretty and add some modules
-            set -g status-right-length 100
-            set -g status-left-length 100
-            set -g status-left ""
-            set -g status-right "#{E:@catppuccin_status_application}"
-            set -agF status-right "#{E:@catppuccin_status_cpu}"
-            set -ag status-right "#{E:@catppuccin_status_session}"
-            set -ag status-right "#{E:@catppuccin_status_uptime}"
-            set -agF status-right "#{E:@catppuccin_status_battery}"
-          '';
-      }
       tmuxPlugins.sensible
-      tmuxPlugins.battery
-      tmuxPlugins.cpu
       {
         plugin = tmuxPlugins.resurrect;
         extraConfig =
@@ -50,9 +24,38 @@
       tmuxPlugins.yank
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.tmux-fzf
+
+      tmuxPlugins.battery
+      tmuxPlugins.cpu
     ];
 
-    catppuccin.enable = false;
+    catppuccin = {
+      enable = true;
+      extraConfig =
+        /*
+        tmux
+        */
+        ''
+          set -g @catppuccin_flavor "mocha"
+          set -g @catppuccin_window_status_style "rounded"
+
+          set -ogq @catppuccin_pane_default_fill "number"
+          set -ogq @catppuccin_pane_number_position "left" # right, left
+
+          # Make the status line pretty and add some modules
+          set -g status-right-length 100
+          set -g status-left-length 100
+
+          # set -g status-left ""
+          set -g status-left "#{E:@catppuccin_status_session}"
+
+          set -g status-right "#{E:@catppuccin_status_application}"
+          set -agF status-right "#{E:@catppuccin_status_cpu}"
+          set -ag status-right "#{E:@catppuccin_status_session}"
+          set -ag status-right "#{E:@catppuccin_status_uptime}"
+          set -agF status-right "#{E:@catppuccin_status_battery}"
+        '';
+    };
 
     extraConfig =
       /*
