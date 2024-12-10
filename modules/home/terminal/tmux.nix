@@ -4,6 +4,8 @@
     shell = "${pkgs.nushell}/bin/nu";
     terminal = "tmux-256color";
     historyLimit = 10000;
+    shortcut = "Space";
+    keyMode = "vi";
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -37,7 +39,7 @@
         */
         ''
           set -g @catppuccin_flavor "mocha"
-          set -g @catppuccin_window_status_style "rounded"
+          set -g @catppuccin_window_status_style "basic"
 
           set -ogq @catppuccin_pane_default_fill "number"
           set -ogq @catppuccin_pane_number_position "left" # right, left
@@ -47,7 +49,7 @@
           set -g status-left-length 100
 
           # set -g status-left ""
-          set -g status-left "#{E:@catppuccin_status_session}"
+          set -g status-left ""
 
           set -g status-right "#{E:@catppuccin_status_application}"
           set -agF status-right "#{E:@catppuccin_status_cpu}"
@@ -64,10 +66,6 @@
       ''
         set-option -sa terminal-overrides ",xterm*:Tc"
         set -g mouse on
-
-        unbind C-b
-        set -g prefix C-Space
-        bind C-Space send-prefix
 
         bind -n M-h previous-window
         bind -n M-l next-window
