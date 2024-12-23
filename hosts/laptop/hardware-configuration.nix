@@ -75,6 +75,7 @@
       };
 
       open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
 
       nvidiaSettings = true;
       dynamicBoost.enable = false;
