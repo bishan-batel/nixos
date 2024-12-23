@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     prismlauncher
+    glfw-wayland
+
     tetrio-desktop
     mangohud
     protonup
