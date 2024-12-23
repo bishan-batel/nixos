@@ -74,24 +74,17 @@
         finegrained = false;
       };
 
-      package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-        version = "565.57.01";
-        sha256_64bit = "sha256-buvpTlheOF6IBPWnQVLfQUiHv4GcwhvZW3Ks0PsYLHo=";
-        sha256_aarch64 = lib.fakeSha256;
-        openSha256 = lib.fakeSha256;
-        settingsSha256 = "sha256-H7uEe34LdmUFcMcS6bz7sbpYhg9zPCb/5AmZZFTx1QA=";
-        persistencedSha256 = lib.fakeSha256;
-      };
-
       open = false;
 
       nvidiaSettings = true;
+      dynamicBoost.enable = false;
 
       prime = {
         # sync.enable = true;
 
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:01:0:0";
+        reverseSync.enable = true;
 
         offload = {
           enable = true;

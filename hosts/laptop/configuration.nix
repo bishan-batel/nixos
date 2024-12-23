@@ -236,7 +236,7 @@
 
   powerManagement = {
     enable = true;
-    powertop.enable = true;
+    powertop.enable = false;
     cpuFreqGovernor = "performance";
   };
 
