@@ -237,6 +237,7 @@
   powerManagement = {
     enable = true;
     powertop.enable = true;
+    cpuFreqGovernor = "performance";
   };
 
   security.pam.services.hyprlock = {};
