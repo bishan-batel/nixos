@@ -20,7 +20,7 @@
     flavor = "mocha";
 
     pointerCursor = {
-      enable = true;
+      enable = false;
       accent = "mauve";
       flavor = "mocha";
     };
