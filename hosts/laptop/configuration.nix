@@ -108,6 +108,10 @@
     qmk
   ];
 
+  programs.coolercontrol = {
+    enable = true;
+    nvidiaSupport = true;
+  };
   services.udev = {
     enable = true;
     packages = with pkgs; [via qmk-udev-rules];
