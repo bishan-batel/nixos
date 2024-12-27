@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
+    hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
 
     xremap-flake.url = "github:xremap/nix-flake";
 
@@ -40,6 +41,7 @@
     nixpkgs,
     catppuccin,
     home-manager,
+    hyprland-qtutils,
     ...
   } @ inputs: let
     system = "x86_64-linux";
