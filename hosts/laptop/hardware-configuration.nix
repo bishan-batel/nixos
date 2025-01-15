@@ -160,11 +160,11 @@
       services.auto-cpufreq.settings = {
         battery = lib.mkForce {
           governor = "powersave";
-          turbo = "auto";
+          turbo = "never";
         };
         charger = lib.mkForce {
           governor = "powersave";
-          turbo = "auto";
+          turbo = "never";
         };
       };
     };
