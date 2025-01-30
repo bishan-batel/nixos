@@ -50,7 +50,7 @@ map <leader>cg <Action>(Generate)
 map <leader>gg <Action>(Generate)
 map <leader>sf <Action>(GotoFile)
 map <leader>sa <Action>(SearchEverywhere)
-map <leader>sh <Action>(TextSearchAction)
+map <leader>sg <Action>(TextSearchAction)
 nmap <leader><leader> <C-Tab>
 
 map <leader>rn <Action>(RenameElement)
