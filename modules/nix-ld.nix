@@ -9,7 +9,7 @@
       SDL2_ttf
       SDL_image
       SDL_mixer
-      SDL_ttf
+      # SDL_ttf
       alsa-lib
       wireplumber
       at-spi2-atk
