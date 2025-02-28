@@ -56,7 +56,7 @@
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       vesktop
-      xwaylandvideobridge
+      #xwaylandvideobridge
       acpi
       wtype
       inputs.lobster.packages.x86_64-linux.lobster
@@ -181,7 +181,10 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xwaylandvideobridge];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      #pkgs.xwaylandvideobridge
+    ];
   };
 
   # Steam
@@ -200,7 +203,7 @@
     thermald.enable = true;
 
     tlp = {
-      enable = true;
+      enable = false;
       settings = {
         CPU_SCALING_GOVERNOR_ON_AC = "performance";
         CPU_SCALING_GOVERNOR_ON_BAT = "powersave";

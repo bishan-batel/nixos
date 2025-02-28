@@ -61,7 +61,7 @@
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       vesktop
-      xwaylandvideobridge
+      #xwaylandvideobridge
     ];
   };
 
