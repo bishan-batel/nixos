@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   programs = {
+    lazygit = {
+      enable = true;
+      settings = {};
+    };
     gh-dash = {
       enable = true;
       catppuccin = {

@@ -3,5 +3,7 @@
     # texlive.combined.scheme-full
     ffmpeg
     yt-dlp
+    fd
+    tectonic
   ];
 }

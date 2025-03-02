@@ -61,7 +61,7 @@
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       vesktop
-      xwaylandvideobridge
+      # xwaylandvideobridge
     ];
   };
 
@@ -169,7 +169,10 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xwaylandvideobridge];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      # pkgs.xwaylandvideobridge
+    ];
   };
 
   # Steam
