@@ -56,7 +56,7 @@
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       vesktop
-      #xwaylandvideobridge
+      # xwaylandvideobridge
       acpi
       wtype
       inputs.lobster.packages.x86_64-linux.lobster
