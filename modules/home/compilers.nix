@@ -6,6 +6,9 @@
     libllvm
     libgcc
 
+    luarocks
+    lua
+
     python3
 
     clang
