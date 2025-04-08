@@ -5,7 +5,7 @@
       devices = ["nodev"];
       efiSupport = true;
       useOSProber = true;
-      configurationLimit = 10;
+      configurationLimit = 1;
 
       # Theming
       catppuccin.enable = true;

@@ -17,7 +17,7 @@
     initrd = {
       availableKernelModules = ["xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
 
-      kernelModules = [];
+      kernelModules = ["nvidia" "i915" "nvidia_modeset" "nvidia_drm"];
     };
 
     kernelModules = ["kvm-intel" "v4l2loopback"];
