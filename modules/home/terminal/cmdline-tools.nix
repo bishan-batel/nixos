@@ -5,5 +5,6 @@
     yt-dlp
     fd
     tectonic
+    doas
   ];
 }
