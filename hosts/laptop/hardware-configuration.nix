@@ -17,7 +17,7 @@
     initrd = {
       availableKernelModules = ["xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
 
-      kernelModules = [];
+      kernelModules = ["nvidia" "i915" "nvidia_modeset" "nvidia_drm"];
     };
 
     kernelModules = ["kvm-intel" "v4l2loopback"];
@@ -81,11 +81,11 @@
       dynamicBoost.enable = false;
 
       prime = {
-        # sync.enable = true;
+        sync.enable = false;
 
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:01:0:0";
-        reverseSync.enable = true;
+        reverseSync.enable = false;
 
         offload = {
           enable = true;
@@ -102,6 +102,8 @@
 
       extraPackages = with pkgs; [
         rocmPackages.clr.icd
+        nvidia-vaapi-driver
+        libvdpau-va-gl
       ];
 
       extraPackages32 = with pkgs; [
