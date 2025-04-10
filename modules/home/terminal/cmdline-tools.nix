@@ -6,5 +6,6 @@
     fd
     tectonic
     doas
+    thefuck
   ];
 }
