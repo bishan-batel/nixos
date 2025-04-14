@@ -2,7 +2,6 @@
   programs = {
     starship = {
       enable = true;
-      catppuccin.enable = true;
 
       settings = {
         format = "$all[$character](bg:surface0 text)($cmd_duration)$directory[](text bg:surface0)[](bold surface0 bg:base_light) ";

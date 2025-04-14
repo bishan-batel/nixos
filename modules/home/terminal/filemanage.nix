@@ -8,8 +8,6 @@
       settings = {
         show_hidden = true;
       };
-
-      catppuccin.enable = true;
     };
 
     zoxide = {enable = true;};
@@ -29,13 +27,11 @@
 
     bat = {
       enable = true;
-      catppuccin.enable = true;
     };
 
     fzf = {
       enable = true;
       tmux.enableShellIntegration = true;
-      catppuccin.enable = true;
     };
   };
 }

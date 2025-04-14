@@ -24,6 +24,12 @@
       accent = "mauve";
       flavor = "mocha";
     };
+
+    yazi.enable = true;
+    bat.enable = true;
+    fzf.enable = true;
+    kitty.enable = true;
+    starship.enable = true;
   };
 
   fonts = {

@@ -12,7 +12,5 @@
       font_size = 15;
       cursor_shape = "block";
     };
-
-    catppuccin.enable = true;
   };
 }
