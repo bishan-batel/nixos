@@ -36,6 +36,7 @@
       glib
       glfw
       glfw-wayland
+      libsForQt5.qt5.qtwayland
       gmp
       gst_all_1.gst-plugins-base
       gst_all_1.gst-plugins-ugly

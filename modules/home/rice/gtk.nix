@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.dconf];
+  home.packages = with pkgs; [dconf libsForQt5.qt5.qtwayland];
   gtk = {
     enable = true;
     font.name = "JetBrainsMono Nerd Font Mono";
