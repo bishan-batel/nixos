@@ -45,6 +45,7 @@
       icu
       keyutils.lib
       libGL
+      libglvnd
       libGLU
       libappindicator-gtk2
       libcaca
@@ -120,6 +121,7 @@
       xorg.xkeyboardconfig
       xz
       zlib
+      libdisplay-info
     ];
   };
 }

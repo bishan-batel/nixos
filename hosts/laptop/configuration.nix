@@ -48,7 +48,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bishan_ = {
     isNormalUser = true;
     description = "Kishan S Patel";
@@ -109,7 +108,7 @@
   ];
 
   programs.coolercontrol = {
-    enable = true;
+    enable = false;
     nvidiaSupport = true;
   };
   services.udev = {
@@ -122,9 +121,10 @@
     sddm = {
       package = pkgs.kdePackages.sddm;
       enable = true;
-      wayland.enable = true;
+      wayland.enable = false;
     };
   };
+  services.xserver.enable = true;
 
   # Hyprland
 
@@ -190,9 +190,9 @@
   # Steam
   programs.steam = {
     enable = true;
-    gamescopeSession.enable = true;
+    gamescopeSession.enable = false;
   };
-  programs.gamemode.enable = true;
+  programs.gamemode.enable = false;
 
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
@@ -235,7 +235,7 @@
 
   powerManagement = {
     enable = true;
-    powertop.enable = false;
+    powertop.enable = true;
     cpuFreqGovernor = "performance";
   };
 
@@ -248,18 +248,18 @@
 
     config = {
       modmap = [
-        {remap = {"CapsLock" = "M_R";};}
+        {remap = {"CapsLock" = "Esc";};}
       ];
 
       # Keymap for key combo rebinds
       keymap = [
         {
           remap = {
-            "M_R-h" = "left";
-            "M_R-j" = "down";
-            "M_R-k" = "up";
-            "M_R-l" = "right";
-            "M_R-t".press.launch = ["nu" "-c" "wtype Δ"];
+            "Alt_R-h" = "left";
+            "Alt_R-j" = "down";
+            "Alt_R-k" = "up";
+            "Alt_R-l" = "right";
+            "Alt_R-t".press.launch = ["nu" "-c" "wtype Δ"];
           };
         }
 
