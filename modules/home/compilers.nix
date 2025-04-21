@@ -6,6 +6,8 @@
     libllvm
     libgcc
 
+    gradle
+
     luarocks
     lua
 

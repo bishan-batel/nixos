@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     pavucontrol
-    gimp
+    gimp3-with-plugins
     thunderbird
     quickemu
 
