@@ -73,7 +73,7 @@
       modesetting.enable = true;
       powerManagement = {
         enable = true;
-        finegrained = false;
+        finegrained = true;
       };
 
       open = false;
@@ -139,11 +139,11 @@
   specialisation = {
     on-the-go.configuration = {
       system.nixos.tags = ["on-the-go"];
-      # hardware.nvidia = {
-      #   prime.offload.enable = lib.mkForce true;
-      #   prime.offload.enableOffloadCmd = lib.mkForce true;
-      #   prime.sync.enable = lib.mkForce false;
-      # };
+      hardware.nvidia = {
+        prime.offload.enable = lib.mkForce true;
+        prime.offload.enableOffloadCmd = lib.mkForce true;
+        prime.sync.enable = lib.mkForce false;
+      };
       boot.extraModprobeConfig = lib.mkForce ''
         blacklist nouveau
         options nouveau modeset=0
@@ -159,7 +159,7 @@
         # Remove NVIDIA VGA/3D controller devices
         ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{power/control}="auto", ATTR{remove}="1"
       '';
-      boot.blacklistedKernelModules = ["nouveau" "nvidia" "nvidia_drm" "nvidia_modeset"];
+      boot.blacklistedKernelModules = ["nouveau" "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_drm" "nvidia_uvm"];
 
       services.auto-cpufreq.settings = {
         battery = lib.mkForce {
