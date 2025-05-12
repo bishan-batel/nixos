@@ -131,6 +131,11 @@
 
   services.printing.enable = true;
 
+  programs.corectrl = {
+    gpuOverclock.enable = true;
+    enable = true;
+  };
+
   # sound.enable = true;
 
   services.pipewire = {
