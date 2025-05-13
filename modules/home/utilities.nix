@@ -9,6 +9,9 @@
     libreoffice-qt
     hunspell
     qjackctl
+
+    noisetorch
+    easyeffects
   ];
 
   programs.zathura = {
