@@ -10,7 +10,6 @@
     hunspell
     qjackctl
 
-    noisetorch
     easyeffects
   ];
 

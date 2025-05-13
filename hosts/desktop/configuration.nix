@@ -127,6 +127,8 @@
 
   users.users.bishan_.shell = pkgs.nushell;
 
+  programs.noisetorch.enable = true;
+
   security.rtkit.enable = true;
 
   services.printing.enable = true;
