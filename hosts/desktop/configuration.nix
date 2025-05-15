@@ -185,8 +185,15 @@
   };
   programs.gamemode.enable = true;
 
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
+  environment = {
+    sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
+    };
+
+    variables = {
+      RUSTICL_ENABLE = "radeonsi";
+      ROC_ENABLE_PRE_VEGA = "1";
+    };
   };
 
   # services.xremap.config = {
