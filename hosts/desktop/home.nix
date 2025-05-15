@@ -19,6 +19,7 @@
     ../../modules/home/dev
     ../../modules/home/keyboard.nix
     ../../modules/wayland.nix
+    ../../modules/home/content.nix
   ];
 
   programs.home-manager.enable = true;

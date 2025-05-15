@@ -8,9 +8,6 @@
     # libreoffice
     libreoffice-qt
     hunspell
-    qjackctl
-
-    easyeffects
   ];
 
   programs.zathura = {
