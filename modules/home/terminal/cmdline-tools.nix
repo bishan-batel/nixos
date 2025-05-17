@@ -7,5 +7,6 @@
     tectonic
     doas
     thefuck
+    speedtest-cli
   ];
 }
