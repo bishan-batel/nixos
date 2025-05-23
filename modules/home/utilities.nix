@@ -8,6 +8,8 @@
     # libreoffice
     libreoffice-qt
     hunspell
+
+    reaper
   ];
 
   programs.zathura = {
