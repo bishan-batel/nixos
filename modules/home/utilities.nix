@@ -9,7 +9,7 @@
     libreoffice-qt
     hunspell
 
-    reaper
+    audacity
   ];
 
   programs.zathura = {
