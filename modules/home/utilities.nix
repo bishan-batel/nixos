@@ -11,6 +11,7 @@
     hunspell
 
     audacity
+    yabridge
   ];
 
   programs.zathura = {
