@@ -6,6 +6,7 @@
     quickemu
 
     # libreoffice
+    reaper
     libreoffice-qt
     hunspell
 
