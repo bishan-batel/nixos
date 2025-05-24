@@ -18,7 +18,7 @@ in {
     margin-right = 0;
     modules-left = [
       "custom/launcher"
-      "custom/playerlabel"
+      "hyprland/window"
       "custom/playerctl#backward"
       "custom/playerctl#play"
       "custom/playerctl#foward"
