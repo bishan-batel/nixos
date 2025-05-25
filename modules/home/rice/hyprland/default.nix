@@ -14,7 +14,8 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = null;
+    portalPackage = null;
 
     xwayland.enable = true;
     systemd = {
@@ -27,7 +28,7 @@ in {
     };
 
     plugins = [
-      # hypr-pkgs.hyprtrails
+      hypr-pkgs.hyprtrails
     ];
   };
 

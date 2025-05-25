@@ -194,6 +194,7 @@
     variables = {
       RUSTICL_ENABLE = "radeonsi";
       ROC_ENABLE_PRE_VEGA = "1";
+      NIXOS_OZONE_WL = "1";
     };
   };
 
