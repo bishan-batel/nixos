@@ -12,6 +12,8 @@
 
     audacity
     yabridge
+
+    wineasio
   ];
 
   programs.zathura = {
