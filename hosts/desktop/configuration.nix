@@ -20,8 +20,6 @@
     accent = "mauve";
   };
 
-  services.flatpak.enable = true;
-
   console.catppuccin.enable = true;
 
   networking.hostName = "desktop"; # Define your hostname.
