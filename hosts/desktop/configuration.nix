@@ -20,7 +20,7 @@
     accent = "mauve";
   };
 
-  # services.flatpak.enable = true;
+  services.flatpak.enable = true;
 
   console.catppuccin.enable = true;
 
@@ -104,7 +104,7 @@
     wine64
     wineWowPackages.waylandFull
     winetricks
-    bottles
+    wineasio
 
     qmk-udev-rules
     via

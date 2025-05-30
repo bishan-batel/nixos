@@ -100,7 +100,6 @@
     wine64
     wineWowPackages.waylandFull
     winetricks
-    bottles
 
     qmk-udev-rules
     via

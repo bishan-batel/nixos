@@ -13,7 +13,7 @@
     audacity
     yabridge
 
-    wineasio
+    bottles
   ];
 
   programs.zathura = {
