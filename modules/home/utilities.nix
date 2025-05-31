@@ -12,6 +12,7 @@
 
     audacity
     yabridge
+    yabridgectl
 
     bottles
   ];
