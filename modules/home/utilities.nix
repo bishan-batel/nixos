@@ -15,6 +15,8 @@
     yabridgectl
 
     bottles
+
+    mixxx
   ];
 
   programs.zathura = {

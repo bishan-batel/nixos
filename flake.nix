@@ -34,6 +34,8 @@
     };
 
     lobster.url = "github:justchokingaround/lobster";
+
+    musnix.url = "github:musnix/musnix";
   };
 
   outputs = {
@@ -56,6 +58,7 @@
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
         inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+        inputs.musnix.nixosModules.musnix
       ];
     };
 

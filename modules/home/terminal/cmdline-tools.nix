@@ -6,7 +6,7 @@
     fd
     tectonic
     doas
-    thefuck
     speedtest-cli
+    spotdl
   ];
 }
