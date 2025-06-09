@@ -57,7 +57,8 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
-      vesktop
+      # vesktop
+      legcord
       # xwaylandvideobridge
     ];
   };
@@ -182,7 +183,8 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
+      # pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
       # pkgs.xwaylandvideobridge
     ];
   };
