@@ -12,6 +12,7 @@
     ../../modules/man.nix
     ../../modules/nix-ld.nix
     ../../modules/auto-upgrade.nix
+    ../../modules/audio.nix
   ];
 
   catppuccin = {
@@ -109,6 +110,8 @@
     qmk
 
     rtaudio
+
+    # pkgs.pkgsi686Linux.pipewire.jack
   ];
 
   services.udev = {
