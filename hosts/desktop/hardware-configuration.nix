@@ -18,7 +18,10 @@
 
     kernelModules = ["kvm-amd" "v4l2loopback"];
 
-    extraModulePackages = [pkgs.linuxPackages.v4l2loopback];
+    extraModulePackages = [
+      pkgs.linuxPackages.v4l2loopback
+      # pkgs.linuxKernel.packages.linux_6_12.v4l2loopback-dkms
+    ];
 
     extraModprobeConfig = ''
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1

@@ -49,6 +49,8 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     config = {allowUnfree = true;};
+    overlays = [
+    ];
   in {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
