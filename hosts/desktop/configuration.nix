@@ -98,7 +98,6 @@
     unzip
     nushell
     v4l-utils
-    linuxPackages.v4l2loopback
 
     wine
     wine64
