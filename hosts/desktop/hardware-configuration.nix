@@ -19,7 +19,7 @@
     kernelModules = ["kvm-amd" "v4l2loopback"];
 
     extraModulePackages = [
-      pkgs.linuxPackages.v4l2loopback
+      config.boot.kernelPackages.v4l2loopback
       # pkgs.linuxKernel.packages.linux_6_12.v4l2loopback-dkms
     ];
 
