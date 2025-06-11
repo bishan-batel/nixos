@@ -179,6 +179,7 @@
 
   programs.hyprland = {
     enable = true;
+    xwayland.enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
     # make sure to also set the portal package, so that they are in sync
@@ -190,15 +191,15 @@
     xdgOpenUsePortal = true;
 
     extraPortals = [
-      # pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
     ];
 
     config = {
-      common.default = "*";
+      common.default = ["gtk"];
       hyprland = {
-        default = ["gtk" "hyprland"];
+        default = ["hyprland" "gtk"];
       };
     };
   };
@@ -213,12 +214,17 @@
   environment = {
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
+      NIXOS_OZONE_WL = "1";
+      MOZ_ENABLE_WAYLAND = "1";
+      T_QPA_PLATFORM = "wayland";
     };
 
     variables = {
       RUSTICL_ENABLE = "radeonsi";
       ROC_ENABLE_PRE_VEGA = "1";
-      NIXOS_OZONE_WL = "1";
+      XDG_CURRENT_DESKTOP = "Hyprland";
+      XDG_SESSION_TYPE = "wayland";
+      XDG_SESSION_DESKTOP = "Hyprland";
     };
   };
 
