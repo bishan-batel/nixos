@@ -17,6 +17,7 @@
     bottles
 
     mixxx
+    blender
   ];
 
   programs.zathura = {

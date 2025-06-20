@@ -97,6 +97,10 @@
     keyboard = {
       qmk.enable = true;
     };
+
+    # fancontrol = {
+    #   enable = true;
+    # };
   };
 
   # systemd.services.lactd.enable = true;

@@ -60,6 +60,7 @@
       # vesktop
       legcord
       kdePackages.xwaylandvideobridge
+      davinci-resolve-studio
     ];
   };
 
