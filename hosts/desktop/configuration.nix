@@ -60,7 +60,7 @@
       # vesktop
       legcord
       kdePackages.xwaylandvideobridge
-      davinci-resolve-studio
+      # davinci-resolve-studio
     ];
   };
 
@@ -134,6 +134,12 @@
   users.users.bishan_.shell = pkgs.nushell;
 
   programs.noisetorch.enable = true;
+
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+  programs.appimage.package = pkgs.appimage-run.override {
+    extraPkgs = pkgs: [pkgs.python312];
+  };
 
   security.rtkit.enable = true;
 

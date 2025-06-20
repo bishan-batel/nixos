@@ -28,11 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-programs-sqlite = {
-      url = "github:wamserma/flake-programs-sqlite";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     lobster.url = "github:justchokingaround/lobster";
 
     musnix.url = "github:musnix/musnix";
@@ -59,7 +54,7 @@
         # inputs.xremap-flake.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
-        inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+        # inputs.flake-programs-sqlite.nixosModules.programs-sqlite
         inputs.musnix.nixosModules.musnix
       ];
     };
@@ -71,7 +66,7 @@
         inputs.xremap-flake.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
-        inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+        # inputs.flake-programs-sqlite.nixosModules.programs-sqlite
       ];
     };
 
