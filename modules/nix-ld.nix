@@ -2,7 +2,7 @@
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      rocmPackages.clr
+      # rocmPackages.clr
       SDL
       SDL2
       SDL2_image

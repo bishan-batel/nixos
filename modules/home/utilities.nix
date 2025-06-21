@@ -11,8 +11,8 @@
     hunspell
 
     audacity
-    yabridge
-    yabridgectl
+    # yabridge
+    # yabridgectl
 
     bottles
 

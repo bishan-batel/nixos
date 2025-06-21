@@ -76,7 +76,7 @@
         vulkan-validation-layers
         amdvlk # Optional: AMD's proprietary Vulkan driver
         mesa.opencl # Enables Rusticl (OpenCL) support
-        rocmPackages.clr.icd
+        # rocmPackages.clr.icd
       ];
 
       extraPackages32 = with pkgs; [
