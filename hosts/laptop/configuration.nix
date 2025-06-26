@@ -13,6 +13,7 @@
     ../../modules/nix-ld.nix
     ../../modules/man.nix
     ../../modules/auto-upgrade.nix
+    ../../modules/nh.nix
   ];
 
   catppuccin = {
