@@ -12,4 +12,6 @@
 
     flake = "/home/bishan_/nixos";
   };
+
+  environment.systemPackages = [pkgs.nom];
 }
