@@ -126,6 +126,10 @@
     };
   };
 
+  services.desktopManager = {
+    gnome.enable = true;
+  };
+
   # Hyprland
 
   users.users.bishan_.shell = pkgs.nushell;
