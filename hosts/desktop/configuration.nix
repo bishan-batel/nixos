@@ -15,6 +15,7 @@
     ../../modules/audio.nix
     ../../modules/nh.nix
     ../../modules/cachix.nix
+    ../../modules/storage.nix
   ];
 
   catppuccin = {

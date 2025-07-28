@@ -8,6 +8,7 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ../../modules/grub.nix
+    ../../modules/storage.nix
   ];
 
   boot = {
