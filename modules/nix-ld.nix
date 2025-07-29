@@ -1,4 +1,16 @@
 {pkgs, ...}: {
+  services.envfs = {
+    enable = true;
+
+    extraFallbackPathCommands =
+      /*
+      bash
+      */
+      ''
+        ln -s ${pkgs.bash}/bin/bash $out/bash
+      '';
+  };
+
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [

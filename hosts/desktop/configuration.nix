@@ -195,7 +195,10 @@
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  programs.sway = {enable = true;};
+  programs.sway = {
+    enable = true;
+    #   wrapperFeatures.gtk = true;
+  };
 
   xdg.portal = {
     enable = true;
