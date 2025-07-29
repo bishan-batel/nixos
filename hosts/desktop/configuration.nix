@@ -197,7 +197,8 @@
 
   programs.sway = {
     enable = true;
-    #   wrapperFeatures.gtk = true;
+    wrapperFeatures.gtk = true;
+    package = pkgs.swayfx;
   };
 
   xdg.portal = {
