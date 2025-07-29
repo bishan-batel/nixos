@@ -131,16 +131,16 @@
     gnome.enable = true;
   };
 
-  # Hyprland
-
   users.users.bishan_.shell = pkgs.nushell;
 
   programs.noisetorch.enable = true;
 
-  programs.appimage.enable = true;
-  programs.appimage.binfmt = true;
-  programs.appimage.package = pkgs.appimage-run.override {
-    extraPkgs = pkgs: [pkgs.python312];
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+    package = pkgs.appimage-run.override {
+      extraPkgs = pkgs: [pkgs.python312];
+    };
   };
 
   security.rtkit.enable = true;
@@ -194,6 +194,8 @@
     # make sure to also set the portal package, so that they are in sync
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
+
+  programs.sway = {enable = true;};
 
   xdg.portal = {
     enable = true;

@@ -20,6 +20,7 @@
     ../../modules/home/keyboard.nix
     ../../modules/wayland.nix
     ../../modules/home/content.nix
+    ../../modules/home/rice/sway
   ];
 
   programs.home-manager.enable = true;
