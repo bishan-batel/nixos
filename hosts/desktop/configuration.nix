@@ -121,7 +121,7 @@
   # SDDM
   services.displayManager = {
     sddm = {
-      package = pkgs.kdePackages.sddm;
+      # package = pkgs.kdePackages.sddm;
       enable = true;
       wayland.enable = true;
     };
@@ -199,6 +199,10 @@
     enable = true;
     wrapperFeatures.gtk = true;
     package = pkgs.swayfx;
+  };
+
+  services.desktopManager = {
+    plasma6.enable = true;
   };
 
   xdg.portal = {
