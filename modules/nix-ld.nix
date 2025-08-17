@@ -1,8 +1,21 @@
 {pkgs, ...}: {
+  services.envfs = {
+    enable = true;
+
+    extraFallbackPathCommands =
+      /*
+      bash
+      */
+      ''
+        ln -s ${pkgs.bash}/bin/bash $out/bash
+      '';
+  };
+
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      # rocmPackages.clr
+      rocmPackages.clr
+      # mesa.opencl
       SDL
       SDL2
       SDL2_image

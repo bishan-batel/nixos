@@ -10,7 +10,7 @@
     libreoffice-qt
     hunspell
 
-    audacity
+    # audacity
     # yabridge
     # yabridgectl
 

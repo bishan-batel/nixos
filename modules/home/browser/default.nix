@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  programs.firefox = {
-    enable = true;
-  };
+  # programs.firefox = {
+  #   enable = true;
+  # };
 
-  home.packages = with pkgs; [fx_cast_bridge brave];
+  home.packages = with pkgs; [fx_cast_bridge brave firefox];
   # services.fx_cast_bridge.enable = true;
 }
