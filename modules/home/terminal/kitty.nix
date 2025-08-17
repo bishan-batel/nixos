@@ -4,7 +4,7 @@
     font.name = "JetBrainsMono Nerd Font Mono";
     # font.name = "Agave Nerd Font Mono";
     settings = {
-      background_opacity = "0.9";
+      background_opacity = "0.94";
       confirm_os_window_close = 0;
       copy_on_select = true;
       clipboard_control = "write-clipboard read-clipboard write-primary";

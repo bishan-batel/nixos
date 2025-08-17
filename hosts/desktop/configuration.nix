@@ -62,7 +62,6 @@
       linuxKernel.packages.linux_zen.perf
       # vesktop
       legcord
-      kdePackages.xwaylandvideobridge
       davinci-resolve-studio
     ];
   };
@@ -78,7 +77,7 @@
 
   services.dbus = {enable = true;};
 
-  services.gnome.at-spi2-core.enable = true;
+  # services.gnome.at-spi2-core.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -110,6 +109,8 @@
 
     rtaudio
 
+    # gnomeExtensions.pop-shell
+
     # pkgs.pkgsi686Linux.pipewire.jack
   ];
 
@@ -121,14 +122,15 @@
   # SDDM
   services.displayManager = {
     sddm = {
-      # package = pkgs.kdePackages.sddm;
+      package = pkgs.kdePackages.sddm;
       enable = true;
       wayland.enable = true;
     };
   };
 
   services.desktopManager = {
-    gnome.enable = true;
+    # gnome.enable = true;
+    # plasma6.enable = false;
   };
 
   users.users.bishan_.shell = pkgs.nushell;
@@ -196,14 +198,35 @@
   };
 
   programs.sway = {
-    enable = true;
+    enable = false;
     wrapperFeatures.gtk = true;
     package = pkgs.swayfx;
   };
 
-  services.desktopManager = {
-    plasma6.enable = true;
+  services.xserver = {
+    enable = true;
+
+    desktopManager = {
+      xterm.enable = false;
+      xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
+    };
+
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        i3status
+        i3blocks
+        clipit
+      ];
+    };
   };
+  services.picom.enable = true;
+
+  services.displayManager.defaultSession = "xfce";
 
   xdg.portal = {
     enable = true;
@@ -239,9 +262,7 @@
     variables = {
       RUSTICL_ENABLE = "radeonsi";
       ROC_ENABLE_PRE_VEGA = "1";
-      XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
-      XDG_SESSION_DESKTOP = "Hyprland";
     };
   };
 
