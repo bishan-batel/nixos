@@ -25,8 +25,8 @@
     kernelParams = ["nvidia-drm.modeset=1" "nvidia-drm.fbdev=1"];
 
     extraModulePackages = with pkgs; [
-      # linuxPackages.v4l2loopback
-      linuxKernel.packages.linux_6_6.v4l2loopback
+      linuxPackages.v4l2loopback
+      # linuxKernel.packages.linux_6_6.v4l2loopback
     ];
 
     kernel.sysctl."vm.max_map_count" = 2147483642;
