@@ -22,7 +22,6 @@
 
   programs.zathura = {
     enable = true;
-    catppuccin.enable = true;
   };
 
   programs = {
@@ -42,8 +41,6 @@
         vim_keys = true;
         rounded_corners = true;
       };
-
-      catppuccin.enable = true;
     };
   };
 }

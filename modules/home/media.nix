@@ -5,17 +5,8 @@
     feh
   ];
 
-  programs.mpv = {
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      accent = "mauve";
-    };
-  };
-
-  programs.imv = {
-    enable = true;
-    catppuccin.enable = true;
+  programs = {
+    mpv.enable = true;
+    imv.enable = true;
   };
 }

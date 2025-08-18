@@ -224,8 +224,6 @@
       ];
     };
   };
-  services.picom.enable = true;
-
   services.displayManager.defaultSession = "xfce";
 
   xdg.portal = {

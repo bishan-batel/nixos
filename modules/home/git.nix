@@ -4,14 +4,8 @@
       enable = true;
       settings = {};
     };
-    gh-dash = {
-      enable = true;
-      catppuccin = {
-        enable = true;
-        accent = "mauve";
-        flavor = "mocha";
-      };
-    };
+
+    gh-dash.enable = true;
 
     gh = {
       enable = true;
@@ -36,14 +30,7 @@
 
       aliases = {};
 
-      delta = {
-        enable = true;
-        catppuccin = {
-          enable = true;
-          flavor = "mocha";
-          # accent = "mauve";
-        };
-      };
+      delta.enable = true;
     };
   };
 }
