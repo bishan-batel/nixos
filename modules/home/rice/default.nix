@@ -12,6 +12,7 @@
     ./notifications.nix
     ./spicetify.nix
     ./hyprland
+    ./i3
   ];
 
   catppuccin = {

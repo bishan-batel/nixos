@@ -203,27 +203,6 @@
     package = pkgs.swayfx;
   };
 
-  services.xserver = {
-    enable = true;
-
-    desktopManager = {
-      xterm.enable = false;
-      xfce = {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
-    };
-
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        i3status
-        i3blocks
-        clipit
-      ];
-    };
-  };
   services.displayManager.defaultSession = "xfce";
 
   xdg.portal = {
