@@ -203,7 +203,7 @@
     package = pkgs.swayfx;
   };
 
-  services.displayManager.defaultSession = "xfce";
+  # services.displayManager.defaultSession = "xfce";
 
   xdg.portal = {
     enable = true;

@@ -1,17 +1,17 @@
-{ pkgs, ... }: {
+{ pkgs, config,... }: {
 
-  home.packages = [
-    i3status
-    i3blocks
+  home.packages = with pkgs; [
     clipit
   ];
-  xsession.windowManager = {
+
+  xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
 
+    config = null;
 
     extraConfig = /*bash*/ '' 
       include ${config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/modules/home/rice/i3/config"}
-    '';
+    # '';
   };
 }

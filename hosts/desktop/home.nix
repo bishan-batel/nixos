@@ -20,7 +20,6 @@
     ../../modules/home/keyboard.nix
     ../../modules/wayland.nix
     ../../modules/home/content.nix
-    # ../../modules/home/rice/i3
   ];
 
   programs.home-manager.enable = true;
