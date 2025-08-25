@@ -1,5 +1,8 @@
-{ pkgs, config,... }: {
-
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     clipit
   ];
@@ -10,8 +13,12 @@
 
     config = null;
 
-    extraConfig = /*bash*/ '' 
-      include ${config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/modules/home/rice/i3/config"}
-    # '';
+    extraConfig =
+      /*
+      bash
+      */
+      ''       
+          include ${config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/modules/home/rice/i3/config"}
+        # '';
   };
 }

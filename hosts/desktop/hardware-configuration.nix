@@ -109,9 +109,9 @@
   services = {
     xserver.videoDrivers = ["amdgpu"];
     dbus.enable = true;
-    devmon.enable = true;
-    gvfs.enable = true;
-    udisks2.enable = true;
+    # devmon.enable = true;
+    # gvfs.enable = true;
+    # udisks2.enable = true;
   };
 
   services.lact.enable = true;

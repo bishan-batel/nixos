@@ -20,6 +20,5 @@
 
   xdg.configFile."sway/config".source = config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/modules/home/rice/sway/sway.conf";
 
-
   services.picom.enable = true;
 }
