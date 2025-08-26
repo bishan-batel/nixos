@@ -12,4 +12,8 @@
     };
     efi.canTouchEfiVariables = true;
   };
+
+  boot.supportedFilesystems = ["ntfs"];
+
+  environment.systemPackages = [ pkgs.ntfs3g ];
 }
