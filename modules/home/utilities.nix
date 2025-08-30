@@ -2,6 +2,8 @@
   home.packages = with pkgs; [
     pavucontrol
     gimp3-with-plugins
+    krita
+    inkscape
     thunderbird
     quickemu
 
