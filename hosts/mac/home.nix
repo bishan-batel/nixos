@@ -35,6 +35,7 @@
 
     mpv.enable = true;
     imv.enable = true;
+    nvim.enable = false;
   };
 
   fonts = {
