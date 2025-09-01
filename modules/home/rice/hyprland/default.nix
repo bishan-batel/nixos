@@ -9,6 +9,7 @@ in {
   home.packages = with pkgs; [
     sway-contrib.grimshot
     hyprshade
+    wl-clipboard
     inputs.hyprland-qtutils.packages."${pkgs.system}".default
   ];
 

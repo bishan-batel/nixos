@@ -6,7 +6,7 @@
     catppuccin.url = "github:catppuccin/nix";
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
 
-    nix-darwin = {
+    darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -41,7 +41,7 @@
   outputs = {
     self,
     nixpkgs,
-    nix-darwin,
+    darwin,
     catppuccin,
     home-manager,
     hyprland-qtutils,
@@ -53,9 +53,14 @@
     overlays = [
     ];
   in {
-    darwinConfigurations."Kishans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-      modules = [ ./hosts/mac/configuration.nix ];
-    };
+    darwinConfigurations."Kishans-MacBook-Pro" = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
+        specialArgs = { inherit inputs; };
+        modules = [ 
+          home-manager.darwinModules.home-manager
+          ./hosts/mac/configuration.nix 
+        ];
+      };
 
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
