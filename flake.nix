@@ -6,6 +6,11 @@
     catppuccin.url = "github:catppuccin/nix";
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
 
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     xremap-flake.url = "github:xremap/nix-flake";
 
     spicetify-nix = {
@@ -36,6 +41,7 @@
   outputs = {
     self,
     nixpkgs,
+    nix-darwin,
     catppuccin,
     home-manager,
     hyprland-qtutils,
@@ -47,6 +53,10 @@
     overlays = [
     ];
   in {
+    darwinConfigurations."Kishans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+      modules = [ ./hosts/mac/configuration.nix ];
+    };
+
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
