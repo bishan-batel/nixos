@@ -1,5 +1,13 @@
 { pkgs, inputs, ... } : {
 
+
+	imports = [
+    # builtins.fetchurl {
+    #   url = "https://raw.githubusercontent.com/Atemu/home-manager/e6d905336181ed8f98d48a1f6c9965b77f18e304/modules/targets/darwin.nix";
+    #   sha256 = "0lsa8ncwvv5qzar2sa8mxblhg6wcq5y6h9ny7kgmsby4wzaryz67";
+    # }
+	];
+
 	environment.systemPackages = with pkgs; [
 		nushell
 		neovim
@@ -65,12 +73,13 @@
 			mouse_action1                = "move";
 			mouse_action2                = "resize";
 			layout                       = "bsp";
-			top_padding                  = 36;
-			bottom_padding               = 10;
-			left_padding                 = 10;
-			right_padding                = 10;
+			top_padding                  = 20;
+			bottom_padding               = 20;
+			left_padding                 = 20;
+			right_padding                = 20;
 			window_gap                   = 10;
 		};
+
 
 		extraConfig = /*bash*/ ''
 	# rules

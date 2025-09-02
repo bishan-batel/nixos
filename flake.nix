@@ -11,6 +11,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mac-app-util.url = "github:hraban/mac-app-util";
+
     xremap-flake.url = "github:xremap/nix-flake";
 
     spicetify-nix = {
@@ -42,6 +44,7 @@
     self,
     nixpkgs,
     darwin,
+    mac-app-util,
     catppuccin,
     home-manager,
     hyprland-qtutils,
@@ -58,6 +61,7 @@
         specialArgs = { inherit inputs; };
         modules = [ 
           home-manager.darwinModules.home-manager
+          mac-app-util.darwinModules.default
           ./hosts/mac/configuration.nix 
         ];
       };
