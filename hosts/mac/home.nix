@@ -9,7 +9,7 @@
     ../../modules/home/rice/spicetify.nix
     ../../modules/home/terminal/nu.nix
     ../../modules/home/terminal/filemanage.nix
-    ../../modules/home/mac/sxkhd.nix
+    ../../modules/home/mac/sxhkd.nix
     inputs.catppuccin.homeModules.catppuccin
     inputs.mac-app-util.homeManagerModules.default
     # (builtins.fetchurl {
