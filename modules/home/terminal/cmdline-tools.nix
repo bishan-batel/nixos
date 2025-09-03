@@ -5,8 +5,17 @@
     yt-dlp
     fd
     tectonic
-    doas
     speedtest-cli
     spotdl
   ];
+
+  programs.btop = {
+    enable = true;
+
+    settings = {
+      vim_keys = true;
+      rounded_corners = true;
+    };
+  };
+
 }

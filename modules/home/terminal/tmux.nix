@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    shell = if pkgs.stdenv.isDarwin then "/etc/profiles/per-user/bishan_/bin/nu" else "${pkgs.nushell}/bin/nu";
+    shell = pkgs.nushell.outPath;
     terminal = "tmux-256color";
     historyLimit = 10000;
     shortcut = "Space";
@@ -52,6 +52,9 @@
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+        
+        if-shell "uname | grep -q Darwin" "set-option -g default-command "reattach-to-user-namespace -l nu""
       '';
   };
 }

@@ -4,6 +4,7 @@
     ../../modules/home/terminal/starship.nix
     ../../modules/home/nvim.nix
     ../../modules/home/git.nix
+    ../../modules/home/terminal/cmdline-tools.nix
     ../../modules/home/terminal/kitty.nix
     ../../modules/home/terminal/tmux.nix
     ../../modules/home/rice/spicetify.nix
@@ -11,10 +12,6 @@
     ../../modules/home/terminal/filemanage.nix
     inputs.catppuccin.homeModules.catppuccin
     inputs.mac-app-util.homeManagerModules.default
-    # (builtins.fetchurl {
-    #   url = "https://raw.githubusercontent.com/Atemu/home-manager/e6d905336181ed8f98d48a1f6c9965b77f18e304/modules/targets/darwin.nix";
-    #   sha256 = "0lsa8ncwvv5qzar2sa8mxblhg6wcq5y6h9ny7kgmsby4wzaryz67";
-    # })
   ];
 
 
@@ -212,6 +209,10 @@
       '';
   };
 
-
-  programs.kitty.settings.shell = "/etc/profiles/per-user/bishan_/bin/nu";
+  programs.nh = {
+    enable = true;
+    # clean.enable = true;
+    # clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/Users/bishan_/nixos"; # sets NH_OS_FLAKE variable for you
+  };
 }
