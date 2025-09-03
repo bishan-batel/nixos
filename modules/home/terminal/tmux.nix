@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    shell = pkgs.nushell.outPath;
+    shell = "${pkgs.nushell.outPath}/bin/nu";
     terminal = "tmux-256color";
     historyLimit = 10000;
     shortcut = "Space";
@@ -54,7 +54,7 @@
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 
         
-        if-shell "uname | grep -q Darwin" "set-option -g default-command "reattach-to-user-namespace -l nu""
+        set-option -g default-command "reattach-to-user-namespace -l nu"
       '';
   };
 }
