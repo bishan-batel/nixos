@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.nushell}/bin/nu";
+    shell = pkgs.nushell.outPath;
     terminal = "tmux-256color";
     historyLimit = 10000;
     shortcut = "Space";
@@ -31,34 +31,6 @@
       tmuxPlugins.cpu
     ];
 
-    catppuccin = {
-      enable = true;
-      extraConfig =
-        /*
-        tmux
-        */
-        ''
-          set -g @catppuccin_flavor "mocha"
-          set -g @catppuccin_window_status_style "basic"
-
-          set -ogq @catppuccin_pane_default_fill "number"
-          set -ogq @catppuccin_pane_number_position "left" # right, left
-
-          # Make the status line pretty and add some modules
-          set -g status-right-length 100
-          set -g status-left-length 100
-
-          # set -g status-left ""
-          set -g status-left ""
-
-          set -g status-right "#{E:@catppuccin_status_application}"
-          set -agF status-right "#{E:@catppuccin_status_cpu}"
-          set -ag status-right "#{E:@catppuccin_status_session}"
-          set -ag status-right "#{E:@catppuccin_status_uptime}"
-          set -agF status-right "#{E:@catppuccin_status_battery}"
-        '';
-    };
-
     extraConfig =
       /*
       tmux
@@ -80,6 +52,9 @@
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+        
+        if-shell "uname | grep -q Darwin" "set-option -g default-command "reattach-to-user-namespace -l nu""
       '';
   };
 }

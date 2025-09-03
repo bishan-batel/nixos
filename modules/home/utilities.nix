@@ -2,6 +2,8 @@
   home.packages = with pkgs; [
     pavucontrol
     gimp3-with-plugins
+    krita
+    inkscape
     thunderbird
     quickemu
 
@@ -33,14 +35,6 @@
         obs-backgroundremoval
         obs-pipewire-audio-capture
       ];
-    };
-    btop = {
-      enable = true;
-
-      settings = {
-        vim_keys = true;
-        rounded_corners = true;
-      };
     };
   };
 }

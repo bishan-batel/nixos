@@ -22,11 +22,10 @@
 
     kernelModules = ["kvm-intel" "v4l2loopback"];
 
-    kernelParams = ["nvidia-drm.modeset=1" "nvidia-drm.fbdev=1"];
+    kernelParams = [];
 
     extraModulePackages = with pkgs; [
       linuxPackages.v4l2loopback
-      # linuxKernel.packages.linux_6_6.v4l2loopback
     ];
 
     kernel.sysctl."vm.max_map_count" = 2147483642;
@@ -36,10 +35,10 @@
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
     '';
 
-    kernel.sysctl = {
-      "kernel.perf_event_paranoid" = -1;
-      "kernel.kptr_restrict" = lib.mkForce 0;
-    };
+    # kernel.sysctl = {
+    #   "kernel.perf_event_paranoid" = -1;
+    #   "kernel.kptr_restrict" = lib.mkForce 0;
+    # };
   };
 
   fileSystems = {
@@ -76,11 +75,11 @@
       modesetting.enable = true;
       powerManagement = {
         enable = true;
-        finegrained = true;
+        finegrained = false;
       };
 
       open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
 
       nvidiaSettings = true;
       dynamicBoost.enable = false;
@@ -130,7 +129,7 @@
     };
   };
 
-  # systemd.services.lactd.enable = true;
+  systemd.services.lactd.enable = true;
 
   services = {
     xserver.videoDrivers = ["nvidia"];
