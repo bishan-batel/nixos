@@ -9,7 +9,6 @@
     ../../modules/home/rice/spicetify.nix
     ../../modules/home/terminal/nu.nix
     ../../modules/home/terminal/filemanage.nix
-    ../../modules/home/mac/sxhkd.nix
     inputs.catppuccin.homeModules.catppuccin
     inputs.mac-app-util.homeManagerModules.default
     # (builtins.fetchurl {
@@ -113,7 +112,7 @@
   ];
 
   programs.sketchybar = {
-    enable = true;
+    enable = false;
     extraPackages = [
       pkgs.jq
     ];
@@ -214,4 +213,5 @@
   };
 
 
+  programs.kitty.settings.shell = "/etc/profiles/per-user/bishan_/bin/nu";
 }

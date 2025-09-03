@@ -26,7 +26,10 @@
     };
 
     carapace.enableNushellIntegration = true;
-    zoxide.enableNushellIntegration = true;
+    zoxide = {
+      enableNushellIntegration = true;
+      enableZshIntegration = true;
+    };
     yazi.enableNushellIntegration = true;
     starship.enableNushellIntegration = true;
   };
