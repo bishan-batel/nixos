@@ -34,8 +34,9 @@ in {
     ];
   };
 
-  # home.file."${config.xdg.configHome}/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/hyprland.conf";
-  xdg.configFile."hypr/hypr.conf".source = ./hyprland.conf;
+  # home.file."${config.xdg.configHome}/hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
+  xdg.configFile."hypr/hypr.conf".source = config.lib.file.mkOutOfStoreSymlink ./hyprland.conf;
+  # xdg.configFile."hypr/hypr.conf".source = ./hyprland.conf;
   # home.file."${config.xdg.configHome}/hypr/hypridle.conf".source = ./hypridle.conf;
 
   xdg.configFile."hypr/hypridle.conf".source = ./hypridle.conf;
