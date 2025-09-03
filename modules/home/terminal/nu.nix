@@ -33,4 +33,10 @@
     yazi.enableNushellIntegration = true;
     starship.enableNushellIntegration = true;
   };
+
+  programs.pay-respects = {
+    # alias = "fuck";
+    enable = true;
+    enableNushellIntegration = true;
+  };
 }
