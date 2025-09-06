@@ -76,7 +76,7 @@
         vulkan-loader
         vulkan-validation-layers
         amdvlk # Optional: AMD's proprietary Vulkan driver
-        # mesa.opencl # Enables Rusticl (OpenCL) support
+        mesa.opencl # Enables Rusticl (OpenCL) support
         rocmPackages.clr.icd
       ];
 
@@ -108,10 +108,11 @@
 
   services = {
     xserver.videoDrivers = ["amdgpu"];
+    xserver.enable = true;
     dbus.enable = true;
-    # devmon.enable = true;
-    # gvfs.enable = true;
-    # udisks2.enable = true;
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
   };
 
   services.lact.enable = true;

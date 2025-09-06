@@ -32,6 +32,7 @@
     # gtk.icon.enable = true;
     zathura.enable = true;
     btop.enable = true;
+    nvim.enable = false;
 
     mpv.enable = true;
     imv.enable = true;

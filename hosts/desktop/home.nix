@@ -44,7 +44,7 @@
       XDG_PICTURES_DIR = "Pictures";
       XDG_DOWNLOADS_DIR = "Downloads";
       XDG_VIDEOS_DIR = "Videos";
-      NIXOS_OZONE_WL = "0";
+      NIXOS_OZONE_WL = "1";
     };
   };
 }
