@@ -15,5 +15,5 @@
 
   boot.supportedFilesystems = ["ntfs"];
 
-  environment.systemPackages = [ pkgs.ntfs3g ];
+  environment.systemPackages = [pkgs.ntfs3g];
 }
