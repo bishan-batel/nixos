@@ -15,11 +15,10 @@
     # ../../modules/home/rice/spicetify.nix
     ../../modules/home/terminal/nu.nix
     ../../modules/home/terminal/filemanage.nix
+    ../../modules/home/dev
     inputs.catppuccin.homeModules.catppuccin
     inputs.mac-app-util.homeManagerModules.default
   ];
-
-  home.packages = [pks.spotify];
 
   programs.home-manager.enable = true;
 
@@ -87,6 +86,7 @@
     # spotify
     nerd-fonts.jetbrains-mono
     nerd-fonts.agave
+    jetbrains-toolbox
   ];
 
   programs.sketchybar = {

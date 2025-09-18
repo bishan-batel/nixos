@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     nushell
     neovim
+    mesa
   ];
 
   # Necessary for using flakes on this system.
