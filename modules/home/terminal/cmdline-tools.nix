@@ -17,5 +17,4 @@
       rounded_corners = true;
     };
   };
-
 }

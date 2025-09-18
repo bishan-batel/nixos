@@ -57,14 +57,14 @@
     ];
   in {
     darwinConfigurations."Kishans-MacBook-Pro" = darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
-        specialArgs = { inherit inputs; };
-        modules = [ 
-          home-manager.darwinModules.home-manager
-          mac-app-util.darwinModules.default
-          ./hosts/mac/configuration.nix 
-        ];
-      };
+      system = "x86_64-darwin";
+      specialArgs = {inherit inputs;};
+      modules = [
+        home-manager.darwinModules.home-manager
+        mac-app-util.darwinModules.default
+        ./hosts/mac/configuration.nix
+      ];
+    };
 
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};

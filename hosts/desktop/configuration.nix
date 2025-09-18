@@ -243,6 +243,16 @@
     };
   };
 
+  services.xserver = {
+    enable = true;
+    windowManager = {
+      i3 = {
+        enable = true;
+        package = pkgs.i3-gaps;
+      };
+    };
+  };
+
   # services.xremap.config = {
   #   modmap = [
   #     {remap = {"CapsLock" = "C_R";};}

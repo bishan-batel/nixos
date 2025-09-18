@@ -32,7 +32,9 @@
     ];
 
     extraConfig =
-      /* tmux */
+      /*
+      tmux
+      */
       ''
         set-option -sa terminal-overrides ",xterm*:Tc"
         set -g mouse on
@@ -54,14 +56,14 @@
         set -g default-command "${pkgs.nushell.outPath}/bin/nu";
         # set-option -g default-command "reattach-to-user-namespace -l ${pkgs.nushell.outPath}/bin/nu"
       '';
-          # set-option -g default-command "reattach-to-user-namespace -l nu"
+    # set-option -g default-command "reattach-to-user-namespace -l nu"
 
     catppuccin = {
       enable = true;
       extraConfig =
         /*
-tmux
-*/
+        tmux
+        */
         ''
           set -g @catppuccin_flavor "mocha"
           set -g @catppuccin_window_status_style "basic"
@@ -83,8 +85,5 @@ tmux
           set -agF status-right "#\{E:@catppuccin_status_battery}"
         '';
     };
-
-
   };
-
 }

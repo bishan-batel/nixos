@@ -1,52 +1,54 @@
-{ pkgs, inputs, ... } : {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ../../modules/home/mac/sxhkd.nix
+    ../../modules/home/mac/yabai.nix
+  ];
 
+  environment.systemPackages = with pkgs; [
+    nushell
+    neovim
+  ];
 
-	imports = [
-		../../modules/home/mac/sxhkd.nix
-		../../modules/home/mac/yabai.nix
-	];
+  # Necessary for using flakes on this system.
+  nix.settings.experimental-features = "nix-command flakes";
 
-	environment.systemPackages = with pkgs; [
-		nushell
-		neovim
-	];
+  # Set Git commit hash for darwin-version.
+  # system.configurationRevision = self.rev or self.dirtyRev or null;
 
-	# Necessary for using flakes on this system.
-	nix.settings.experimental-features = "nix-command flakes";
+  # Used for backwards compatibility, please read the changelog before changing.
+  # $ darwin-rebuild changelog
+  system.stateVersion = 6;
 
-	# Set Git commit hash for darwin-version.
-	# system.configurationRevision = self.rev or self.dirtyRev or null;
+  # The platform the configuration will be used on.
+  nixpkgs.hostPlatform = "aarch64-darwin";
 
-	# Used for backwards compatibility, please read the changelog before changing.
-	# $ darwin-rebuild changelog
-	system.stateVersion = 6;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
-	# The platform the configuration will be used on.
-	nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = _: true;
+    allowUnsupportedSystem = true;
+  };
 
-	security.pam.services.sudo_local.touchIdAuth = true;
+  users.users.bishan_ = {
+    home = "/Users/bishan_";
+    shell = pkgs.nushell;
+  };
 
-	nixpkgs.config = {
-		allowUnfree = true;
-		allowUnfreePredicate = _: true;
-		allowUnsupportedSystem = true;
-	};
+  environment.shells = with pkgs; [nushell];
 
-	users.users.bishan_ = { 
-		home = "/Users/bishan_";
-		shell = pkgs.nushell;
-	}; 
+  system.primaryUser = "bishan_";
 
-	environment.shells = with pkgs; [ nushell ];
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
 
-	system.primaryUser = "bishan_";
-
-	home-manager = {
-		extraSpecialArgs = {inherit inputs;};
-
-		useGlobalPkgs = true;
-		useUserPackages = true;
-		users.bishan_ = import ./home.nix;
-		backupFileExtension = "backup";
-	};
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.bishan_ = import ./home.nix;
+    backupFileExtension = "backup";
+  };
 }
