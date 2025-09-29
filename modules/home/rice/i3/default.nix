@@ -4,7 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    clipit
+    xclip
   ];
 
   xsession.windowManager.i3 = {

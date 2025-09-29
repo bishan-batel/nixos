@@ -1,11 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     prismlauncher
-    glfw-wayland
 
-    tetrio-desktop
     mangohud
     protonup
+
+    tetrio-desktop
+    # tetrio-plus
   ];
 
   # programs.steam.enable = true;

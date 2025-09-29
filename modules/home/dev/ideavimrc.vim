@@ -2,16 +2,26 @@
 let g:mapleader = " "
 
 " Highlight copied text
+" call plug#begin()
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'vim-scripts/argtextobj.vim'
 
+" Plug 'machakann/vim-sandwich'
+Plug 'rhysd/vim-operator-surround'
+" call plug#end()
 
-set surround
+set mini-ai
 set commentary
 set which-key
+set vim-operator-surround
+set operator-surround
+
+map <silent>sa <Plug>(operator-surround-append)
+map <silent>sd <Plug>(operator-surround-delete)
+map <silent>sr <Plug>(operator-surround-replace)
 
 set ideajoin
 set ideamark
@@ -29,10 +39,8 @@ set smartcase
 set visualbell
 
 
-set number
 set rnu
-
-
+set number
 
 vmap <leader>y "+y
 nmap <leader>y "+yy
@@ -40,12 +48,9 @@ nmap <leader>y "+yy
 vmap <leader>p "+p
 nmap <leader>p "+p
 
-nmap s Ysurround
-xmap s <Plug>VSurround
-
-
 map <leader>ca <Action>(ShowIntentionActions)
 map <leader>cg <Action>(Generate)
+set number
 
 map <leader>gg <Action>(Generate)
 map <leader>sf <Action>(GotoFile)
@@ -66,6 +71,9 @@ map <leader>f <Action>(ReformatCode)
 
 "" Map <leader>d to start debug
 map <leader>od <Action>(Debug)
+
+"" Map <leader>d to start debug
+map <leader>or <Action>(Run)
 
 "" Map \b to toggle the breakpoint on the current line
 map <leader>cb <Action>(ToggleLineBreakpoint)

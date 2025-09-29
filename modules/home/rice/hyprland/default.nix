@@ -30,7 +30,7 @@ in {
     };
 
     plugins = [
-      hypr-pkgs.hyprexpo
+      # hypr-pkgs.hyprexpo
       # hypr-pkgs.hyprtrails
     ];
   };
