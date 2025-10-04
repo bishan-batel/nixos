@@ -13,15 +13,13 @@ Plug 'vim-scripts/argtextobj.vim'
 Plug 'rhysd/vim-operator-surround'
 " call plug#end()
 
+" sfdf
 set mini-ai
 set commentary
 set which-key
 set vim-operator-surround
 set operator-surround
 
-map <silent>sa <Plug>(operator-surround-append)
-map <silent>sd <Plug>(operator-surround-delete)
-map <silent>sr <Plug>(operator-surround-replace)
 
 set ideajoin
 set ideamark
