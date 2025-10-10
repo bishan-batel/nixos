@@ -87,6 +87,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.agave
     jetbrains-toolbox
+    p4v 
+    p4
   ];
 
   programs.sketchybar = {

@@ -24,6 +24,10 @@
 
   programs.zathura = {
     enable = true;
+    options = {
+      "scroll-step" = 20;
+      "smooth-scroll" = true;
+    };
   };
 
   programs = {
