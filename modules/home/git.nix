@@ -33,4 +33,6 @@
       delta.enable = true;
     };
   };
+
+  home.packages = with pkgs; [p4 p4v];
 }

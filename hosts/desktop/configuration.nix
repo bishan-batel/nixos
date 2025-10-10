@@ -104,8 +104,8 @@
     wineasio
 
     qmk-udev-rules
-    via
-    qmk
+    # via
+    # qmk
 
     rtaudio
 
@@ -224,7 +224,7 @@
   # Steam
   programs.steam = {
     enable = true;
-    gamescopeSession.enable = true;
+    # gamescopeSession.enable = true;
   };
   programs.gamemode.enable = true;
 

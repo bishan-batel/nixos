@@ -80,14 +80,11 @@
         libvdpau-va-gl
         vulkan-loader
         vulkan-validation-layers
-        amdvlk # Optional: AMD's proprietary Vulkan driver
         mesa.opencl # Enables Rusticl (OpenCL) support
         rocmPackages.clr.icd
       ];
 
-      extraPackages32 = with pkgs; [
-        driversi686Linux.amdvlk
-      ];
+      extraPackages32 = with pkgs; [ ];
     };
 
     bluetooth = {

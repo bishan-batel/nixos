@@ -102,9 +102,9 @@
     wineWowPackages.waylandFull
     winetricks
 
-    qmk-udev-rules
-    via
-    qmk
+    # qmk-udev-rules
+    # via
+    # qmk
   ];
 
   programs.coolercontrol = {
@@ -190,7 +190,7 @@
   # Steam
   programs.steam = {
     enable = true;
-    gamescopeSession.enable = false;
+    # gamescopeSession.enable = false;
   };
 
   programs.gamemode.enable = true;
