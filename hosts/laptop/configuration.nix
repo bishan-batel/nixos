@@ -62,6 +62,8 @@
       wtype
       inputs.lobster.packages.x86_64-linux.lobster
       brightnessctl
+      p4
+      p4v
     ];
   };
 
@@ -121,7 +123,7 @@
     sddm = {
       package = pkgs.kdePackages.sddm;
       enable = true;
-      wayland.enable = true;
+      # wayland.enable = true;
     };
   };
   services.xserver.enable = true;
