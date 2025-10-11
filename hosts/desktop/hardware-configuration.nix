@@ -84,7 +84,7 @@
         rocmPackages.clr.icd
       ];
 
-      extraPackages32 = with pkgs; [ ];
+      extraPackages32 = with pkgs; [];
     };
 
     bluetooth = {
