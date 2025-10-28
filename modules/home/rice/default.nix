@@ -15,6 +15,8 @@
     ./i3
   ];
 
+  # gtk.catppuccin.enable = true;
+
   catppuccin = {
     enable = true;
     accent = "mauve";
@@ -28,8 +30,9 @@
     starship.enable = true;
     gh-dash.enable = true;
     delta.enable = true;
+    rofi.enable = true;
     # gtk.enable = true;
-    # gtk.icon.enable = true;
+    gtk.icon.enable = true;
     zathura.enable = true;
     btop.enable = true;
     nvim.enable = false;

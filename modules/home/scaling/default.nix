@@ -8,7 +8,7 @@
     sh
     */
     ''
-      Xft.dpi: 160
+      Xft.dpi: 150
     '';
   wayland.windowManager.hyprland.settings = {
     env = [
@@ -37,13 +37,13 @@
     # variable frame rate
     misc.vfr = true;
 
-    gestures = {
-      workspace_swipe = true;
-      workspace_swipe_fingers = 4;
-      workspace_swipe_min_fingers = 3;
-      workspace_swipe_distance = 500;
-      workspace_swipe_touch = true;
-    };
+    # gestures = {
+    #   workspace_swipe = true;
+    #   workspace_swipe_fingers = 4;
+    #   workspace_swipe_min_fingers = 3;
+    #   workspace_swipe_distance = 500;
+    #   workspace_swipe_touch = true;
+    # };
 
     bind = [
       "SUPER, G, exec, sh ${pkgs.writeShellScriptBin "game_mode.sh" ''
