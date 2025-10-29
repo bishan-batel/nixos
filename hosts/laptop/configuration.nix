@@ -126,7 +126,17 @@
       # wayland.enable = true;
     };
   };
-  services.xserver.enable = true;
+
+  services.xserver = {
+    enable = true;
+    windowManager = {
+      i3 = {
+        enable = true;
+        package = pkgs.i3-gaps;
+      };
+    };
+  };
+
 
   # Hyprland
 
