@@ -203,6 +203,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Special key to take a screenshot with grim
 bindsym Print exec grim
+bindsym $mod+shift+s exec flameshot gui
 
 #
 # Status Bar:
