@@ -1,3 +1,3 @@
 {config, ...}: {
-  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink ./ideavimrc;
+  home.file.".ideavimrc".source = config.lib.file.mkOutOfStoreSymlink ./ideavimrc.vim;
 }

@@ -137,7 +137,6 @@
     };
   };
 
-
   # Hyprland
 
   users.users.bishan_.shell = pkgs.nushell;
