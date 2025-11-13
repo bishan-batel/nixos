@@ -2,8 +2,7 @@
   home.packages = with pkgs; [
     prismlauncher
 
-    mangohud
-    protonup
+    protonup-ng
 
     tetrio-desktop
     # tetrio-plus

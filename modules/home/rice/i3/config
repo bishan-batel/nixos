@@ -53,6 +53,7 @@ bindsym  $mod+q kill
 
 # Start your launcher
 bindsym   $mod+d exec $menu
+bindsym   $mod+shift+d exec nvidia-offload $menu
 
 # Reload the configuration file
 bindsym   $mod+Shift+c reload
