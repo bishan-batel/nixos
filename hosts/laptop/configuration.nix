@@ -111,7 +111,6 @@
 
   programs.coolercontrol = {
     enable = false;
-    nvidiaSupport = true;
   };
   services.udev = {
     enable = true;
