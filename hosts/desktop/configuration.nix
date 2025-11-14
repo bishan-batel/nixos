@@ -231,15 +231,11 @@
   environment = {
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatabilitytools.d";
-      NIXOS_OZONE_WL = "1";
-      MOZ_ENABLE_WAYLAND = "1";
-      T_QPA_PLATFORM = "wayland";
     };
 
     variables = {
       RUSTICL_ENABLE = "radeonsi";
       ROC_ENABLE_PRE_VEGA = "1";
-      XDG_SESSION_TYPE = "wayland";
     };
   };
 
@@ -248,7 +244,7 @@
     windowManager = {
       i3 = {
         enable = true;
-        package = pkgs.i3-gaps;
+        package = pkgs.i3;
       };
     };
   };
