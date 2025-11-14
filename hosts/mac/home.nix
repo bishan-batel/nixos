@@ -89,7 +89,11 @@
     jetbrains-toolbox
     p4v
     p4
+    mpv
+    ani-cli
   ];
+
+  # programs.aria2.eanble = true;
 
   programs.sketchybar = {
     enable = false;

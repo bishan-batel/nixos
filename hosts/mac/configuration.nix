@@ -29,6 +29,8 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # services.dbus.enable = true;
+
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = _: true;
