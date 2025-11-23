@@ -22,6 +22,7 @@
     accent = "mauve";
     flavor = "mocha";
 
+    mako.enable = true;
     cursors.enable = true;
     yazi.enable = true;
     bat.enable = true;
