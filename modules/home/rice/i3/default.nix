@@ -6,6 +6,7 @@
 }: {
   home.packages = with pkgs; [
     xclip
+    arandr
     picom
     xborders
     flameshot
@@ -21,7 +22,7 @@
       /*
       bash
       */
-      ''         
+      ''       
         include ${config.lib.file.mkOutOfStoreSymlink "/home/bishan_/nixos/modules/home/rice/i3/config"}
         # '';
   };
