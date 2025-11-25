@@ -15,7 +15,7 @@
     QT_SCALE_FACTOR = "2";
     GDK_SCALE = "2";
     QT_AUTO_SCREEN_SCALE_FACTOR = "2";
-    AQ_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card2";
+    # AQ_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card2";
     LIBVA_DRIVER_NAME = "nvidia";
     GLX_VENDOR_LIBRARY_NAME = "nvidia";
     NVD_BACKEND = "direct";
