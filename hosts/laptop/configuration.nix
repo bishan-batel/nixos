@@ -104,6 +104,9 @@
     wineWowPackages.waylandFull
     winetricks
 
+    asusctl
+    kdePackages.layer-shell-qt
+
     # qmk-udev-rules
     # via
     # qmk
@@ -122,7 +125,7 @@
     sddm = {
       package = pkgs.kdePackages.sddm;
       enable = true;
-      # wayland.enable = true;
+      wayland.enable = true;
     };
   };
 
