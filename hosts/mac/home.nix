@@ -28,23 +28,25 @@
     homeDirectory = "/Users/bishan_";
   };
 
-  home.file."Applications/home-manager".source = let
-    apps = pkgs.buildEnv {
-      name = "home-manager-applications";
-      paths = config.home.packages;
-      pathsToLink = "/Applications";
-    };
-  in "${apps}/Applications";
+  # home.file."Applications/home-manager".source = let
+  #   apps = pkgs.buildEnv {
+  #     name = "home-manager-applications";
+  #     paths = config.home.packages;
+  #     pathsToLink = "/Applications";
+  #   };
+  # in "${apps}/Applications";
 
-  home.activation = {
-    aliasApplications = lib.hm.dag.entryAfter ["writeBoundary"] ''
-           app_folder=$(echo ~/Applications);
-           for app in $(find "$genProfilePath/home-path/Applications" -type l); do
-      $DRY_RUN_CMD rm -f $app_folder/$(basename $app)
-      $DRY_RUN_CMD osascript -e "tell app \"Finder\"" -e "make new alias file at POSIX file \"$app_folder\" to POSIX file \"$app\"" -e "set name of result to \"$(basename $app)\"" -e "end tell"
-           done
-    '';
-  };
+  targets.darwin.linkApps.enable = true;
+
+  # home.activation = {
+  #   aliasApplications = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #          app_folder=$(echo ~/Applications);
+  #          for app in $(find "$genProfilePath/home-path/Applications" -type l); do
+  #     $DRY_RUN_CMD rm -f $app_folder/$(basename $app)
+  #     $DRY_RUN_CMD osascript -e "tell app \"Finder\"" -e "make new alias file at POSIX file \"$app_folder\" to POSIX file \"$app\"" -e "set name of result to \"$(basename $app)\"" -e "end tell"
+  #          done
+  #   '';
+  # };
 
   catppuccin = {
     enable = true;
