@@ -10,10 +10,13 @@
       clipboard_control = "write-clipboard read-clipboard write-primary";
       font_size = 15;
       cursor_shape = "block";
-      cursor_trail = 100;
       cursor_trail_enabled = true;
-      cursor_trail_start_threshold = 0;
-      cursor_trail_decay = 0.5;
+      # cursor_trail = 50;
+      cursor_trail = 2;
+      cursor_trail_start_threshold = 2;
+      cursor_trail_decay = "0.01 0.4";
+      # cursor_trail_start_threshold = 0;
+      # cursor_trail_decay = 0.5;
     };
   };
 }
