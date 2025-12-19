@@ -5,10 +5,6 @@
 }: {
   imports = [
     ../../modules/home/scaling
-    ../../modules/home/git.nix
-    ../../modules/home/compilers.nix
-    ../../modules/home/editors.nix
-    ../../modules/home/nvim.nix
     ../../modules/home/utilities.nix
     ../../modules/home/gaming.nix
     ../../modules/home/discord.nix
@@ -19,7 +15,6 @@
     ../../modules/home/rice
     ../../modules/home/keyboard.nix
     ../../modules/home/dev
-    ../../modules/wayland.nix
   ];
 
   programs.home-manager.enable = true;

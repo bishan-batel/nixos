@@ -11,6 +11,7 @@
     reaper
     libreoffice-qt
     hunspell
+    qjackctl
 
     # audacity
     # yabridge
@@ -21,14 +22,6 @@
     mixxx
     blender
   ];
-
-  programs.zathura = {
-    enable = true;
-    options = {
-      "scroll-step" = 20;
-      "smooth-scroll" = true;
-    };
-  };
 
   programs = {
     obs-studio = {
