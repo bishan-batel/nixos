@@ -15,6 +15,7 @@
     enable = true;
     libraries = with pkgs; [
       rocmPackages.clr
+      rocmPackages.clr.icd
       mesa.opencl
       SDL
       SDL2

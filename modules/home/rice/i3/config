@@ -157,7 +157,7 @@ assign [class="firefox"] workspace number 2
 assign [class="rider"] workspace number 3
 assign [class="obsidian"] workspace number 5
 assign [class="spotify"] workspace number 9
-assign [class="UnrealEditor"] workspace number 4
+# assign [class="UnrealEditor"] workspace number 4
 
 # popup_during_fullscreen smart
 
@@ -166,7 +166,8 @@ for_window [class="Dialog"] floating enable
 for_window [class="GtkDialog"] floating enable
 
 # for_window [class="UnrealEditor"] no_focus
-for_window [class="UnrealEditor"] floating enable, no_focus
+for_window [class="UnrealEditor"] floating enable
+no_focus [class="UnrealEditor"]
 # focus_on_window_activation urgent
 
 

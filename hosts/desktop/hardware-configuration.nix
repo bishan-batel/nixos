@@ -64,6 +64,10 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
+  hardware.amdgpu.opencl.enable = true;
+
+  # hardware.opengl.driSupport=true;
+
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
