@@ -4,10 +4,11 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ../../modules/home/terminal/starship.nix
-    ../../modules/home/nvim.nix
+    ../../modules/home/dev/nvim.nix
     ../../modules/home/git.nix
     ../../modules/home/terminal/cmdline-tools.nix
     ../../modules/home/terminal/kitty.nix
@@ -74,9 +75,9 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = ["JetBrainsMono"];
-        sansSerif = ["JetBrainsMono"];
-        serif = ["JetBrainsMono"];
+        monospace = [ "JetBrainsMono" ];
+        sansSerif = [ "JetBrainsMono" ];
+        serif = [ "JetBrainsMono" ];
       };
     };
   };
@@ -104,9 +105,7 @@
     ];
 
     config =
-      /*
-      bash
-      */
+      # bash
       ''
           # This is a demo config to showcase some of the most important commands.
            # It is meant to be changed and configured, as it is intentionally kept sparse.
