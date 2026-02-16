@@ -8,8 +8,6 @@
 {
   imports = [
     ../../modules/home/terminal/starship.nix
-    ../../modules/home/dev/nvim.nix
-    ../../modules/home/git.nix
     ../../modules/home/terminal/cmdline-tools.nix
     ../../modules/home/terminal/kitty.nix
     ../../modules/home/terminal/tmux.nix
@@ -94,6 +92,7 @@
     p4
     mpv
     ani-cli
+    # dotnet-sdk_8
   ];
 
   # programs.aria2.eanble = true;

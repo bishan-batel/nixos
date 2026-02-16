@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   services.yabai = {
-    enable = true;
+    enable = false;
     enableScriptingAddition = true;
     config = {
       focus_follows_mouse = "autoraise";
@@ -34,9 +35,7 @@
     };
 
     extraConfig =
-      /*
-      bash
-      */
+      # bash
       ''
         # rules
         yabai -m rule --add app='System Preferences' manage=off

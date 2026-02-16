@@ -1,10 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     # rustup
     gnumake
     lld
-    libllvm
-    libgcc
+    # libllvm
+    # libgcc
 
     gradle
 
