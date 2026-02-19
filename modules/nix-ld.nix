@@ -16,6 +16,7 @@
     libraries = with pkgs; [
       rocmPackages.clr
       rocmPackages.clr.icd
+      mpg123
       mesa.opencl
       SDL
       SDL2
