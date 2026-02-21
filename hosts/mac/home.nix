@@ -65,7 +65,6 @@
     btop.enable = true;
 
     mpv.enable = true;
-    imv.enable = true;
     nvim.enable = false;
   };
 
@@ -79,6 +78,7 @@
       };
     };
   };
+
   programs.zathura = {
     enable = true;
   };

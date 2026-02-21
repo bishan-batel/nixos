@@ -16,10 +16,9 @@
 
     ../../modules/home/browser/default.nix
 
-    ../../modules/home/discord.nix
+    # ../../modules/home/discord.nix
     ../../modules/home/media.nix
 
-    ../../modules/home/obsidian.nix
     ../../modules/home/dev
 
     inputs.catppuccin.homeModules.catppuccin
