@@ -75,6 +75,7 @@
     jetbrains-toolbox
     p4v
     p4
+    iina
   ];
 
   programs.nh = {
