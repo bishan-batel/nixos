@@ -92,6 +92,7 @@
     p4
     mpv
     ani-cli
+    iina
     # dotnet-sdk_8
   ];
 
