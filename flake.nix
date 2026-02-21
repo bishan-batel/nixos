@@ -65,6 +65,15 @@
         ./hosts/mac/configuration.nix
       ];
     };
+    darwinConfigurations."Epic-Machine" = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      specialArgs = {inherit inputs;};
+      modules = [
+        home-manager.darwinModules.home-manager
+        mac-app-util.darwinModules.default
+        ./hosts/macm4/configuration.nix
+      ];
+    };
 
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
