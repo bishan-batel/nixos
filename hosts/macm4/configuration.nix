@@ -12,6 +12,7 @@
     nushell
     neovim
     mesa
+    # inputs.lobster.packages.x86_64-darwin.lobster
   ];
 
   # Necessary for using flakes on this system.
@@ -54,5 +55,12 @@
     useUserPackages = true;
     users.bishan_ = import ./home.nix;
     backupFileExtension = "backup";
+  };
+  homebrew = {
+    enable = true;
+
+    taps = [];
+    brews = [ "gsed" ];
+    casks = [];
   };
 }
