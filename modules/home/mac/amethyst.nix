@@ -1,0 +1,5 @@
+{ pkgs, ... } : {
+  casks = [
+    { name = "amethyst"; }
+  ];
+}
