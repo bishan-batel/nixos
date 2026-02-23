@@ -15,10 +15,15 @@
 
     git = {
       enable = true;
-      userName = "Kishan S Patel";
-      userEmail = "bishan.batel@protonmail.com";
 
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Kishan S Patel";
+          email = "bishan.batel@protonmail.com";
+        };
+
+        alias = {};
+
         url = {
           "https://github.com/" = {insteadOf = "gh:";};
         };
@@ -27,10 +32,11 @@
         credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
         http.sslVerify = false;
       };
+    };
 
-      aliases = {};
-
-      delta.enable = true;
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
   };
 
