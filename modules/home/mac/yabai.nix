@@ -11,7 +11,7 @@
       window_opacity_duration = "0.0";
       window_border = "on";
       window_border_placement = "inset";
-      window_border_width = 2;
+      window_border_width = 5;
       window_border_radius = 3;
       active_window_border_topmost = "off";
       window_topmost = "on";
@@ -34,11 +34,41 @@
       window_gap = 10;
     };
 
-    extraConfig =
-      # bash
-      ''
+    extraConfig = /* bash */ ''
         # rules
-        yabai -m rule --add app='System Preferences' manage=off
+        sudo yabai --load-sa
+        yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+        function setup_space {
+          local idx="$1"
+          local name="$2"
+          local space=
+          echo "setup space $idx : $name"
+
+          space=$(yabai -m query --spaces --space "$idx")
+          if [ -z "$space" ]; then
+            yabai -m space --create
+          fi
+
+          yabai -m space "$idx" --label "$name"
+        }
+
+        setup_space 1 terminal
+        setup_space 2 browser
+        setup_space 3 workbench
+        setup_space 4 workshow
+        setup_space 5 obsidian
+        setup_space 6 config
+        setup_space 7 launcher
+        setup_space 8 game
+        setup_space 9 social 
+        setup_space 10 music
+
+        
+        yabai -m rule --add app="^System Settings$" manage=off
+        yabai -m rule --add app="^Calculator$" manage=off
+        yabai -m rule --add app="^Karabiner-Elements$" manage=off
+        yabai -m rule --add app="^QuickTime Player$" manage=off
 
         # Any other arbitrary config here
       '';

@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ../../modules/home/mac/sxhkd.nix
-    ../../modules/home/mac/yabai.nix
+    # ../../modules/home/mac/sxhkd.nix
+    # ../../modules/home/mac/yabai.nix
   ];
 
   environment.systemPackages = with pkgs; [
