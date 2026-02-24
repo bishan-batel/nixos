@@ -1,3 +1,3 @@
-{ pkgs, ... }: {
-  home.packages = [pkgs.unityhub]; 
+{pkgs, ...}: {
+  home.packages = [pkgs.unityhub];
 }

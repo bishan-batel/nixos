@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services.yabai = {
-    enable = true;
+    enable = false;
     enableScriptingAddition = true;
     config = {
       focus_follows_mouse = "autoraise";
@@ -34,7 +33,11 @@
       window_gap = 10;
     };
 
-    extraConfig = /* bash */ ''
+    extraConfig =
+      /*
+      bash
+      */
+      ''
         # rules
         sudo yabai --load-sa
         yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
@@ -61,10 +64,10 @@
         setup_space 6 config
         setup_space 7 launcher
         setup_space 8 game
-        setup_space 9 social 
+        setup_space 9 social
         setup_space 10 music
 
-        
+
         yabai -m rule --add app="^System Settings$" manage=off
         yabai -m rule --add app="^Calculator$" manage=off
         yabai -m rule --add app="^Karabiner-Elements$" manage=off

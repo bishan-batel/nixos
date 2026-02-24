@@ -57,34 +57,33 @@
         # set-option -g default-command "reattach-to-user-namespace -l ${pkgs.nushell.outPath}/bin/nu"
       '';
     # set-option -g default-command "reattach-to-user-namespace -l nu"
-
   };
 
   catppuccin.tmux = {
     enable = true;
     extraConfig =
-    /*
-    tmux
-    */
-    ''
-    set -g @catppuccin_flavor "mocha"
-    set -g @catppuccin_window_status_style "basic"
+      /*
+      tmux
+      */
+      ''
+        set -g @catppuccin_flavor "mocha"
+        set -g @catppuccin_window_status_style "basic"
 
-    set -ogq @catppuccin_pane_default_fill "number"
-    set -ogq @catppuccin_pane_number_position "left" # right, left
+        set -ogq @catppuccin_pane_default_fill "number"
+        set -ogq @catppuccin_pane_number_position "left" # right, left
 
-    # Make the status line pretty and add some modules
-    set -g status-right-length 100
-    set -g status-left-length 100
+        # Make the status line pretty and add some modules
+        set -g status-right-length 100
+        set -g status-left-length 100
 
-    # set -g status-left ""
-    set -g status-left ""
+        # set -g status-left ""
+        set -g status-left ""
 
-    set -g status-right "#\{E:@catppuccin_status_application}"
-    set -agF status-right "#\{E:@catppuccin_status_cpu}"
-    set -ag status-right "#\{E:@catppuccin_status_session}"
-    set -ag status-right "#\{E:@catppuccin_status_uptime}"
-    set -agF status-right "#\{E:@catppuccin_status_battery}"
-    '';
+        set -g status-right "#\{E:@catppuccin_status_application}"
+        set -agF status-right "#\{E:@catppuccin_status_cpu}"
+        set -ag status-right "#\{E:@catppuccin_status_session}"
+        set -ag status-right "#\{E:@catppuccin_status_uptime}"
+        set -agF status-right "#\{E:@catppuccin_status_battery}"
+      '';
   };
 }

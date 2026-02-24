@@ -4,8 +4,7 @@
   lib,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     ../../modules/home/terminal/starship.nix
     ../../modules/home/terminal/cmdline-tools.nix
@@ -72,9 +71,9 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = [ "JetBrainsMono" ];
-        sansSerif = [ "JetBrainsMono" ];
-        serif = [ "JetBrainsMono" ];
+        monospace = ["JetBrainsMono"];
+        sansSerif = ["JetBrainsMono"];
+        serif = ["JetBrainsMono"];
       };
     };
   };

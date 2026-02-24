@@ -1,5 +1,5 @@
-{ pkgs, ... } : {
+{pkgs, ...}: {
   homebrew.casks = [
-    { name = "amethyst"; }
+    {name = "amethyst";}
   ];
 }
