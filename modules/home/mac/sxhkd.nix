@@ -3,7 +3,7 @@
     enable = true;
 
     skhdConfig = ''
-      cmd + shift - return: open -n -a Kitty
+      cmd + shift - return: open -n -a Ghosttty
 
       fn - 1 : yabai -m space --focus 1
       fn - 2 : yabai -m space --focus 2
