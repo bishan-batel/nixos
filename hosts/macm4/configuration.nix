@@ -62,6 +62,6 @@
 
     taps = [];
     brews = [ "gsed" ];
-    casks = [];
+    casks = [ "xquartz" ];
   };
 }
