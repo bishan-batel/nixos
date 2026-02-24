@@ -4,9 +4,9 @@
   ...
 }: {
   imports = [
-    # ../../modules/home/mac/sxhkd.nix
-    # ../../modules/home/mac/yabai.nix
-    ../../modules/home/mac/amethyst.nix
+    ../../modules/home/mac/sxhkd.nix
+    ../../modules/home/mac/yabai.nix
+    # ../../modules/home/mac/amethyst.nix
   ];
 
   environment.systemPackages = with pkgs; [
