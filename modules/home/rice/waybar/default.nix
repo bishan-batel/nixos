@@ -18,9 +18,7 @@ in {
   };
 
   xdg.configFile."waybar/machiatto.css".text =
-    /*
-    css
-    */
+    /* css */
     ''
       /*
       *
