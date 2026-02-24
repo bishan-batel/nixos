@@ -10,6 +10,7 @@
     ../../modules/home/terminal/starship.nix
     ../../modules/home/terminal/cmdline-tools.nix
     ../../modules/home/terminal/kitty.nix
+    ../../modules/home/terminal/ghostty.nix
     ../../modules/home/terminal/tmux.nix
     ../../modules/home/terminal/nu.nix
     ../../modules/home/terminal/filemanage.nix
