@@ -13,6 +13,7 @@
     nushell
     neovim
     mesa
+    qbittorrent
     # inputs.lobster.packages.x86_64-darwin.lobster
   ];
 
@@ -62,6 +63,6 @@
 
     taps = [];
     brews = ["gsed"];
-    casks = ["xquartz"];
+    casks = ["xquartz" "qlvideo"];
   };
 }

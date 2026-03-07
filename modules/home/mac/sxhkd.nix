@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.skhd = {
-    enable = true;
+    enable = false;
 
     skhdConfig = ''
       cmd + shift - return: open -n -a Ghosttty
