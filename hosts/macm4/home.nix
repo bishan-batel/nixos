@@ -76,6 +76,7 @@
     p4v
     p4
     iina
+    uv
   ];
 
   programs.nh = {

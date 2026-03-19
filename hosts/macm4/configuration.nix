@@ -14,6 +14,8 @@
     neovim
     mesa
     qbittorrent
+    pkg-config 
+    cairo
     # inputs.lobster.packages.x86_64-darwin.lobster
   ];
 
@@ -62,7 +64,7 @@
     enable = true;
 
     taps = [];
-    brews = ["gsed"];
+    brews = ["gsed" "qtmultimedia"];
     casks = ["xquartz" "qlvideo"];
   };
 }

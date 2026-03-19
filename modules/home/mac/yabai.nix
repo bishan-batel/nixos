@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.yabai = {
-    enable = false;
+    enable = true;
     enableScriptingAddition = true;
     config = {
       focus_follows_mouse = "autoraise";
@@ -52,6 +52,8 @@
 
           yabai -m space "$idx" --label "$name"
         }
+        yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+        yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
 
         # setup_space 1 terminal
         # setup_space 2 browser
