@@ -101,7 +101,7 @@
     wine64
     wineWowPackages.waylandFull
     winetricks
-    wineasio
+    # wineasio
 
     qmk-udev-rules
     # via
