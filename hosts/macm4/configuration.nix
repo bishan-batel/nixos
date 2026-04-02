@@ -63,8 +63,8 @@
   homebrew = {
     enable = true;
 
-    taps = [];
+    taps = [ ];
     brews = ["gsed" "qtmultimedia"];
-    casks = ["xquartz" "qlvideo"];
+    casks = ["xquartz" "qlvideo" "font-computer-modern"];
   };
 }
