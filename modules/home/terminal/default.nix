@@ -7,5 +7,6 @@
     ./filemanage.nix
     ./starship.nix
     ./cmdline-tools.nix
+    ./zellij.nix
   ];
 }
