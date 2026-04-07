@@ -27,6 +27,8 @@
   ];
 
   programs.home-manager.enable = true;
+  programs.aria2.enable = true;
+
 
   home = {
     username = "bishan_";
@@ -78,6 +80,7 @@
     p4
     iina
     uv
+    cargo
   ];
 
   programs.nh = {
