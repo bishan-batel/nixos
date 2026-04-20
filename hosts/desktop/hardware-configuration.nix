@@ -86,6 +86,7 @@
         vulkan-validation-layers
         mesa.opencl # Enables Rusticl (OpenCL) support
         rocmPackages.clr.icd
+        mesa.drivers
       ];
 
       extraPackages32 = with pkgs; [];
