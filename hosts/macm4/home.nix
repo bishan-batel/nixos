@@ -81,6 +81,8 @@
     iina
     uv
     cargo
+    shader-slang
+    llvmPackages.clang-tools
   ];
 
   programs.nh = {
