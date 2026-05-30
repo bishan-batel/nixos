@@ -138,6 +138,26 @@
       xz
       zlib
       libdisplay-info
+      libxshmfence
+      alsa-lib
+      fontconfig
+      freetype
+      gtk3
+      xorg.libX11
+      xorg.libXcursor
+      xorg.libXext
+      xorg.libXrandr
+
+      libxshmfence 
+      libXau 
+      libxkbfile
     ];
+
   };
+
+  environment.systemPackages = with pkgs; [ 
+    libxshmfence 
+    libXau 
+    libxkbfile
+  ];
 }
