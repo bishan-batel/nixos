@@ -64,7 +64,7 @@
       brightnessctl
       p4
       p4v
-      r2modman
+      # r2modman
     ];
   };
 

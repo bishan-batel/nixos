@@ -97,6 +97,7 @@
     nushell
     v4l-utils
 
+    # r2modman
     wine
     wine64
     wineWowPackages.waylandFull
