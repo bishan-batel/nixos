@@ -64,7 +64,7 @@
     enable = true;
 
     taps = [ ];
-    brews = ["gsed" "qtmultimedia"];
+    brews = ["gsed" "qtmultimedia" "blackhole-2ch"];
     casks = ["xquartz" "qlvideo" "font-computer-modern"];
   };
 }
