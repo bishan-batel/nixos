@@ -6,12 +6,11 @@
       efiSupport = true;
       useOSProber = true;
       configurationLimit = 1;
-
-      # Theming
-      catppuccin.enable = true;
     };
     efi.canTouchEfiVariables = true;
   };
+
+  catppuccin.grub.enable = true;
 
   boot.supportedFilesystems = ["ntfs"];
 

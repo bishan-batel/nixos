@@ -4,18 +4,24 @@
   ...
 }: {
   imports = [
-    # ../../modules/home/mac/sxhkd.nix
-    # ../../modules/home/mac/yabai.nix
+    ../../modules/home/mac/sxhkd.nix
+    ../../modules/home/mac/yabai.nix
+    # ../../modules/home/mac/amethyst.nix
   ];
 
   environment.systemPackages = with pkgs; [
     nushell
     neovim
     mesa
+    qbittorrent
+    pkg-config 
+    cairo
+    # inputs.lobster.packages.x86_64-darwin.lobster
   ];
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
+  nix.package = pkgs.lixPackageSets.stable.lix;
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -53,5 +59,12 @@
     useUserPackages = true;
     users.bishan_ = import ./home.nix;
     backupFileExtension = "backup";
+  };
+  homebrew = {
+    enable = true;
+
+    taps = [ ];
+    brews = ["gsed" "qtmultimedia" ];
+    casks = ["xquartz" "qlvideo" "font-computer-modern"];
   };
 }

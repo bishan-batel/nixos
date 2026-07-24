@@ -7,7 +7,6 @@
 
   programs = {
     mpv.enable = true;
-    imv.enable = true;
     zathura = {
       enable = true;
       options = {

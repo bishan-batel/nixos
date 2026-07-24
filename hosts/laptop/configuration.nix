@@ -24,8 +24,7 @@
     accent = "mauve";
   };
 
-  console.catppuccin.enable = true;
-  boot.loader.grub.catppuccin.enable = true;
+  catppuccin.tty.enable = true;
 
   networking.hostName = "laptop"; # Define your hostname.
   #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -65,7 +64,6 @@
       brightnessctl
       p4
       p4v
-      davinci-resolve-studio
     ];
   };
 

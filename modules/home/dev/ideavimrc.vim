@@ -76,6 +76,9 @@ map <leader>or <Action>(Run)
 "" Map \b to toggle the breakpoint on the current line
 map <leader>cb <Action>(ToggleLineBreakpoint)
 
+map <leader>rr <Action>(ToggleRenderedDocPresentationForAll)<Cr><Action>(ToggleRenderedDocPresentationForAll)<Cr>
+map <leader>rt <Action>(ToggleRenderedDocPresentationForAll)
+
 nnoremap <C-\> :NERDTreeToggle<cr>
 
 set NERDTree

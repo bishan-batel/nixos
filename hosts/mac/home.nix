@@ -7,8 +7,6 @@
 }: {
   imports = [
     ../../modules/home/terminal/starship.nix
-    ../../modules/home/nvim.nix
-    ../../modules/home/git.nix
     ../../modules/home/terminal/cmdline-tools.nix
     ../../modules/home/terminal/kitty.nix
     ../../modules/home/terminal/tmux.nix
@@ -65,8 +63,7 @@
     zathura.enable = true;
     btop.enable = true;
 
-    mpv.enable = true;
-    imv.enable = true;
+    mpv.enable = false;
     nvim.enable = false;
   };
 
@@ -80,6 +77,7 @@
       };
     };
   };
+
   programs.zathura = {
     enable = true;
   };
@@ -93,6 +91,8 @@
     p4
     mpv
     ani-cli
+    iina
+    # dotnet-sdk_8
   ];
 
   # programs.aria2.eanble = true;
@@ -104,9 +104,7 @@
     ];
 
     config =
-      /*
-      bash
-      */
+      # bash
       ''
           # This is a demo config to showcase some of the most important commands.
            # It is meant to be changed and configured, as it is intentionally kept sparse.

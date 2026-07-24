@@ -15,15 +15,15 @@
   qt = {
     enable = true;
     platformTheme = {
-      name = "kvantum";
+      name = "qtct";
     };
     style = {
       name = "kvantum";
-      catppuccin = {
-        enable = true;
-        apply = true;
-      };
     };
+  };
+
+  catppuccin.qt5ct = {
+    enable = true;
   };
 
   xdg = {

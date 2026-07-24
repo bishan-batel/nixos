@@ -24,7 +24,7 @@
     accent = "mauve";
   };
 
-  console.catppuccin.enable = true;
+  catppuccin.tty.enable = true;
 
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -57,7 +57,7 @@
   users.users.bishan_ = {
     isNormalUser = true;
     description = "Kishan S Patel";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "render"];
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       # vesktop
@@ -97,11 +97,12 @@
     nushell
     v4l-utils
 
+    # r2modman
     wine
     wine64
     wineWowPackages.waylandFull
     winetricks
-    wineasio
+    # wineasio
 
     qmk-udev-rules
     # via

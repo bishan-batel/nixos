@@ -3,8 +3,8 @@
     # rustup
     gnumake
     lld
-    libllvm
-    libgcc
+    # libllvm
+    # libgcc
 
     gradle
 

@@ -77,6 +77,7 @@
       };
     };
 
+    # completion library
     carapace.enable = true;
   };
 }
