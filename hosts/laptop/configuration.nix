@@ -65,6 +65,7 @@
       brightnessctl
       p4
       p4v
+      davinci-resolve-studio
     ];
   };
 
@@ -100,6 +101,8 @@
     v4l-utils
     linuxPackages.v4l2loopback
 
+    lm_sensors
+
     wine
     wine64
     wineWowPackages.waylandFull
@@ -120,7 +123,7 @@
   services.supergfxd.enable = true;
 
   programs.coolercontrol = {
-    enable = false;
+    enable = true;
   };
   services.udev = {
     enable = true;
@@ -202,10 +205,12 @@
     enable = true;
     xwayland.enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-
     # make sure to also set the portal package, so that they are in sync
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
+
+  
+  services.power-profiles-daemon.enable = true; 
 
   xdg.portal = {
     enable = true;
@@ -240,7 +245,7 @@
     thermald.enable = true;
 
     auto-cpufreq = {
-      enable = true;
+      enable = false;
       settings = {
         battery = {
           governor = "powersave";

@@ -13,9 +13,20 @@
     ../../modules/grub.nix
   ];
 
+  # services.logind.settings.Login = {
+  #   HandleLidSwitch = "poweroff";
+  #   HandleLidSwitchExternalPower = "lock";
+  #   HandleLidSwitchDocked = "ignore";
+  # };
+
+  hardware = {
+    enableAllFirmware = true;
+    enableRedistributableFirmware = true;
+  };
+
   boot = {
     initrd = {
-      availableKernelModules = ["xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" "rtsx_pci_sdmmc"];
+      availableKernelModules = ["vmd" "xhci_pci" "nvme" "thunderbolt" "sd_mod"];
 
       kernelModules = ["nvidia" "i915" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
     };
@@ -75,14 +86,14 @@
       modesetting.enable = true;
       powerManagement = {
         enable = true;
-        finegrained = false;
+        finegrained = true;
       };
 
       open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
 
       nvidiaSettings = true;
-      dynamicBoost.enable = false;
+      dynamicBoost.enable = true;
 
       prime = {
         sync.enable = false;
@@ -136,43 +147,5 @@
     devmon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
-  };
-
-  specialisation = {
-    on-the-go.configuration = {
-      system.nixos.tags = ["on-the-go"];
-      hardware.nvidia = {
-        prime.offload.enable = lib.mkForce true;
-        prime.offload.enableOffloadCmd = lib.mkForce true;
-        prime.sync.enable = lib.mkForce false;
-      };
-      boot.extraModprobeConfig = lib.mkForce ''
-        blacklist nouveau
-        options nouveau modeset=0
-      '';
-
-      services.udev.extraRules = lib.mkForce ''
-        # Remove NVIDIA USB xHCI Host Controller devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c0330", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA USB Type-C UCSI devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c8000", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA Audio devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x040300", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA VGA/3D controller devices
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{power/control}="auto", ATTR{remove}="1"
-      '';
-      boot.blacklistedKernelModules = ["nouveau" "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_drm" "nvidia_uvm"];
-
-      services.auto-cpufreq.settings = {
-        battery = lib.mkForce {
-          governor = "powersave";
-          turbo = "never";
-        };
-        charger = lib.mkForce {
-          governor = "powersave";
-          turbo = "never";
-        };
-      };
-    };
   };
 }
