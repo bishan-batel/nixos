@@ -76,8 +76,8 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.agave
     jetbrains-toolbox
-    p4v
-    p4
+    # p4v
+    # p4
     iina
     uv
     cargo

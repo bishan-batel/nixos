@@ -15,13 +15,15 @@
     mesa
     qbittorrent
     pkg-config 
+    cloc
     cairo
     # inputs.lobster.packages.x86_64-darwin.lobster
   ];
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-  nix.package = pkgs.lixPackageSets.stable.lix;
+  nix.enable = false;
+  
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -64,7 +66,7 @@
     enable = true;
 
     taps = [ ];
-    brews = ["gsed" "qtmultimedia" ];
+    brews = ["gsed" "qtmultimedia" "qjackctl"];
     casks = ["xquartz" "qlvideo" "font-computer-modern"];
   };
 }
