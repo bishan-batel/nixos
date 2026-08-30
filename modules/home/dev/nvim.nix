@@ -6,5 +6,5 @@
     viAlias = true;
   };
 
-  home.packages = with pkgs; [neovide librsvg imagemagick glsl_analyzer];
+  home.packages = with pkgs; [neovide librsvg imagemagick glsl_analyzer devenv];
 }
