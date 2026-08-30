@@ -13,6 +13,7 @@
     ../../modules/home/terminal
     ../../modules/home/rice
     ../../modules/home/dev
+    ../../modules/home/proton.nix
     ../../modules/home/dev/unity.nix
     ../../modules/home/keyboard.nix
   ];
