@@ -89,7 +89,8 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
-    inputs.lobster.packages.x86_64-linux.lobster
+    inputs.lobster.packages.${pkgs.stdenv.hostPlatform.system}.lobster
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     git
     zip
