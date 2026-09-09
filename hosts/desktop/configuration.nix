@@ -90,7 +90,6 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
     inputs.lobster.packages.${pkgs.stdenv.hostPlatform.system}.lobster
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     git
     zip
