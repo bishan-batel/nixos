@@ -20,5 +20,7 @@
     dotnet-sdk_8
 
     cppreference-doc
+
+    nixfmt
   ];
 }
