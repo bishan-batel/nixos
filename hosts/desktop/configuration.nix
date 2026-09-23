@@ -62,7 +62,7 @@
       linuxKernel.packages.linux_zen.perf
       # vesktop
       legcord
-      davinci-resolve-studio
+      # davinci-resolve-studio
     ];
   };
 
@@ -98,10 +98,10 @@
     v4l-utils
 
     # r2modman
-    wine
-    wine64
-    wineWowPackages.waylandFull
-    winetricks
+    # wine
+    # wine64
+    # wineWowPackages.waylandFull
+    # winetricks
     # wineasio
 
     qmk-udev-rules
