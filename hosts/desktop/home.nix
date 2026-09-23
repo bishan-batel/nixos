@@ -36,7 +36,6 @@
     sessionVariables = {
       EDITOR = "nvim";
       TERMINAL = "kitty";
-      BROWSER = "firefox";
       XDG_PICTURES_DIR = "Pictures";
       XDG_DOWNLOADS_DIR = "Downloads";
       XDG_VIDEOS_DIR = "Videos";

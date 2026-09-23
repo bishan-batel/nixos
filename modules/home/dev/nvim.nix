@@ -1,10 +1,17 @@
-{pkgs, ...}: {
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-    viAlias = true;
-  };
+{ pkgs, ... }: {
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   vimAlias = true;
+  #   viAlias = true;
+  # };
 
-  home.packages = with pkgs; [neovide librsvg imagemagick glsl_analyzer devenv];
+  home.packages = with pkgs; [
+    neovide
+    librsvg
+    imagemagick
+    glsl_analyzer
+    devenv
+    neovim
+  ];
 }

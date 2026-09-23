@@ -1,6 +1,5 @@
 { pkgs, inputs, ... }:
 {
-
   imports = [
     inputs.zen-browser.homeModules.default
     # or inputs.zen-browser.homeModules.twilight

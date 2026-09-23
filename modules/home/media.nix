@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     ani-cli
-    blockbench
+    # blockbench
     feh
   ];
 

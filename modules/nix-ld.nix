@@ -51,7 +51,7 @@
       glew110
       glib
       glfw
-      libsForQt5.qt5.qtwayland
+      qt5.qtwayland
       gmp
       gst_all_1.gst-plugins-base
       gst_all_1.gst-plugins-ugly
@@ -63,7 +63,7 @@
       libGL
       libglvnd
       libGLU
-      libappindicator-gtk2
+      # libappindicator-gtk2
       libcaca
       libcanberra
       libcap
@@ -109,8 +109,8 @@
       udev
       vulkan-loader
       wayland
-      xorg.libICE
-      xorg.libSM
+      libice
+      libsm
       xorg.libX11
       xorg.libXScrnSaver
       xorg.libXcomposite

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [dconf libsForQt5.qt5.qtwayland catppuccin-gtk];
+  home.packages = with pkgs; [dconf qt5.qtwayland catppuccin-gtk];
 
   gtk = {
     enable = true;
