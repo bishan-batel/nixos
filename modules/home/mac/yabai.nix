@@ -33,7 +33,10 @@
       window_gap = 10;
     };
 
-    extraConfig = /* bash */
+    extraConfig =
+      /*
+      bash
+      */
       ''
         # rules
         sudo yabai --load-sa
