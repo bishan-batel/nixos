@@ -6,7 +6,8 @@
   inputs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ../../modules/man.nix
@@ -29,7 +30,10 @@
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -57,25 +61,32 @@
   users.users.bishan_ = {
     isNormalUser = true;
     description = "Kishan S Patel";
-    extraGroups = ["networkmanager" "wheel" "render"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "render"
+    ];
     packages = with pkgs; [
       linuxKernel.packages.linux_zen.perf
       # vesktop
-      legcord
+      discord
+      # legcord
       # davinci-resolve-studio
     ];
   };
 
   # === Ricefields ===
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "bishan_" = import ./home.nix;
     };
     backupFileExtension = "backup";
   };
 
-  services.dbus = {enable = true;};
+  services.dbus = {
+    enable = true;
+  };
 
   # services.gnome.at-spi2-core.enable = true;
 
@@ -117,7 +128,10 @@
 
   services.udev = {
     enable = true;
-    packages = with pkgs; [via qmk-udev-rules];
+    packages = with pkgs; [
+      via
+      qmk-udev-rules
+    ];
   };
 
   # SDDM
@@ -142,7 +156,7 @@
     enable = true;
     binfmt = true;
     package = pkgs.appimage-run.override {
-      extraPkgs = pkgs: [pkgs.python312];
+      extraPkgs = pkgs: [ pkgs.python312 ];
     };
   };
 
@@ -195,7 +209,8 @@
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
     # make sure to also set the portal package, so that they are in sync
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   programs.sway = {
@@ -218,7 +233,10 @@
     ];
 
     config = {
-      common.default = ["hyprland" "gtk"];
+      common.default = [
+        "hyprland"
+        "gtk"
+      ];
     };
   };
 

@@ -30,7 +30,7 @@ hl.config({
 	exec_once = {
 		'hyprctl plugin load "$HYPR_PLUGIN_DIR/lib/libhyprexpo.so"',
 		"dbus-update-activation-environment --systemd --all",
-		"swww-daemon",
+		"awww-daemon",
 		"sh ~/nixos/modules/home-manager/rice/hyprland/startup.nu",
 		"waybar",
 		"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP",
@@ -126,9 +126,10 @@ hl.config({
 
 -- Displays Layout Definitions
 hl.monitor({
-	output = "DP-1",
+	output = "DP-2",
 	mode = "highrr",
-	position = "-2560x0",
+	-- position = "-2560x0",
+	position = "auto",
 	scale = "auto",
 	bitdepth = 8,
 })
@@ -136,7 +137,7 @@ hl.monitor({
 hl.monitor({
 	output = "HDMI-A-1",
 	mode = "highrr",
-	position = "auto",
+	position = "2560x0",
 	scale = "auto",
 	bitdepth = 10,
 	-- transform = 1,
@@ -220,8 +221,8 @@ hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "previous" }))
 -- =========================================================================
 -- Dynamic Mouse Operations (Replaces legacy hl.bindm)
 -- =========================================================================
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.move, { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize, { mouse = true })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- =========================================================================
 -- Passive Audio Engine Layer Controls (Replaces legacy hl.bindl)

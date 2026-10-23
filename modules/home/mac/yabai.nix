@@ -34,9 +34,9 @@
     };
 
     extraConfig = /* bash */ ''
-      # rules
-      sudo yabai --load-sa
-      yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+        # rules
+        sudo yabai --load-sa
+        yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
       function setup_space {
         local idx="$1"
