@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   services.yabai = {
-    enable = true;
+    enable = false;
     enableScriptingAddition = true;
     config = {
       focus_follows_mouse = "autoraise";
@@ -33,46 +33,45 @@
       window_gap = 10;
     };
 
-    extraConfig = /* bash */
-      ''
-        # rules
-        sudo yabai --load-sa
-        yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+    extraConfig = /* bash */ ''
+      # rules
+      sudo yabai --load-sa
+      yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
-        function setup_space {
-          local idx="$1"
-          local name="$2"
-          local space=
-          echo "setup space $idx : $name"
+      function setup_space {
+        local idx="$1"
+        local name="$2"
+        local space=
+        echo "setup space $idx : $name"
 
-          space=$(yabai -m query --spaces --space "$idx")
-          if [ -z "$space" ]; then
-            yabai -m space --create
-          fi
+        space=$(yabai -m query --spaces --space "$idx")
+        if [ -z "$space" ]; then
+          yabai -m space --create
+        fi
 
-          yabai -m space "$idx" --label "$name"
-        }
-        yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
-        yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+        yabai -m space "$idx" --label "$name"
+      }
+      yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+      yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
 
-        # setup_space 1 terminal
-        # setup_space 2 browser
-        # setup_space 3 workbench
-        # setup_space 4 workshow
-        # setup_space 5 obsidian
-        # setup_space 6 config
-        # setup_space 7 launcher
-        # setup_space 8 game
-        # setup_space 9 social
-        # setup_space 10 music
+      # setup_space 1 terminal
+      # setup_space 2 browser
+      # setup_space 3 workbench
+      # setup_space 4 workshow
+      # setup_space 5 obsidian
+      # setup_space 6 config
+      # setup_space 7 launcher
+      # setup_space 8 game
+      # setup_space 9 social
+      # setup_space 10 music
 
 
-        # yabai -m rule --add app="^System Settings$" manage=off
-        # yabai -m rule --add app="^Calculator$" manage=off
-        # yabai -m rule --add app="^Karabiner-Elements$" manage=off
-        # yabai -m rule --add app="^QuickTime Player$" manage=off
+      # yabai -m rule --add app="^System Settings$" manage=off
+      # yabai -m rule --add app="^Calculator$" manage=off
+      # yabai -m rule --add app="^Karabiner-Elements$" manage=off
+      # yabai -m rule --add app="^QuickTime Player$" manage=off
 
-        # Any other arbitrary config here
-      '';
+      # Any other arbitrary config here
+    '';
   };
 }
