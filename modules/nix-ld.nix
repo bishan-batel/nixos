@@ -1,14 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   services.envfs = {
     enable = true;
 
-    extraFallbackPathCommands =
-      /*
-      bash
-      */
-      ''
-        ln -s ${pkgs.bash}/bin/bash $out/bash
-      '';
+    extraFallbackPathCommands = /* bash */ ''
+      ln -s ${pkgs.bash}/bin/bash $out/bash
+    '';
   };
 
   programs.nix-ld = {
@@ -105,6 +101,7 @@
       python3
       speex
       stdenv.cc.cc
+      stdenv.cc.cc.lib
       tbb
       udev
       vulkan-loader
@@ -148,16 +145,16 @@
       xorg.libXext
       xorg.libXrandr
 
-      libxshmfence 
-      libXau 
+      libxshmfence
+      libXau
       libxkbfile
     ];
 
   };
 
-  environment.systemPackages = with pkgs; [ 
-    libxshmfence 
-    libXau 
+  environment.systemPackages = with pkgs; [
+    libxshmfence
+    libXau
     libxkbfile
   ];
 }
