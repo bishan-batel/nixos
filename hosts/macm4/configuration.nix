@@ -2,10 +2,11 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
-    ../../modules/home/mac/sxhkd.nix
-    ../../modules/home/mac/yabai.nix
+    # ../../modules/home/mac/sxhkd.nix
+    # ../../modules/home/mac/yabai.nix
     # ../../modules/home/mac/amethyst.nix
   ];
 
@@ -14,7 +15,7 @@
     neovim
     mesa
     qbittorrent
-    pkg-config 
+    pkg-config
     cloc
     cairo
     # inputs.lobster.packages.x86_64-darwin.lobster
@@ -23,7 +24,6 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
   nix.enable = false;
-  
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -50,12 +50,12 @@
     shell = pkgs.nushell;
   };
 
-  environment.shells = with pkgs; [nushell];
+  environment.shells = with pkgs; [ nushell ];
 
   system.primaryUser = "bishan_";
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
 
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -66,7 +66,15 @@
     enable = true;
 
     taps = [ ];
-    brews = ["gsed" "qtmultimedia" "qjackctl"];
-    casks = ["xquartz" "qlvideo" "font-computer-modern"];
+    brews = [
+      "gsed"
+      "qtmultimedia"
+      "qjackctl"
+    ];
+    casks = [
+      "xquartz"
+      "qlvideo"
+      "font-computer-modern"
+    ];
   };
 }
